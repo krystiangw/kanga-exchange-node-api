@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@types/node": "^18.11.9",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "@openapitools/openapi-generator-cli": "^2.5.2"
+  }
+}
