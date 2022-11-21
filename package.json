@@ -1,6 +1,6 @@
 {
   "name": "kanga-exchange-node-api",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "devDependencies": {
     "@tsconfig/node16": "^1.0.3",
@@ -13,9 +13,29 @@
   "dependencies": {
     "crypto": "^1.0.1"
   },
-  "author": {
-    "email": "gwizdala.kr@gmail.com",
-    "name": "Krystian Gwizdala"
+  "author": "Krystian Gwizdala <gwizdala.kr@gmail.com>",
+  "main": "./src/index.ts",
+  "description": "Kanga Exchange Node API library",
+  "scripts": {
+    "test": "npm test"
   },
-  "main": "./src/index.ts"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krystiangw/kanga-exchange-node-api.git"
+  },
+  "keywords": [
+    "kanga",
+    "exchange",
+    "crypto",
+    "api",
+    "rest",
+    "node"
+  ],
+  "bugs": {
+    "url": "https://github.com/krystiangw/kanga-exchange-node-api/issues"
+  },
+  "homepage": "https://github.com/krystiangw/kanga-exchange-node-api#readme",
+  "engines": {
+    "node": ">=18.0.0"
+   }
 }

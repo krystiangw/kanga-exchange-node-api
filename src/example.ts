@@ -1,4 +1,4 @@
-import { Configuration, TradeApi, PublicApi, getHmac } from './index';
+import { Configuration, TradeApi, PublicApi, getHmac } from 'kanga-exchange-node-api';
 import * as dotenv from 'dotenv'
 
 const secretKey = dotenv.config().parsed?.KANGA_SECRET as string;
@@ -25,11 +25,13 @@ async function getUserOrderList() {
       nonce: time,
       appId: publicKey,
       market: 'KNG-oPLN',
-      limit: 105
+      limit: 100
     };
 
     const conf = new Configuration({
-      apiKey: getHmac(secretKey, body)
+      apiKey: getHmac(secretKey, body),
+      // for Node < 18.0 needs to provide fetch API
+      // fetchApi: fetch
     });
     const tradeApi = new TradeApi(conf);
     const results = await tradeApi.apiV2MarketOrderListPost({
