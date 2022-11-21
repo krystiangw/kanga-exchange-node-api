@@ -27,13 +27,13 @@ import {
  */
 export interface ApiV2MarketOrderListPost200ResponseOneOf {
     /**
-     * 
+     *
      * @type {string}
      * @memberof ApiV2MarketOrderListPost200ResponseOneOf
      */
     result: ApiV2MarketOrderListPost200ResponseOneOfResultEnum;
     /**
-     * 
+     *
      * @type {Array<ApiV2MarketOrderListPost200ResponseOneOfOrdersInner>}
      * @memberof ApiV2MarketOrderListPost200ResponseOneOf
      */
@@ -70,7 +70,7 @@ export function ApiV2MarketOrderListPost200ResponseOneOfFromJSONTyped(json: any,
         return json;
     }
     return {
-        
+
         'result': json['result'],
         'orders': ((json['orders'] as Array<any>).map(ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerFromJSON)),
     };
@@ -84,9 +84,8 @@ export function ApiV2MarketOrderListPost200ResponseOneOfToJSON(value?: ApiV2Mark
         return null;
     }
     return {
-        
+
         'result': value.result,
         'orders': ((value.orders as Array<any>).map(ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerToJSON)),
     };
 }
-

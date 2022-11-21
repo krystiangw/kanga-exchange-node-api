@@ -84,7 +84,7 @@ export interface ApiV2MarketOrderListPostOperationRequest {
 }
 
 /**
- * 
+ *
  */
 export class TradeApi extends runtime.BaseAPI {
 
@@ -312,7 +312,9 @@ export class TradeApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
-
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["api-sig"] = this.configuration.apiKey("api-sig"); // SignatureAuth authentication
+        }
         const response = await this.request({
             path: `/api/v2/market/order/list`,
             method: 'POST',
