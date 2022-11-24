@@ -11,7 +11,7 @@ async function getOrderbookRawGet() {
     const results = await publicApi.apiV2MarketOrderbookRawGet({
       market: 'KNG-oPLN'
     });
-    console.log('getOrderbookRawGet ', results);
+    console.log('getOrderbookRawGet response: ', JSON.stringify(results));
   } catch (err) {
     console.error(err);
   }
@@ -34,14 +34,14 @@ async function getUserOrderList() {
       // fetchApi: fetch
     });
     const tradeApi = new TradeApi(conf);
-    const results = await tradeApi.apiV2MarketOrderHistoryListPostRaw({
-      apiV2MarketOrderBookPostRequest: body
+    const results = await tradeApi.apiV2MarketOrderListPost({
+      apiV2MarketOrderListPostRequest: body
     });
-    console.log('getUserOrderListresults ', results);
+    console.log('getUserOrderList response: ', results);
   } catch (err) {
     console.error(err);
   }
 }
 
-// getOrderbookRawGet();
+getOrderbookRawGet();
 getUserOrderList();
