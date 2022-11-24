@@ -40,9 +40,50 @@ export interface ApiV2KposRefillPostOperationRequest {
 }
 
 /**
+ * KPOSApi - interface
+ * 
+ * @export
+ * @interface KPOSApiInterface
+ */
+export interface KPOSApiInterface {
+    /**
+     * Returns KPOS balances
+     * @summary KPOS balances
+     * @param {ApiV2KposBalancesGetPostRequest} apiV2KposBalancesGetPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof KPOSApiInterface
+     */
+    apiV2KposBalancesGetPostRaw(requestParameters: ApiV2KposBalancesGetPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2KposBalancesGetPost200Response>>;
+
+    /**
+     * Returns KPOS balances
+     * KPOS balances
+     */
+    apiV2KposBalancesGetPost(requestParameters: ApiV2KposBalancesGetPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2KposBalancesGetPost200Response>;
+
+    /**
+     * Refills KPOS reserve
+     * @summary KPOS refill
+     * @param {ApiV2KposRefillPostRequest} apiV2KposRefillPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof KPOSApiInterface
+     */
+    apiV2KposRefillPostRaw(requestParameters: ApiV2KposRefillPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2KposRefillPost200Response>>;
+
+    /**
+     * Refills KPOS reserve
+     * KPOS refill
+     */
+    apiV2KposRefillPost(requestParameters: ApiV2KposRefillPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2KposRefillPost200Response>;
+
+}
+
+/**
  * 
  */
-export class KPOSApi extends runtime.BaseAPI {
+export class KPOSApi extends runtime.BaseAPI implements KPOSApiInterface {
 
     /**
      * Returns KPOS balances

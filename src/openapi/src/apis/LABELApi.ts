@@ -57,9 +57,82 @@ export interface ApiV2LabelUserListPostOperationRequest {
 }
 
 /**
+ * LABELApi - interface
+ * 
+ * @export
+ * @interface LABELApiInterface
+ */
+export interface LABELApiInterface {
+    /**
+     * Assigns a label to the specified user.
+     * @summary Assign a label
+     * @param {ApiV2LabelUnassignPostRequest} apiV2LabelUnassignPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof LABELApiInterface
+     */
+    apiV2LabelAssignPostRaw(requestParameters: ApiV2LabelAssignPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2LabelAssignPost200Response>>;
+
+    /**
+     * Assigns a label to the specified user.
+     * Assign a label
+     */
+    apiV2LabelAssignPost(requestParameters: ApiV2LabelAssignPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2LabelAssignPost200Response>;
+
+    /**
+     * Returns the list of available labels.
+     * @summary Label list
+     * @param {ApiV2LabelListPostRequest} apiV2LabelListPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof LABELApiInterface
+     */
+    apiV2LabelListPostRaw(requestParameters: ApiV2LabelListPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2LabelListPost200Response>>;
+
+    /**
+     * Returns the list of available labels.
+     * Label list
+     */
+    apiV2LabelListPost(requestParameters: ApiV2LabelListPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2LabelListPost200Response>;
+
+    /**
+     * Unassigns a label from the specified user.
+     * @summary Unassign a label
+     * @param {ApiV2LabelUnassignPostRequest} apiV2LabelUnassignPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof LABELApiInterface
+     */
+    apiV2LabelUnassignPostRaw(requestParameters: ApiV2LabelUnassignPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2LabelUnassignPost200Response>>;
+
+    /**
+     * Unassigns a label from the specified user.
+     * Unassign a label
+     */
+    apiV2LabelUnassignPost(requestParameters: ApiV2LabelUnassignPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2LabelUnassignPost200Response>;
+
+    /**
+     * Returns all labels assigned to the specified user.
+     * @summary User labels
+     * @param {ApiV2LabelUserListPostRequest} apiV2LabelUserListPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof LABELApiInterface
+     */
+    apiV2LabelUserListPostRaw(requestParameters: ApiV2LabelUserListPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2LabelUserListPost200Response>>;
+
+    /**
+     * Returns all labels assigned to the specified user.
+     * User labels
+     */
+    apiV2LabelUserListPost(requestParameters: ApiV2LabelUserListPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2LabelUserListPost200Response>;
+
+}
+
+/**
  * 
  */
-export class LABELApi extends runtime.BaseAPI {
+export class LABELApi extends runtime.BaseAPI implements LABELApiInterface {
 
     /**
      * Assigns a label to the specified user.

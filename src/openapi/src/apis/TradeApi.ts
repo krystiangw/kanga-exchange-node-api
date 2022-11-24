@@ -84,9 +84,130 @@ export interface ApiV2MarketOrderListPostOperationRequest {
 }
 
 /**
- *
+ * TradeApi - interface
+ * 
+ * @export
+ * @interface TradeApiInterface
  */
-export class TradeApi extends runtime.BaseAPI {
+export interface TradeApiInterface {
+    /**
+     * Returns the list of all markets. This call will be deprecated in the near future.
+     * @summary Market list
+     * @param {object} body 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TradeApiInterface
+     */
+    apiMarketsPostRaw(requestParameters: ApiMarketsPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiMarketsPost200Response>>;
+
+    /**
+     * Returns the list of all markets. This call will be deprecated in the near future.
+     * Market list
+     */
+    apiMarketsPost(requestParameters: ApiMarketsPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiMarketsPost200Response>;
+
+    /**
+     * Returns the order book for the specified market (cached every 2 seconds).
+     * @summary Order book
+     * @param {ApiV2MarketOrderBookPostRequest} apiV2MarketOrderBookPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TradeApiInterface
+     */
+    apiV2MarketOrderBookPostRaw(requestParameters: ApiV2MarketOrderBookPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2MarketOrderBookPost200Response>>;
+
+    /**
+     * Returns the order book for the specified market (cached every 2 seconds).
+     * Order book
+     */
+    apiV2MarketOrderBookPost(requestParameters: ApiV2MarketOrderBookPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2MarketOrderBookPost200Response>;
+
+    /**
+     * Cancels the order identified by orderId.
+     * @summary Cancel order
+     * @param {ApiV2MarketOrderCancelPostRequest} apiV2MarketOrderCancelPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TradeApiInterface
+     */
+    apiV2MarketOrderCancelPostRaw(requestParameters: ApiV2MarketOrderCancelPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2MarketOrderCancelPost200Response>>;
+
+    /**
+     * Cancels the order identified by orderId.
+     * Cancel order
+     */
+    apiV2MarketOrderCancelPost(requestParameters: ApiV2MarketOrderCancelPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2MarketOrderCancelPost200Response>;
+
+    /**
+     * Creates a new order. On success returns orderId.
+     * @summary Create order
+     * @param {ApiV2MarketOrderCreatePostRequest} apiV2MarketOrderCreatePostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TradeApiInterface
+     */
+    apiV2MarketOrderCreatePostRaw(requestParameters: ApiV2MarketOrderCreatePostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2MarketOrderCreatePost200Response>>;
+
+    /**
+     * Creates a new order. On success returns orderId.
+     * Create order
+     */
+    apiV2MarketOrderCreatePost(requestParameters: ApiV2MarketOrderCreatePostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2MarketOrderCreatePost200Response>;
+
+    /**
+     * Returns the details of the specified order.
+     * @summary Get order
+     * @param {ApiV2MarketOrderGetPostRequest} apiV2MarketOrderGetPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TradeApiInterface
+     */
+    apiV2MarketOrderGetPostRaw(requestParameters: ApiV2MarketOrderGetPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2MarketOrderGetPost200Response>>;
+
+    /**
+     * Returns the details of the specified order.
+     * Get order
+     */
+    apiV2MarketOrderGetPost(requestParameters: ApiV2MarketOrderGetPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2MarketOrderGetPost200Response>;
+
+    /**
+     * Returns up to 50 recent orders (both fulfilled and canceled) from the specified market.
+     * @summary Order history
+     * @param {ApiV2MarketOrderBookPostRequest} apiV2MarketOrderBookPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TradeApiInterface
+     */
+    apiV2MarketOrderHistoryListPostRaw(requestParameters: ApiV2MarketOrderHistoryListPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2MarketOrderHistoryListPost200Response>>;
+
+    /**
+     * Returns up to 50 recent orders (both fulfilled and canceled) from the specified market.
+     * Order history
+     */
+    apiV2MarketOrderHistoryListPost(requestParameters: ApiV2MarketOrderHistoryListPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2MarketOrderHistoryListPost200Response>;
+
+    /**
+     * Returns up to 100 active orders from the specified market.
+     * @summary Active order list
+     * @param {ApiV2MarketOrderListPostRequest} apiV2MarketOrderListPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof TradeApiInterface
+     */
+    apiV2MarketOrderListPostRaw(requestParameters: ApiV2MarketOrderListPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2MarketOrderListPost200Response>>;
+
+    /**
+     * Returns up to 100 active orders from the specified market.
+     * Active order list
+     */
+    apiV2MarketOrderListPost(requestParameters: ApiV2MarketOrderListPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2MarketOrderListPost200Response>;
+
+}
+
+/**
+ * 
+ */
+export class TradeApi extends runtime.BaseAPI implements TradeApiInterface {
 
     /**
      * Returns the list of all markets. This call will be deprecated in the near future.
@@ -102,6 +223,10 @@ export class TradeApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["api-sig"] = this.configuration.apiKey("api-sig"); // SignatureAuth authentication
+        }
 
         const response = await this.request({
             path: `/api/markets`,
@@ -138,6 +263,10 @@ export class TradeApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["api-sig"] = this.configuration.apiKey("api-sig"); // SignatureAuth authentication
+        }
+
         const response = await this.request({
             path: `/api/v2/market/order/book`,
             method: 'POST',
@@ -172,6 +301,10 @@ export class TradeApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["api-sig"] = this.configuration.apiKey("api-sig"); // SignatureAuth authentication
+        }
 
         const response = await this.request({
             path: `/api/v2/market/order/cancel`,
@@ -208,6 +341,10 @@ export class TradeApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["api-sig"] = this.configuration.apiKey("api-sig"); // SignatureAuth authentication
+        }
+
         const response = await this.request({
             path: `/api/v2/market/order/create`,
             method: 'POST',
@@ -242,6 +379,10 @@ export class TradeApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["api-sig"] = this.configuration.apiKey("api-sig"); // SignatureAuth authentication
+        }
 
         const response = await this.request({
             path: `/api/v2/market/order/get`,
@@ -278,6 +419,10 @@ export class TradeApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["api-sig"] = this.configuration.apiKey("api-sig"); // SignatureAuth authentication
+        }
+
         const response = await this.request({
             path: `/api/v2/market/order/history/list`,
             method: 'POST',
@@ -312,9 +457,11 @@ export class TradeApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
         if (this.configuration && this.configuration.apiKey) {
             headerParameters["api-sig"] = this.configuration.apiKey("api-sig"); // SignatureAuth authentication
         }
+
         const response = await this.request({
             path: `/api/v2/market/order/list`,
             method: 'POST',

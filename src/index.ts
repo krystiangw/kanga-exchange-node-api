@@ -1,2 +1,2 @@
-export * from './openapi';
+export * from './openapi/src';
 export * from './hmac';

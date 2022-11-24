@@ -43,7 +43,7 @@ import {
 
 /**
  * @type ApiV2MarketOrderBookPost200Response
- *
+ * 
  * @export
  */
 export type ApiV2MarketOrderBookPost200Response = ApiV2MarketOrderBookPost200ResponseOneOf | ApiV2PayPaymentGetPost200ResponseOneOf1 | ApiV2PayPaymentGetPost200ResponseOneOf2 | ApiV2PayPaymentGetPost200ResponseOneOf3;
@@ -82,3 +82,4 @@ export function ApiV2MarketOrderBookPost200ResponseToJSON(value?: ApiV2MarketOrd
 
     return {};
 }
+
