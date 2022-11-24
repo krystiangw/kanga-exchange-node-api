@@ -1,6 +1,6 @@
 {
   "name": "kanga-exchange-node-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "devDependencies": {
     "@tsconfig/node16": "^1.0.3",
@@ -18,7 +18,8 @@
   "description": "Kanga Exchange Node API library",
   "scripts": {
     "test": "npm test",
-    "generate": "openapi-generator-cli generate -i kanga-api-schema.yaml -g typescript-fetch -o src/openapi/ --additional-properties=npmName=kanga-exchange-node-api,supportsES6=true,npmVersion=0.0.2,withInterfaces=true"
+    "generate": "openapi-generator-cli generate -i kanga-api-schema.yaml -g typescript-fetch -o src/openapi/ --additional-properties=npmName=kanga-exchange-node-api,supportsES6=true,npmVersion=0.0.2,withInterfaces=true",
+    "example": "npx ts-node src/example.ts"
   },
   "repository": {
     "type": "git",

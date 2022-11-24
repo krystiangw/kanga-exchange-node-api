@@ -85,7 +85,7 @@ export interface ApiV2MarketOrderListPostOperationRequest {
 
 /**
  * TradeApi - interface
- * 
+ *
  * @export
  * @interface TradeApiInterface
  */
@@ -93,7 +93,7 @@ export interface TradeApiInterface {
     /**
      * Returns the list of all markets. This call will be deprecated in the near future.
      * @summary Market list
-     * @param {object} body 
+     * @param {object} body
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TradeApiInterface
@@ -109,7 +109,7 @@ export interface TradeApiInterface {
     /**
      * Returns the order book for the specified market (cached every 2 seconds).
      * @summary Order book
-     * @param {ApiV2MarketOrderBookPostRequest} apiV2MarketOrderBookPostRequest 
+     * @param {ApiV2MarketOrderBookPostRequest} apiV2MarketOrderBookPostRequest
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TradeApiInterface
@@ -125,7 +125,7 @@ export interface TradeApiInterface {
     /**
      * Cancels the order identified by orderId.
      * @summary Cancel order
-     * @param {ApiV2MarketOrderCancelPostRequest} apiV2MarketOrderCancelPostRequest 
+     * @param {ApiV2MarketOrderCancelPostRequest} apiV2MarketOrderCancelPostRequest
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TradeApiInterface
@@ -141,7 +141,7 @@ export interface TradeApiInterface {
     /**
      * Creates a new order. On success returns orderId.
      * @summary Create order
-     * @param {ApiV2MarketOrderCreatePostRequest} apiV2MarketOrderCreatePostRequest 
+     * @param {ApiV2MarketOrderCreatePostRequest} apiV2MarketOrderCreatePostRequest
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TradeApiInterface
@@ -157,7 +157,7 @@ export interface TradeApiInterface {
     /**
      * Returns the details of the specified order.
      * @summary Get order
-     * @param {ApiV2MarketOrderGetPostRequest} apiV2MarketOrderGetPostRequest 
+     * @param {ApiV2MarketOrderGetPostRequest} apiV2MarketOrderGetPostRequest
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TradeApiInterface
@@ -173,7 +173,7 @@ export interface TradeApiInterface {
     /**
      * Returns up to 50 recent orders (both fulfilled and canceled) from the specified market.
      * @summary Order history
-     * @param {ApiV2MarketOrderBookPostRequest} apiV2MarketOrderBookPostRequest 
+     * @param {ApiV2MarketOrderBookPostRequest} apiV2MarketOrderBookPostRequest
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TradeApiInterface
@@ -189,7 +189,7 @@ export interface TradeApiInterface {
     /**
      * Returns up to 100 active orders from the specified market.
      * @summary Active order list
-     * @param {ApiV2MarketOrderListPostRequest} apiV2MarketOrderListPostRequest 
+     * @param {ApiV2MarketOrderListPostRequest} apiV2MarketOrderListPostRequest
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TradeApiInterface
@@ -205,7 +205,7 @@ export interface TradeApiInterface {
 }
 
 /**
- * 
+ *
  */
 export class TradeApi extends runtime.BaseAPI implements TradeApiInterface {
 
