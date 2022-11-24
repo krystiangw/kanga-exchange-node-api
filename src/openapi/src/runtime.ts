@@ -119,7 +119,19 @@ export class BaseAPI {
         if (response && (response.status >= 200 && response.status < 300)) {
             return response;
         }
-        throw new ResponseError(response, 'Response returned an error code');
+        let responseToString = '';
+        try {
+            const value = response.body?.getReader();
+            const red = await value?.read();
+            responseToString = this.uint8ArrayToBase64(red?.value as Uint8Array);
+        } catch (err) {
+            //
+        }
+        throw new ResponseError(response, `Response returned an error code ${response.status}. ${responseToString ? 'Message ' + responseToString : ''}`);
+    }
+
+    private uint8ArrayToBase64(data: Uint8Array) {
+        return btoa(Array.from(data).map((c) => String.fromCharCode(c)).join(''));
     }
 
     private async createFetchParams(context: RequestOpts, initOverrides?: RequestInit | InitOverrideFunction) {
