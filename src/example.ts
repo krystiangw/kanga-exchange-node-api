@@ -1,4 +1,4 @@
-import { Configuration, TradeApi, PublicApi, getHmac } from 'kanga-exchange-node-api';
+import { Configuration, TradeApi, PublicApi, getHmac } from './';
 import * as dotenv from 'dotenv'
 
 const secretKey = dotenv.config().parsed?.KANGA_SECRET as string;
@@ -34,8 +34,8 @@ async function getUserOrderList() {
       // fetchApi: fetch
     });
     const tradeApi = new TradeApi(conf);
-    const results = await tradeApi.apiV2MarketOrderListPost({
-      apiV2MarketOrderListPostRequest: body
+    const results = await tradeApi.apiV2MarketOrderHistoryListPostRaw({
+      apiV2MarketOrderBookPostRequest: body
     });
     console.log('getUserOrderListresults ', results);
   } catch (err) {
@@ -43,5 +43,5 @@ async function getUserOrderList() {
   }
 }
 
-getOrderbookRawGet();
+// getOrderbookRawGet();
 getUserOrderList();

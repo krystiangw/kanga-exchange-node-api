@@ -17,7 +17,8 @@
   "main": "./src/index.ts",
   "description": "Kanga Exchange Node API library",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "generate": "openapi-generator-cli generate -i kanga-api-schema.yaml -g typescript-fetch -o src/openapi/ --additional-properties=npmName=kanga-exchange-node-api,supportsES6=true,npmVersion=0.0.2,withInterfaces=true"
   },
   "repository": {
     "type": "git",

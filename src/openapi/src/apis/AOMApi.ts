@@ -98,9 +98,162 @@ export interface ApiV2AomWithdrawPostRequest {
 }
 
 /**
+ * AOMApi - interface
+ * 
+ * @export
+ * @interface AOMApiInterface
+ */
+export interface AOMApiInterface {
+    /**
+     * Closes an automated order maker and transfers funds to wallet. An AOM can only be closed when inactive
+     * @summary Close automated order maker
+     * @param {ApiV2AomGetPostRequest} apiV2AomGetPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AOMApiInterface
+     */
+    apiV2AomClosePostRaw(requestParameters: ApiV2AomClosePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2AomClosePost200Response>>;
+
+    /**
+     * Closes an automated order maker and transfers funds to wallet. An AOM can only be closed when inactive
+     * Close automated order maker
+     */
+    apiV2AomClosePost(requestParameters: ApiV2AomClosePostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2AomClosePost200Response>;
+
+    /**
+     * Creates a new automated order maker.
+     * @summary Create automated order maker
+     * @param {ApiV2AomCreatePostRequest} apiV2AomCreatePostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AOMApiInterface
+     */
+    apiV2AomCreatePostRaw(requestParameters: ApiV2AomCreatePostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2AomCreatePost200Response>>;
+
+    /**
+     * Creates a new automated order maker.
+     * Create automated order maker
+     */
+    apiV2AomCreatePost(requestParameters: ApiV2AomCreatePostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2AomCreatePost200Response>;
+
+    /**
+     * Returns automated order maker details and currency balances.
+     * @summary Automated order maker details
+     * @param {ApiV2AomGetPostRequest} apiV2AomGetPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AOMApiInterface
+     */
+    apiV2AomGetPostRaw(requestParameters: ApiV2AomGetPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2AomGetPost200Response>>;
+
+    /**
+     * Returns automated order maker details and currency balances.
+     * Automated order maker details
+     */
+    apiV2AomGetPost(requestParameters: ApiV2AomGetPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2AomGetPost200Response>;
+
+    /**
+     * Returns the list of automated order makers.
+     * @summary List automated order makers
+     * @param {ApiV2AomListPostRequest} apiV2AomListPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AOMApiInterface
+     */
+    apiV2AomListPostRaw(requestParameters: ApiV2AomListPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2AomListPost200Response>>;
+
+    /**
+     * Returns the list of automated order makers.
+     * List automated order makers
+     */
+    apiV2AomListPost(requestParameters: ApiV2AomListPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2AomListPost200Response>;
+
+    /**
+     * Starts a newly created or previously stopped automated order maker.
+     * @summary Start automated order maker
+     * @param {ApiV2AomGetPostRequest} apiV2AomGetPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AOMApiInterface
+     */
+    apiV2AomStartPostRaw(requestParameters: ApiV2AomStartPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2AomStartPost200Response>>;
+
+    /**
+     * Starts a newly created or previously stopped automated order maker.
+     * Start automated order maker
+     */
+    apiV2AomStartPost(requestParameters: ApiV2AomStartPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2AomStartPost200Response>;
+
+    /**
+     * Stops an active automated order maker.
+     * @summary Stop automated order maker
+     * @param {ApiV2AomGetPostRequest} apiV2AomGetPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AOMApiInterface
+     */
+    apiV2AomStopPostRaw(requestParameters: ApiV2AomStopPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2AomStopPost200Response>>;
+
+    /**
+     * Stops an active automated order maker.
+     * Stop automated order maker
+     */
+    apiV2AomStopPost(requestParameters: ApiV2AomStopPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2AomStopPost200Response>;
+
+    /**
+     * Tops up automated order maker currency balance.
+     * @summary Top up automated order maker
+     * @param {ApiV2AomTopupPostRequest} apiV2AomTopupPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AOMApiInterface
+     */
+    apiV2AomTopupPostRaw(requestParameters: ApiV2AomTopupPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2AomTopupPost200Response>>;
+
+    /**
+     * Tops up automated order maker currency balance.
+     * Top up automated order maker
+     */
+    apiV2AomTopupPost(requestParameters: ApiV2AomTopupPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2AomTopupPost200Response>;
+
+    /**
+     * Updates an existing automated order maker. An AOM can only be updated when inactive.
+     * @summary Update automated order maker
+     * @param {ApiV2AomUpdatePostRequest} apiV2AomUpdatePostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AOMApiInterface
+     */
+    apiV2AomUpdatePostRaw(requestParameters: ApiV2AomUpdatePostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2AomUpdatePost200Response>>;
+
+    /**
+     * Updates an existing automated order maker. An AOM can only be updated when inactive.
+     * Update automated order maker
+     */
+    apiV2AomUpdatePost(requestParameters: ApiV2AomUpdatePostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2AomUpdatePost200Response>;
+
+    /**
+     * Transfers the total balance of automated order maker purchases to wallet.
+     * @summary Automated order maker purchase balance withdrawal
+     * @param {ApiV2AomGetPostRequest} apiV2AomGetPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AOMApiInterface
+     */
+    apiV2AomWithdrawPostRaw(requestParameters: ApiV2AomWithdrawPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2AomWithdrawPost200Response>>;
+
+    /**
+     * Transfers the total balance of automated order maker purchases to wallet.
+     * Automated order maker purchase balance withdrawal
+     */
+    apiV2AomWithdrawPost(requestParameters: ApiV2AomWithdrawPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2AomWithdrawPost200Response>;
+
+}
+
+/**
  * 
  */
-export class AOMApi extends runtime.BaseAPI {
+export class AOMApi extends runtime.BaseAPI implements AOMApiInterface {
 
     /**
      * Closes an automated order maker and transfers funds to wallet. An AOM can only be closed when inactive

@@ -12,9 +12,7 @@
  * Do not edit the class manually.
  */
 
- function uint8ArrayToBase64(data: Uint8Array) {
-    return btoa(Array.from(data).map((c) => String.fromCharCode(c)).join(''));
-}
+
 export const BASE_PATH = "https://api.kanga.exchange".replace(/\/+$/, "");
 
 export interface ConfigurationParameters {
@@ -121,10 +119,6 @@ export class BaseAPI {
         if (response && (response.status >= 200 && response.status < 300)) {
             return response;
         }
-        const value = response.body?.getReader();
-        const red = await value?.read();
-
-        console.log("======= value ", uint8ArrayToBase64(red?.value as Uint8Array));
         throw new ResponseError(response, 'Response returned an error code');
     }
 

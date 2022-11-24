@@ -40,9 +40,50 @@ export interface ApiV2DistributionGroupListPostRequest {
 }
 
 /**
+ * DistributionApi - interface
+ * 
+ * @export
+ * @interface DistributionApiInterface
+ */
+export interface DistributionApiInterface {
+    /**
+     * Creates a distribution
+     * @summary Distribution create
+     * @param {ApiV2DistributionCreatePostRequest} apiV2DistributionCreatePostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DistributionApiInterface
+     */
+    apiV2DistributionCreatePostRaw(requestParameters: ApiV2DistributionCreatePostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2DistributionCreatePost200Response>>;
+
+    /**
+     * Creates a distribution
+     * Distribution create
+     */
+    apiV2DistributionCreatePost(requestParameters: ApiV2DistributionCreatePostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2DistributionCreatePost200Response>;
+
+    /**
+     * Lists distribution groups
+     * @summary Distribution group list
+     * @param {ApiV2LabelListPostRequest} apiV2LabelListPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DistributionApiInterface
+     */
+    apiV2DistributionGroupListPostRaw(requestParameters: ApiV2DistributionGroupListPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2DistributionGroupListPost200Response>>;
+
+    /**
+     * Lists distribution groups
+     * Distribution group list
+     */
+    apiV2DistributionGroupListPost(requestParameters: ApiV2DistributionGroupListPostRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2DistributionGroupListPost200Response>;
+
+}
+
+/**
  * 
  */
-export class DistributionApi extends runtime.BaseAPI {
+export class DistributionApi extends runtime.BaseAPI implements DistributionApiInterface {
 
     /**
      * Creates a distribution

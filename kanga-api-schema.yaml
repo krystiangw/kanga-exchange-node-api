@@ -1900,6 +1900,8 @@ paths:
         - wallet
       summary: Wallet balances
       description: Returns wallet balances for all assets held by the user.
+      security:
+        - SignatureAuth: []
       requestBody:
         required: true
         content:
@@ -3205,6 +3207,8 @@ paths:
         - trade
       summary: Create order
       description: Creates a new order. On success returns orderId.
+      security:
+        - SignatureAuth: []
       requestBody:
         required: true
         content:
@@ -3517,6 +3521,8 @@ paths:
         - trade
       summary: Get order
       description: Returns the details of the specified order.
+      security:
+        - SignatureAuth: []
       requestBody:
         required: true
         content:
@@ -3630,6 +3636,8 @@ paths:
         - trade
       summary: Cancel order
       description: Cancels the order identified by orderId.
+      security:
+        - SignatureAuth: []
       requestBody:
         required: true
         content:
@@ -3741,6 +3749,8 @@ paths:
         - trade
       summary: Active order list
       description: Returns up to 100 active orders from the specified market.
+      security:
+        - SignatureAuth: []
       requestBody:
         required: true
         content:
@@ -3940,6 +3950,8 @@ paths:
         - trade
       summary: Order book
       description: Returns the order book for the specified market (cached every 2 seconds).
+      security:
+        - SignatureAuth: []
       requestBody:
         required: true
         content:
@@ -4173,6 +4185,8 @@ paths:
         - trade
       summary: Order history
       description: Returns up to 50 recent orders (both fulfilled and canceled) from the specified market.
+      security:
+        - SignatureAuth: []
       requestBody:
         required: true
         content:
@@ -4302,6 +4316,8 @@ paths:
         - trade
       summary: Market list
       description: Returns the list of all markets. This call will be deprecated in the near future.
+      security:
+        - SignatureAuth: []
       requestBody:
         required: true
         content:

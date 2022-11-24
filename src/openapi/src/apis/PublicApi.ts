@@ -48,9 +48,112 @@ export interface ApiV2MarketTradesGetRequest {
 }
 
 /**
- *
+ * PublicApi - interface
+ * 
+ * @export
+ * @interface PublicApiInterface
  */
-export class PublicApi extends runtime.BaseAPI {
+export interface PublicApiInterface {
+    /**
+     * Returns the list of assets accepted by the exchange.
+     * @summary Asset list
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PublicApiInterface
+     */
+    apiV2MarketAssetsGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<any>>;
+
+    /**
+     * Returns the list of assets accepted by the exchange.
+     * Asset list
+     */
+    apiV2MarketAssetsGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<any>;
+
+    /**
+     * Returns raw change data for the specified market.
+     * @summary Market changes
+     * @param {string} market 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PublicApiInterface
+     */
+    apiV2MarketChangesGetRaw(requestParameters: ApiV2MarketChangesGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2MarketChangesGet200Response>>;
+
+    /**
+     * Returns raw change data for the specified market.
+     * Market changes
+     */
+    apiV2MarketChangesGet(requestParameters: ApiV2MarketChangesGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2MarketChangesGet200Response>;
+
+    /**
+     * Returns the order book for the specified market.
+     * @summary Order book
+     * @param {string} market 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PublicApiInterface
+     */
+    apiV2MarketDepthGetRaw(requestParameters: ApiV2MarketDepthGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2MarketDepthGet200Response>>;
+
+    /**
+     * Returns the order book for the specified market.
+     * Order book
+     */
+    apiV2MarketDepthGet(requestParameters: ApiV2MarketDepthGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2MarketDepthGet200Response>;
+
+    /**
+     * Returns raw order book data for the specified market.
+     * @summary Order book (raw)
+     * @param {string} market 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PublicApiInterface
+     */
+    apiV2MarketOrderbookRawGetRaw(requestParameters: ApiV2MarketOrderbookRawGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2MarketOrderbookRawGet200Response>>;
+
+    /**
+     * Returns raw order book data for the specified market.
+     * Order book (raw)
+     */
+    apiV2MarketOrderbookRawGet(requestParameters: ApiV2MarketOrderbookRawGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2MarketOrderbookRawGet200Response>;
+
+    /**
+     * Returns last price and 24-hour change for all active markets.
+     * @summary Market tickers
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PublicApiInterface
+     */
+    apiV2MarketTickerGetRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<any>>;
+
+    /**
+     * Returns last price and 24-hour change for all active markets.
+     * Market tickers
+     */
+    apiV2MarketTickerGet(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<any>;
+
+    /**
+     * Returns the list of trades for the specified market.
+     * @summary Market trades
+     * @param {string} market 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PublicApiInterface
+     */
+    apiV2MarketTradesGetRaw(requestParameters: ApiV2MarketTradesGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2MarketTradesGet200Response>>;
+
+    /**
+     * Returns the list of trades for the specified market.
+     * Market trades
+     */
+    apiV2MarketTradesGet(requestParameters: ApiV2MarketTradesGetRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2MarketTradesGet200Response>;
+
+}
+
+/**
+ * 
+ */
+export class PublicApi extends runtime.BaseAPI implements PublicApiInterface {
 
     /**
      * Returns the list of assets accepted by the exchange.

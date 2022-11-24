@@ -30,9 +30,34 @@ export interface ApiV2WalletListPostOperationRequest {
 }
 
 /**
+ * WalletApi - interface
+ * 
+ * @export
+ * @interface WalletApiInterface
+ */
+export interface WalletApiInterface {
+    /**
+     * Returns wallet balances for all assets held by the user.
+     * @summary Wallet balances
+     * @param {ApiV2WalletListPostRequest} apiV2WalletListPostRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof WalletApiInterface
+     */
+    apiV2WalletListPostRaw(requestParameters: ApiV2WalletListPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<ApiV2WalletListPost200Response>>;
+
+    /**
+     * Returns wallet balances for all assets held by the user.
+     * Wallet balances
+     */
+    apiV2WalletListPost(requestParameters: ApiV2WalletListPostOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<ApiV2WalletListPost200Response>;
+
+}
+
+/**
  * 
  */
-export class WalletApi extends runtime.BaseAPI {
+export class WalletApi extends runtime.BaseAPI implements WalletApiInterface {
 
     /**
      * Returns wallet balances for all assets held by the user.
@@ -48,6 +73,10 @@ export class WalletApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["api-sig"] = this.configuration.apiKey("api-sig"); // SignatureAuth authentication
+        }
 
         const response = await this.request({
             path: `/api/v2/wallet/list`,
