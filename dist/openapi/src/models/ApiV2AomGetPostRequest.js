@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,20 +12,24 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2AomGetPostRequestToJSON = exports.ApiV2AomGetPostRequestFromJSONTyped = exports.ApiV2AomGetPostRequestFromJSON = exports.instanceOfApiV2AomGetPostRequest = void 0;
 /**
  * Check if a given object implements the ApiV2AomGetPostRequest interface.
  */
-export function instanceOfApiV2AomGetPostRequest(value) {
+function instanceOfApiV2AomGetPostRequest(value) {
     let isInstance = true;
     isInstance = isInstance && "nonce" in value;
     isInstance = isInstance && "appId" in value;
     isInstance = isInstance && "aomId" in value;
     return isInstance;
 }
-export function ApiV2AomGetPostRequestFromJSON(json) {
+exports.instanceOfApiV2AomGetPostRequest = instanceOfApiV2AomGetPostRequest;
+function ApiV2AomGetPostRequestFromJSON(json) {
     return ApiV2AomGetPostRequestFromJSONTyped(json, false);
 }
-export function ApiV2AomGetPostRequestFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2AomGetPostRequestFromJSON = ApiV2AomGetPostRequestFromJSON;
+function ApiV2AomGetPostRequestFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -34,7 +39,8 @@ export function ApiV2AomGetPostRequestFromJSONTyped(json, ignoreDiscriminator) {
         'aomId': json['aomId'],
     };
 }
-export function ApiV2AomGetPostRequestToJSON(value) {
+exports.ApiV2AomGetPostRequestFromJSONTyped = ApiV2AomGetPostRequestFromJSONTyped;
+function ApiV2AomGetPostRequestToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -47,4 +53,5 @@ export function ApiV2AomGetPostRequestToJSON(value) {
         'aomId': value.aomId,
     };
 }
+exports.ApiV2AomGetPostRequestToJSON = ApiV2AomGetPostRequestToJSON;
 //# sourceMappingURL=ApiV2AomGetPostRequest.js.map

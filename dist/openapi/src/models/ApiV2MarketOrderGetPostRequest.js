@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,21 +12,25 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { exists } from '../runtime';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketOrderGetPostRequestToJSON = exports.ApiV2MarketOrderGetPostRequestFromJSONTyped = exports.ApiV2MarketOrderGetPostRequestFromJSON = exports.instanceOfApiV2MarketOrderGetPostRequest = void 0;
+const runtime_1 = require("../runtime");
 /**
  * Check if a given object implements the ApiV2MarketOrderGetPostRequest interface.
  */
-export function instanceOfApiV2MarketOrderGetPostRequest(value) {
+function instanceOfApiV2MarketOrderGetPostRequest(value) {
     let isInstance = true;
     isInstance = isInstance && "nonce" in value;
     isInstance = isInstance && "appId" in value;
     isInstance = isInstance && "orderId" in value;
     return isInstance;
 }
-export function ApiV2MarketOrderGetPostRequestFromJSON(json) {
+exports.instanceOfApiV2MarketOrderGetPostRequest = instanceOfApiV2MarketOrderGetPostRequest;
+function ApiV2MarketOrderGetPostRequestFromJSON(json) {
     return ApiV2MarketOrderGetPostRequestFromJSONTyped(json, false);
 }
-export function ApiV2MarketOrderGetPostRequestFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketOrderGetPostRequestFromJSON = ApiV2MarketOrderGetPostRequestFromJSON;
+function ApiV2MarketOrderGetPostRequestFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -33,10 +38,11 @@ export function ApiV2MarketOrderGetPostRequestFromJSONTyped(json, ignoreDiscrimi
         'nonce': json['nonce'],
         'appId': json['appId'],
         'orderId': json['orderId'],
-        'walletKey': !exists(json, 'walletKey') ? undefined : json['walletKey'],
+        'walletKey': !(0, runtime_1.exists)(json, 'walletKey') ? undefined : json['walletKey'],
     };
 }
-export function ApiV2MarketOrderGetPostRequestToJSON(value) {
+exports.ApiV2MarketOrderGetPostRequestFromJSONTyped = ApiV2MarketOrderGetPostRequestFromJSONTyped;
+function ApiV2MarketOrderGetPostRequestToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -50,4 +56,5 @@ export function ApiV2MarketOrderGetPostRequestToJSON(value) {
         'walletKey': value.walletKey,
     };
 }
+exports.ApiV2MarketOrderGetPostRequestToJSON = ApiV2MarketOrderGetPostRequestToJSON;
 //# sourceMappingURL=ApiV2MarketOrderGetPostRequest.js.map

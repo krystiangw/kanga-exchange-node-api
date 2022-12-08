@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,20 +12,24 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketOrderBookPostRequestToJSON = exports.ApiV2MarketOrderBookPostRequestFromJSONTyped = exports.ApiV2MarketOrderBookPostRequestFromJSON = exports.instanceOfApiV2MarketOrderBookPostRequest = void 0;
 /**
  * Check if a given object implements the ApiV2MarketOrderBookPostRequest interface.
  */
-export function instanceOfApiV2MarketOrderBookPostRequest(value) {
+function instanceOfApiV2MarketOrderBookPostRequest(value) {
     let isInstance = true;
     isInstance = isInstance && "nonce" in value;
     isInstance = isInstance && "appId" in value;
     isInstance = isInstance && "market" in value;
     return isInstance;
 }
-export function ApiV2MarketOrderBookPostRequestFromJSON(json) {
+exports.instanceOfApiV2MarketOrderBookPostRequest = instanceOfApiV2MarketOrderBookPostRequest;
+function ApiV2MarketOrderBookPostRequestFromJSON(json) {
     return ApiV2MarketOrderBookPostRequestFromJSONTyped(json, false);
 }
-export function ApiV2MarketOrderBookPostRequestFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketOrderBookPostRequestFromJSON = ApiV2MarketOrderBookPostRequestFromJSON;
+function ApiV2MarketOrderBookPostRequestFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -34,7 +39,8 @@ export function ApiV2MarketOrderBookPostRequestFromJSONTyped(json, ignoreDiscrim
         'market': json['market'],
     };
 }
-export function ApiV2MarketOrderBookPostRequestToJSON(value) {
+exports.ApiV2MarketOrderBookPostRequestFromJSONTyped = ApiV2MarketOrderBookPostRequestFromJSONTyped;
+function ApiV2MarketOrderBookPostRequestToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -47,4 +53,5 @@ export function ApiV2MarketOrderBookPostRequestToJSON(value) {
         'market': value.market,
     };
 }
+exports.ApiV2MarketOrderBookPostRequestToJSON = ApiV2MarketOrderBookPostRequestToJSON;
 //# sourceMappingURL=ApiV2MarketOrderBookPostRequest.js.map

@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,30 +12,35 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { exists } from '../runtime';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2WalletListPostRequestToJSON = exports.ApiV2WalletListPostRequestFromJSONTyped = exports.ApiV2WalletListPostRequestFromJSON = exports.instanceOfApiV2WalletListPostRequest = void 0;
+const runtime_1 = require("../runtime");
 /**
  * Check if a given object implements the ApiV2WalletListPostRequest interface.
  */
-export function instanceOfApiV2WalletListPostRequest(value) {
+function instanceOfApiV2WalletListPostRequest(value) {
     let isInstance = true;
     isInstance = isInstance && "nonce" in value;
     isInstance = isInstance && "appId" in value;
     return isInstance;
 }
-export function ApiV2WalletListPostRequestFromJSON(json) {
+exports.instanceOfApiV2WalletListPostRequest = instanceOfApiV2WalletListPostRequest;
+function ApiV2WalletListPostRequestFromJSON(json) {
     return ApiV2WalletListPostRequestFromJSONTyped(json, false);
 }
-export function ApiV2WalletListPostRequestFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2WalletListPostRequestFromJSON = ApiV2WalletListPostRequestFromJSON;
+function ApiV2WalletListPostRequestFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         'nonce': json['nonce'],
         'appId': json['appId'],
-        'walletKey': !exists(json, 'walletKey') ? undefined : json['walletKey'],
+        'walletKey': !(0, runtime_1.exists)(json, 'walletKey') ? undefined : json['walletKey'],
     };
 }
-export function ApiV2WalletListPostRequestToJSON(value) {
+exports.ApiV2WalletListPostRequestFromJSONTyped = ApiV2WalletListPostRequestFromJSONTyped;
+function ApiV2WalletListPostRequestToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -47,4 +53,5 @@ export function ApiV2WalletListPostRequestToJSON(value) {
         'walletKey': value.walletKey,
     };
 }
+exports.ApiV2WalletListPostRequestToJSON = ApiV2WalletListPostRequestToJSON;
 //# sourceMappingURL=ApiV2WalletListPostRequest.js.map

@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,10 +12,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2LabelUnassignPostRequestToJSON = exports.ApiV2LabelUnassignPostRequestFromJSONTyped = exports.ApiV2LabelUnassignPostRequestFromJSON = exports.instanceOfApiV2LabelUnassignPostRequest = void 0;
 /**
  * Check if a given object implements the ApiV2LabelUnassignPostRequest interface.
  */
-export function instanceOfApiV2LabelUnassignPostRequest(value) {
+function instanceOfApiV2LabelUnassignPostRequest(value) {
     let isInstance = true;
     isInstance = isInstance && "nonce" in value;
     isInstance = isInstance && "appId" in value;
@@ -22,10 +25,12 @@ export function instanceOfApiV2LabelUnassignPostRequest(value) {
     isInstance = isInstance && "labelId" in value;
     return isInstance;
 }
-export function ApiV2LabelUnassignPostRequestFromJSON(json) {
+exports.instanceOfApiV2LabelUnassignPostRequest = instanceOfApiV2LabelUnassignPostRequest;
+function ApiV2LabelUnassignPostRequestFromJSON(json) {
     return ApiV2LabelUnassignPostRequestFromJSONTyped(json, false);
 }
-export function ApiV2LabelUnassignPostRequestFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2LabelUnassignPostRequestFromJSON = ApiV2LabelUnassignPostRequestFromJSON;
+function ApiV2LabelUnassignPostRequestFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -36,7 +41,8 @@ export function ApiV2LabelUnassignPostRequestFromJSONTyped(json, ignoreDiscrimin
         'labelId': json['labelId'],
     };
 }
-export function ApiV2LabelUnassignPostRequestToJSON(value) {
+exports.ApiV2LabelUnassignPostRequestFromJSONTyped = ApiV2LabelUnassignPostRequestFromJSONTyped;
+function ApiV2LabelUnassignPostRequestToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -50,4 +56,5 @@ export function ApiV2LabelUnassignPostRequestToJSON(value) {
         'labelId': value.labelId,
     };
 }
+exports.ApiV2LabelUnassignPostRequestToJSON = ApiV2LabelUnassignPostRequestToJSON;
 //# sourceMappingURL=ApiV2LabelUnassignPostRequest.js.map

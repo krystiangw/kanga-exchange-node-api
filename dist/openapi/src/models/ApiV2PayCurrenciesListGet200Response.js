@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,35 +12,40 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ApiV2PayCurrenciesListGet200ResponseListInnerFromJSON, ApiV2PayCurrenciesListGet200ResponseListInnerToJSON, } from './ApiV2PayCurrenciesListGet200ResponseListInner';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2PayCurrenciesListGet200ResponseToJSON = exports.ApiV2PayCurrenciesListGet200ResponseFromJSONTyped = exports.ApiV2PayCurrenciesListGet200ResponseFromJSON = exports.instanceOfApiV2PayCurrenciesListGet200Response = exports.ApiV2PayCurrenciesListGet200ResponseResultEnum = void 0;
+const ApiV2PayCurrenciesListGet200ResponseListInner_1 = require("./ApiV2PayCurrenciesListGet200ResponseListInner");
 /**
  * @export
  */
-export const ApiV2PayCurrenciesListGet200ResponseResultEnum = {
+exports.ApiV2PayCurrenciesListGet200ResponseResultEnum = {
     Ok: 'ok'
 };
 /**
  * Check if a given object implements the ApiV2PayCurrenciesListGet200Response interface.
  */
-export function instanceOfApiV2PayCurrenciesListGet200Response(value) {
+function instanceOfApiV2PayCurrenciesListGet200Response(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "list" in value;
     return isInstance;
 }
-export function ApiV2PayCurrenciesListGet200ResponseFromJSON(json) {
+exports.instanceOfApiV2PayCurrenciesListGet200Response = instanceOfApiV2PayCurrenciesListGet200Response;
+function ApiV2PayCurrenciesListGet200ResponseFromJSON(json) {
     return ApiV2PayCurrenciesListGet200ResponseFromJSONTyped(json, false);
 }
-export function ApiV2PayCurrenciesListGet200ResponseFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2PayCurrenciesListGet200ResponseFromJSON = ApiV2PayCurrenciesListGet200ResponseFromJSON;
+function ApiV2PayCurrenciesListGet200ResponseFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         'result': json['result'],
-        'list': (json['list'].map(ApiV2PayCurrenciesListGet200ResponseListInnerFromJSON)),
+        'list': (json['list'].map(ApiV2PayCurrenciesListGet200ResponseListInner_1.ApiV2PayCurrenciesListGet200ResponseListInnerFromJSON)),
     };
 }
-export function ApiV2PayCurrenciesListGet200ResponseToJSON(value) {
+exports.ApiV2PayCurrenciesListGet200ResponseFromJSONTyped = ApiV2PayCurrenciesListGet200ResponseFromJSONTyped;
+function ApiV2PayCurrenciesListGet200ResponseToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -48,7 +54,8 @@ export function ApiV2PayCurrenciesListGet200ResponseToJSON(value) {
     }
     return {
         'result': value.result,
-        'list': (value.list.map(ApiV2PayCurrenciesListGet200ResponseListInnerToJSON)),
+        'list': (value.list.map(ApiV2PayCurrenciesListGet200ResponseListInner_1.ApiV2PayCurrenciesListGet200ResponseListInnerToJSON)),
     };
 }
+exports.ApiV2PayCurrenciesListGet200ResponseToJSON = ApiV2PayCurrenciesListGet200ResponseToJSON;
 //# sourceMappingURL=ApiV2PayCurrenciesListGet200Response.js.map

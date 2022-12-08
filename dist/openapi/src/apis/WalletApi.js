@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,12 +12,37 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as runtime from '../runtime';
-import { ApiV2WalletListPost200ResponseFromJSON, ApiV2WalletListPostRequestToJSON, } from '../models';
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WalletApi = void 0;
+const runtime = __importStar(require("../runtime"));
+const models_1 = require("../models");
 /**
  *
  */
-export class WalletApi extends runtime.BaseAPI {
+class WalletApi extends runtime.BaseAPI {
     /**
      * Returns wallet balances for all assets held by the user.
      * Wallet balances
@@ -36,9 +62,9 @@ export class WalletApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2WalletListPostRequestToJSON(requestParameters.apiV2WalletListPostRequest),
+            body: (0, models_1.ApiV2WalletListPostRequestToJSON)(requestParameters.apiV2WalletListPostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2WalletListPost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2WalletListPost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Returns wallet balances for all assets held by the user.
@@ -49,4 +75,5 @@ export class WalletApi extends runtime.BaseAPI {
         return await response.value();
     }
 }
+exports.WalletApi = WalletApi;
 //# sourceMappingURL=WalletApi.js.map

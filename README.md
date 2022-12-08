@@ -1,9 +1,13 @@
 ## [Kanga Exchange](https://kanga.exchange/) Node API library
 
+![NPM Downloads](https://img.shields.io/npm/dw/kanga-exchange-node-api)
+
 Generated using [@openapitools/openapi-generator-cli](https://www.npmjs.com/package/@openapitools/openapi-generator-cli)
 and schema file [kanga-api-schema](kanga-api-schema.yaml)
 
 # Install
+
+From NPM [https://www.npmjs.com/package/kanga-exchange-node-api](https://www.npmjs.com/package/kanga-exchange-node-api)
 
 ```npm install kanga-exchange-node-api```
 

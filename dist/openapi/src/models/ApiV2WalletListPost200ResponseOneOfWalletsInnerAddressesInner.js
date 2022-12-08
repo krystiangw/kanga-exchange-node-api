@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,29 +12,34 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { exists } from '../runtime';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerToJSON = exports.ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerFromJSONTyped = exports.ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerFromJSON = exports.instanceOfApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInner = void 0;
+const runtime_1 = require("../runtime");
 /**
  * Check if a given object implements the ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInner interface.
  */
-export function instanceOfApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInner(value) {
+function instanceOfApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInner(value) {
     let isInstance = true;
     isInstance = isInstance && "network" in value;
     return isInstance;
 }
-export function ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerFromJSON(json) {
+exports.instanceOfApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInner = instanceOfApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInner;
+function ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerFromJSON(json) {
     return ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerFromJSONTyped(json, false);
 }
-export function ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerFromJSON = ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerFromJSON;
+function ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         'network': json['network'],
-        'type': !exists(json, 'type') ? undefined : json['type'],
-        'address': !exists(json, 'address') ? undefined : json['address'],
+        'type': !(0, runtime_1.exists)(json, 'type') ? undefined : json['type'],
+        'address': !(0, runtime_1.exists)(json, 'address') ? undefined : json['address'],
     };
 }
-export function ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerToJSON(value) {
+exports.ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerFromJSONTyped = ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerFromJSONTyped;
+function ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -46,4 +52,5 @@ export function ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerToJ
         'address': value.address,
     };
 }
+exports.ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerToJSON = ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerToJSON;
 //# sourceMappingURL=ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInner.js.map

@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,25 +12,29 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2AomCreatePost200ResponseOneOfToJSON = exports.ApiV2AomCreatePost200ResponseOneOfFromJSONTyped = exports.ApiV2AomCreatePost200ResponseOneOfFromJSON = exports.instanceOfApiV2AomCreatePost200ResponseOneOf = exports.ApiV2AomCreatePost200ResponseOneOfResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2AomCreatePost200ResponseOneOfResultEnum = {
+exports.ApiV2AomCreatePost200ResponseOneOfResultEnum = {
     Ok: 'ok'
 };
 /**
  * Check if a given object implements the ApiV2AomCreatePost200ResponseOneOf interface.
  */
-export function instanceOfApiV2AomCreatePost200ResponseOneOf(value) {
+function instanceOfApiV2AomCreatePost200ResponseOneOf(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "aomId" in value;
     return isInstance;
 }
-export function ApiV2AomCreatePost200ResponseOneOfFromJSON(json) {
+exports.instanceOfApiV2AomCreatePost200ResponseOneOf = instanceOfApiV2AomCreatePost200ResponseOneOf;
+function ApiV2AomCreatePost200ResponseOneOfFromJSON(json) {
     return ApiV2AomCreatePost200ResponseOneOfFromJSONTyped(json, false);
 }
-export function ApiV2AomCreatePost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2AomCreatePost200ResponseOneOfFromJSON = ApiV2AomCreatePost200ResponseOneOfFromJSON;
+function ApiV2AomCreatePost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -38,7 +43,8 @@ export function ApiV2AomCreatePost200ResponseOneOfFromJSONTyped(json, ignoreDisc
         'aomId': json['aomId'],
     };
 }
-export function ApiV2AomCreatePost200ResponseOneOfToJSON(value) {
+exports.ApiV2AomCreatePost200ResponseOneOfFromJSONTyped = ApiV2AomCreatePost200ResponseOneOfFromJSONTyped;
+function ApiV2AomCreatePost200ResponseOneOfToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -50,4 +56,5 @@ export function ApiV2AomCreatePost200ResponseOneOfToJSON(value) {
         'aomId': value.aomId,
     };
 }
+exports.ApiV2AomCreatePost200ResponseOneOfToJSON = ApiV2AomCreatePost200ResponseOneOfToJSON;
 //# sourceMappingURL=ApiV2AomCreatePost200ResponseOneOf.js.map

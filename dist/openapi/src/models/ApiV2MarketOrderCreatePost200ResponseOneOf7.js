@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,31 +12,35 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketOrderCreatePost200ResponseOneOf7ToJSON = exports.ApiV2MarketOrderCreatePost200ResponseOneOf7FromJSONTyped = exports.ApiV2MarketOrderCreatePost200ResponseOneOf7FromJSON = exports.instanceOfApiV2MarketOrderCreatePost200ResponseOneOf7 = exports.ApiV2MarketOrderCreatePost200ResponseOneOf7CodeEnum = exports.ApiV2MarketOrderCreatePost200ResponseOneOf7ResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2MarketOrderCreatePost200ResponseOneOf7ResultEnum = {
+exports.ApiV2MarketOrderCreatePost200ResponseOneOf7ResultEnum = {
     Fail: 'fail'
 };
 /**
  * @export
  */
-export const ApiV2MarketOrderCreatePost200ResponseOneOf7CodeEnum = {
+exports.ApiV2MarketOrderCreatePost200ResponseOneOf7CodeEnum = {
     NUMBER_1008: 1008
 };
 /**
  * Check if a given object implements the ApiV2MarketOrderCreatePost200ResponseOneOf7 interface.
  */
-export function instanceOfApiV2MarketOrderCreatePost200ResponseOneOf7(value) {
+function instanceOfApiV2MarketOrderCreatePost200ResponseOneOf7(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "code" in value;
     return isInstance;
 }
-export function ApiV2MarketOrderCreatePost200ResponseOneOf7FromJSON(json) {
+exports.instanceOfApiV2MarketOrderCreatePost200ResponseOneOf7 = instanceOfApiV2MarketOrderCreatePost200ResponseOneOf7;
+function ApiV2MarketOrderCreatePost200ResponseOneOf7FromJSON(json) {
     return ApiV2MarketOrderCreatePost200ResponseOneOf7FromJSONTyped(json, false);
 }
-export function ApiV2MarketOrderCreatePost200ResponseOneOf7FromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketOrderCreatePost200ResponseOneOf7FromJSON = ApiV2MarketOrderCreatePost200ResponseOneOf7FromJSON;
+function ApiV2MarketOrderCreatePost200ResponseOneOf7FromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -44,7 +49,8 @@ export function ApiV2MarketOrderCreatePost200ResponseOneOf7FromJSONTyped(json, i
         'code': json['code'],
     };
 }
-export function ApiV2MarketOrderCreatePost200ResponseOneOf7ToJSON(value) {
+exports.ApiV2MarketOrderCreatePost200ResponseOneOf7FromJSONTyped = ApiV2MarketOrderCreatePost200ResponseOneOf7FromJSONTyped;
+function ApiV2MarketOrderCreatePost200ResponseOneOf7ToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -56,4 +62,5 @@ export function ApiV2MarketOrderCreatePost200ResponseOneOf7ToJSON(value) {
         'code': value.code,
     };
 }
+exports.ApiV2MarketOrderCreatePost200ResponseOneOf7ToJSON = ApiV2MarketOrderCreatePost200ResponseOneOf7ToJSON;
 //# sourceMappingURL=ApiV2MarketOrderCreatePost200ResponseOneOf7.js.map

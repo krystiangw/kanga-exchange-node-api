@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,19 +12,23 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketDepthGet200ResponseBidsInnerToJSON = exports.ApiV2MarketDepthGet200ResponseBidsInnerFromJSONTyped = exports.ApiV2MarketDepthGet200ResponseBidsInnerFromJSON = exports.instanceOfApiV2MarketDepthGet200ResponseBidsInner = void 0;
 /**
  * Check if a given object implements the ApiV2MarketDepthGet200ResponseBidsInner interface.
  */
-export function instanceOfApiV2MarketDepthGet200ResponseBidsInner(value) {
+function instanceOfApiV2MarketDepthGet200ResponseBidsInner(value) {
     let isInstance = true;
     isInstance = isInstance && "price" in value;
     isInstance = isInstance && "quantity" in value;
     return isInstance;
 }
-export function ApiV2MarketDepthGet200ResponseBidsInnerFromJSON(json) {
+exports.instanceOfApiV2MarketDepthGet200ResponseBidsInner = instanceOfApiV2MarketDepthGet200ResponseBidsInner;
+function ApiV2MarketDepthGet200ResponseBidsInnerFromJSON(json) {
     return ApiV2MarketDepthGet200ResponseBidsInnerFromJSONTyped(json, false);
 }
-export function ApiV2MarketDepthGet200ResponseBidsInnerFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketDepthGet200ResponseBidsInnerFromJSON = ApiV2MarketDepthGet200ResponseBidsInnerFromJSON;
+function ApiV2MarketDepthGet200ResponseBidsInnerFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -32,7 +37,8 @@ export function ApiV2MarketDepthGet200ResponseBidsInnerFromJSONTyped(json, ignor
         'quantity': json['quantity'],
     };
 }
-export function ApiV2MarketDepthGet200ResponseBidsInnerToJSON(value) {
+exports.ApiV2MarketDepthGet200ResponseBidsInnerFromJSONTyped = ApiV2MarketDepthGet200ResponseBidsInnerFromJSONTyped;
+function ApiV2MarketDepthGet200ResponseBidsInnerToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -44,4 +50,5 @@ export function ApiV2MarketDepthGet200ResponseBidsInnerToJSON(value) {
         'quantity': value.quantity,
     };
 }
+exports.ApiV2MarketDepthGet200ResponseBidsInnerToJSON = ApiV2MarketDepthGet200ResponseBidsInnerToJSON;
 //# sourceMappingURL=ApiV2MarketDepthGet200ResponseBidsInner.js.map

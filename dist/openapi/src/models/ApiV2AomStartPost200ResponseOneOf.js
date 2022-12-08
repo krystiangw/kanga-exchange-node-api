@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,24 +12,28 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2AomStartPost200ResponseOneOfToJSON = exports.ApiV2AomStartPost200ResponseOneOfFromJSONTyped = exports.ApiV2AomStartPost200ResponseOneOfFromJSON = exports.instanceOfApiV2AomStartPost200ResponseOneOf = exports.ApiV2AomStartPost200ResponseOneOfResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2AomStartPost200ResponseOneOfResultEnum = {
+exports.ApiV2AomStartPost200ResponseOneOfResultEnum = {
     Ok: 'ok'
 };
 /**
  * Check if a given object implements the ApiV2AomStartPost200ResponseOneOf interface.
  */
-export function instanceOfApiV2AomStartPost200ResponseOneOf(value) {
+function instanceOfApiV2AomStartPost200ResponseOneOf(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     return isInstance;
 }
-export function ApiV2AomStartPost200ResponseOneOfFromJSON(json) {
+exports.instanceOfApiV2AomStartPost200ResponseOneOf = instanceOfApiV2AomStartPost200ResponseOneOf;
+function ApiV2AomStartPost200ResponseOneOfFromJSON(json) {
     return ApiV2AomStartPost200ResponseOneOfFromJSONTyped(json, false);
 }
-export function ApiV2AomStartPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2AomStartPost200ResponseOneOfFromJSON = ApiV2AomStartPost200ResponseOneOfFromJSON;
+function ApiV2AomStartPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -36,7 +41,8 @@ export function ApiV2AomStartPost200ResponseOneOfFromJSONTyped(json, ignoreDiscr
         'result': json['result'],
     };
 }
-export function ApiV2AomStartPost200ResponseOneOfToJSON(value) {
+exports.ApiV2AomStartPost200ResponseOneOfFromJSONTyped = ApiV2AomStartPost200ResponseOneOfFromJSONTyped;
+function ApiV2AomStartPost200ResponseOneOfToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -47,4 +53,5 @@ export function ApiV2AomStartPost200ResponseOneOfToJSON(value) {
         'result': value.result,
     };
 }
+exports.ApiV2AomStartPost200ResponseOneOfToJSON = ApiV2AomStartPost200ResponseOneOfToJSON;
 //# sourceMappingURL=ApiV2AomStartPost200ResponseOneOf.js.map

@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,10 +12,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2AomUpdatePostRequestToJSON = exports.ApiV2AomUpdatePostRequestFromJSONTyped = exports.ApiV2AomUpdatePostRequestFromJSON = exports.instanceOfApiV2AomUpdatePostRequest = void 0;
 /**
  * Check if a given object implements the ApiV2AomUpdatePostRequest interface.
  */
-export function instanceOfApiV2AomUpdatePostRequest(value) {
+function instanceOfApiV2AomUpdatePostRequest(value) {
     let isInstance = true;
     isInstance = isInstance && "nonce" in value;
     isInstance = isInstance && "appId" in value;
@@ -25,10 +28,12 @@ export function instanceOfApiV2AomUpdatePostRequest(value) {
     isInstance = isInstance && "maxDelay" in value;
     return isInstance;
 }
-export function ApiV2AomUpdatePostRequestFromJSON(json) {
+exports.instanceOfApiV2AomUpdatePostRequest = instanceOfApiV2AomUpdatePostRequest;
+function ApiV2AomUpdatePostRequestFromJSON(json) {
     return ApiV2AomUpdatePostRequestFromJSONTyped(json, false);
 }
-export function ApiV2AomUpdatePostRequestFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2AomUpdatePostRequestFromJSON = ApiV2AomUpdatePostRequestFromJSON;
+function ApiV2AomUpdatePostRequestFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -42,7 +47,8 @@ export function ApiV2AomUpdatePostRequestFromJSONTyped(json, ignoreDiscriminator
         'maxDelay': json['maxDelay'],
     };
 }
-export function ApiV2AomUpdatePostRequestToJSON(value) {
+exports.ApiV2AomUpdatePostRequestFromJSONTyped = ApiV2AomUpdatePostRequestFromJSONTyped;
+function ApiV2AomUpdatePostRequestToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -59,4 +65,5 @@ export function ApiV2AomUpdatePostRequestToJSON(value) {
         'maxDelay': value.maxDelay,
     };
 }
+exports.ApiV2AomUpdatePostRequestToJSON = ApiV2AomUpdatePostRequestToJSON;
 //# sourceMappingURL=ApiV2AomUpdatePostRequest.js.map

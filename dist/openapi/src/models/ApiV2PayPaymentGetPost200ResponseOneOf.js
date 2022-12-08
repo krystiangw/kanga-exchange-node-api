@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,17 +12,19 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { exists } from '../runtime';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2PayPaymentGetPost200ResponseOneOfToJSON = exports.ApiV2PayPaymentGetPost200ResponseOneOfFromJSONTyped = exports.ApiV2PayPaymentGetPost200ResponseOneOfFromJSON = exports.instanceOfApiV2PayPaymentGetPost200ResponseOneOf = exports.ApiV2PayPaymentGetPost200ResponseOneOfResultEnum = void 0;
+const runtime_1 = require("../runtime");
 /**
  * @export
  */
-export const ApiV2PayPaymentGetPost200ResponseOneOfResultEnum = {
+exports.ApiV2PayPaymentGetPost200ResponseOneOfResultEnum = {
     Ok: 'ok'
 };
 /**
  * Check if a given object implements the ApiV2PayPaymentGetPost200ResponseOneOf interface.
  */
-export function instanceOfApiV2PayPaymentGetPost200ResponseOneOf(value) {
+function instanceOfApiV2PayPaymentGetPost200ResponseOneOf(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "id" in value;
@@ -37,10 +40,12 @@ export function instanceOfApiV2PayPaymentGetPost200ResponseOneOf(value) {
     isInstance = isInstance && "paymentId" in value;
     return isInstance;
 }
-export function ApiV2PayPaymentGetPost200ResponseOneOfFromJSON(json) {
+exports.instanceOfApiV2PayPaymentGetPost200ResponseOneOf = instanceOfApiV2PayPaymentGetPost200ResponseOneOf;
+function ApiV2PayPaymentGetPost200ResponseOneOfFromJSON(json) {
     return ApiV2PayPaymentGetPost200ResponseOneOfFromJSONTyped(json, false);
 }
-export function ApiV2PayPaymentGetPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2PayPaymentGetPost200ResponseOneOfFromJSON = ApiV2PayPaymentGetPost200ResponseOneOfFromJSON;
+function ApiV2PayPaymentGetPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -57,12 +62,13 @@ export function ApiV2PayPaymentGetPost200ResponseOneOfFromJSONTyped(json, ignore
         'email': json['email'],
         'state': json['state'],
         'paymentId': json['paymentId'],
-        'paymentAmount': !exists(json, 'paymentAmount') ? undefined : json['paymentAmount'],
-        'paymentCurrency': !exists(json, 'paymentCurrency') ? undefined : json['paymentCurrency'],
-        'settlementDate': !exists(json, 'settlementDate') ? undefined : json['settlementDate'],
+        'paymentAmount': !(0, runtime_1.exists)(json, 'paymentAmount') ? undefined : json['paymentAmount'],
+        'paymentCurrency': !(0, runtime_1.exists)(json, 'paymentCurrency') ? undefined : json['paymentCurrency'],
+        'settlementDate': !(0, runtime_1.exists)(json, 'settlementDate') ? undefined : json['settlementDate'],
     };
 }
-export function ApiV2PayPaymentGetPost200ResponseOneOfToJSON(value) {
+exports.ApiV2PayPaymentGetPost200ResponseOneOfFromJSONTyped = ApiV2PayPaymentGetPost200ResponseOneOfFromJSONTyped;
+function ApiV2PayPaymentGetPost200ResponseOneOfToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -87,4 +93,5 @@ export function ApiV2PayPaymentGetPost200ResponseOneOfToJSON(value) {
         'settlementDate': value.settlementDate,
     };
 }
+exports.ApiV2PayPaymentGetPost200ResponseOneOfToJSON = ApiV2PayPaymentGetPost200ResponseOneOfToJSON;
 //# sourceMappingURL=ApiV2PayPaymentGetPost200ResponseOneOf.js.map

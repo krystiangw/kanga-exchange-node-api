@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,29 +12,34 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ApiV2MarketTradesGet200ResponseTradesInnerFromJSON, ApiV2MarketTradesGet200ResponseTradesInnerToJSON, } from './ApiV2MarketTradesGet200ResponseTradesInner';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketTradesGet200ResponseToJSON = exports.ApiV2MarketTradesGet200ResponseFromJSONTyped = exports.ApiV2MarketTradesGet200ResponseFromJSON = exports.instanceOfApiV2MarketTradesGet200Response = void 0;
+const ApiV2MarketTradesGet200ResponseTradesInner_1 = require("./ApiV2MarketTradesGet200ResponseTradesInner");
 /**
  * Check if a given object implements the ApiV2MarketTradesGet200Response interface.
  */
-export function instanceOfApiV2MarketTradesGet200Response(value) {
+function instanceOfApiV2MarketTradesGet200Response(value) {
     let isInstance = true;
     isInstance = isInstance && "timestamp" in value;
     isInstance = isInstance && "trades" in value;
     return isInstance;
 }
-export function ApiV2MarketTradesGet200ResponseFromJSON(json) {
+exports.instanceOfApiV2MarketTradesGet200Response = instanceOfApiV2MarketTradesGet200Response;
+function ApiV2MarketTradesGet200ResponseFromJSON(json) {
     return ApiV2MarketTradesGet200ResponseFromJSONTyped(json, false);
 }
-export function ApiV2MarketTradesGet200ResponseFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketTradesGet200ResponseFromJSON = ApiV2MarketTradesGet200ResponseFromJSON;
+function ApiV2MarketTradesGet200ResponseFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         'timestamp': json['timestamp'],
-        'trades': (json['trades'].map(ApiV2MarketTradesGet200ResponseTradesInnerFromJSON)),
+        'trades': (json['trades'].map(ApiV2MarketTradesGet200ResponseTradesInner_1.ApiV2MarketTradesGet200ResponseTradesInnerFromJSON)),
     };
 }
-export function ApiV2MarketTradesGet200ResponseToJSON(value) {
+exports.ApiV2MarketTradesGet200ResponseFromJSONTyped = ApiV2MarketTradesGet200ResponseFromJSONTyped;
+function ApiV2MarketTradesGet200ResponseToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -42,7 +48,8 @@ export function ApiV2MarketTradesGet200ResponseToJSON(value) {
     }
     return {
         'timestamp': value.timestamp,
-        'trades': (value.trades.map(ApiV2MarketTradesGet200ResponseTradesInnerToJSON)),
+        'trades': (value.trades.map(ApiV2MarketTradesGet200ResponseTradesInner_1.ApiV2MarketTradesGet200ResponseTradesInnerToJSON)),
     };
 }
+exports.ApiV2MarketTradesGet200ResponseToJSON = ApiV2MarketTradesGet200ResponseToJSON;
 //# sourceMappingURL=ApiV2MarketTradesGet200Response.js.map

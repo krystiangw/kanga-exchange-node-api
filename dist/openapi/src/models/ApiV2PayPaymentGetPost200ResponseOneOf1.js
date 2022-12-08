@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,31 +12,35 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2PayPaymentGetPost200ResponseOneOf1ToJSON = exports.ApiV2PayPaymentGetPost200ResponseOneOf1FromJSONTyped = exports.ApiV2PayPaymentGetPost200ResponseOneOf1FromJSON = exports.instanceOfApiV2PayPaymentGetPost200ResponseOneOf1 = exports.ApiV2PayPaymentGetPost200ResponseOneOf1CodeEnum = exports.ApiV2PayPaymentGetPost200ResponseOneOf1ResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2PayPaymentGetPost200ResponseOneOf1ResultEnum = {
+exports.ApiV2PayPaymentGetPost200ResponseOneOf1ResultEnum = {
     Fail: 'fail'
 };
 /**
  * @export
  */
-export const ApiV2PayPaymentGetPost200ResponseOneOf1CodeEnum = {
+exports.ApiV2PayPaymentGetPost200ResponseOneOf1CodeEnum = {
     NUMBER_401: 401
 };
 /**
  * Check if a given object implements the ApiV2PayPaymentGetPost200ResponseOneOf1 interface.
  */
-export function instanceOfApiV2PayPaymentGetPost200ResponseOneOf1(value) {
+function instanceOfApiV2PayPaymentGetPost200ResponseOneOf1(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "code" in value;
     return isInstance;
 }
-export function ApiV2PayPaymentGetPost200ResponseOneOf1FromJSON(json) {
+exports.instanceOfApiV2PayPaymentGetPost200ResponseOneOf1 = instanceOfApiV2PayPaymentGetPost200ResponseOneOf1;
+function ApiV2PayPaymentGetPost200ResponseOneOf1FromJSON(json) {
     return ApiV2PayPaymentGetPost200ResponseOneOf1FromJSONTyped(json, false);
 }
-export function ApiV2PayPaymentGetPost200ResponseOneOf1FromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2PayPaymentGetPost200ResponseOneOf1FromJSON = ApiV2PayPaymentGetPost200ResponseOneOf1FromJSON;
+function ApiV2PayPaymentGetPost200ResponseOneOf1FromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -44,7 +49,8 @@ export function ApiV2PayPaymentGetPost200ResponseOneOf1FromJSONTyped(json, ignor
         'code': json['code'],
     };
 }
-export function ApiV2PayPaymentGetPost200ResponseOneOf1ToJSON(value) {
+exports.ApiV2PayPaymentGetPost200ResponseOneOf1FromJSONTyped = ApiV2PayPaymentGetPost200ResponseOneOf1FromJSONTyped;
+function ApiV2PayPaymentGetPost200ResponseOneOf1ToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -56,4 +62,5 @@ export function ApiV2PayPaymentGetPost200ResponseOneOf1ToJSON(value) {
         'code': value.code,
     };
 }
+exports.ApiV2PayPaymentGetPost200ResponseOneOf1ToJSON = ApiV2PayPaymentGetPost200ResponseOneOf1ToJSON;
 //# sourceMappingURL=ApiV2PayPaymentGetPost200ResponseOneOf1.js.map

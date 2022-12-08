@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,10 +12,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketOrderbookRawGet200ResponseToJSON = exports.ApiV2MarketOrderbookRawGet200ResponseFromJSONTyped = exports.ApiV2MarketOrderbookRawGet200ResponseFromJSON = exports.instanceOfApiV2MarketOrderbookRawGet200Response = void 0;
 /**
  * Check if a given object implements the ApiV2MarketOrderbookRawGet200Response interface.
  */
-export function instanceOfApiV2MarketOrderbookRawGet200Response(value) {
+function instanceOfApiV2MarketOrderbookRawGet200Response(value) {
     let isInstance = true;
     isInstance = isInstance && "timestamp" in value;
     isInstance = isInstance && "bids" in value;
@@ -22,10 +25,12 @@ export function instanceOfApiV2MarketOrderbookRawGet200Response(value) {
     isInstance = isInstance && "tickerId" in value;
     return isInstance;
 }
-export function ApiV2MarketOrderbookRawGet200ResponseFromJSON(json) {
+exports.instanceOfApiV2MarketOrderbookRawGet200Response = instanceOfApiV2MarketOrderbookRawGet200Response;
+function ApiV2MarketOrderbookRawGet200ResponseFromJSON(json) {
     return ApiV2MarketOrderbookRawGet200ResponseFromJSONTyped(json, false);
 }
-export function ApiV2MarketOrderbookRawGet200ResponseFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketOrderbookRawGet200ResponseFromJSON = ApiV2MarketOrderbookRawGet200ResponseFromJSON;
+function ApiV2MarketOrderbookRawGet200ResponseFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -36,7 +41,8 @@ export function ApiV2MarketOrderbookRawGet200ResponseFromJSONTyped(json, ignoreD
         'tickerId': json['ticker_id'],
     };
 }
-export function ApiV2MarketOrderbookRawGet200ResponseToJSON(value) {
+exports.ApiV2MarketOrderbookRawGet200ResponseFromJSONTyped = ApiV2MarketOrderbookRawGet200ResponseFromJSONTyped;
+function ApiV2MarketOrderbookRawGet200ResponseToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -50,4 +56,5 @@ export function ApiV2MarketOrderbookRawGet200ResponseToJSON(value) {
         'ticker_id': value.tickerId,
     };
 }
+exports.ApiV2MarketOrderbookRawGet200ResponseToJSON = ApiV2MarketOrderbookRawGet200ResponseToJSON;
 //# sourceMappingURL=ApiV2MarketOrderbookRawGet200Response.js.map

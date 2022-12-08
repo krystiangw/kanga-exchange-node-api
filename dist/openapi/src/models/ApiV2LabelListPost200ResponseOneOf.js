@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,35 +12,40 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ApiV2LabelListPost200ResponseOneOfListInnerFromJSON, ApiV2LabelListPost200ResponseOneOfListInnerToJSON, } from './ApiV2LabelListPost200ResponseOneOfListInner';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2LabelListPost200ResponseOneOfToJSON = exports.ApiV2LabelListPost200ResponseOneOfFromJSONTyped = exports.ApiV2LabelListPost200ResponseOneOfFromJSON = exports.instanceOfApiV2LabelListPost200ResponseOneOf = exports.ApiV2LabelListPost200ResponseOneOfResultEnum = void 0;
+const ApiV2LabelListPost200ResponseOneOfListInner_1 = require("./ApiV2LabelListPost200ResponseOneOfListInner");
 /**
  * @export
  */
-export const ApiV2LabelListPost200ResponseOneOfResultEnum = {
+exports.ApiV2LabelListPost200ResponseOneOfResultEnum = {
     Ok: 'ok'
 };
 /**
  * Check if a given object implements the ApiV2LabelListPost200ResponseOneOf interface.
  */
-export function instanceOfApiV2LabelListPost200ResponseOneOf(value) {
+function instanceOfApiV2LabelListPost200ResponseOneOf(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "list" in value;
     return isInstance;
 }
-export function ApiV2LabelListPost200ResponseOneOfFromJSON(json) {
+exports.instanceOfApiV2LabelListPost200ResponseOneOf = instanceOfApiV2LabelListPost200ResponseOneOf;
+function ApiV2LabelListPost200ResponseOneOfFromJSON(json) {
     return ApiV2LabelListPost200ResponseOneOfFromJSONTyped(json, false);
 }
-export function ApiV2LabelListPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2LabelListPost200ResponseOneOfFromJSON = ApiV2LabelListPost200ResponseOneOfFromJSON;
+function ApiV2LabelListPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         'result': json['result'],
-        'list': (json['list'].map(ApiV2LabelListPost200ResponseOneOfListInnerFromJSON)),
+        'list': (json['list'].map(ApiV2LabelListPost200ResponseOneOfListInner_1.ApiV2LabelListPost200ResponseOneOfListInnerFromJSON)),
     };
 }
-export function ApiV2LabelListPost200ResponseOneOfToJSON(value) {
+exports.ApiV2LabelListPost200ResponseOneOfFromJSONTyped = ApiV2LabelListPost200ResponseOneOfFromJSONTyped;
+function ApiV2LabelListPost200ResponseOneOfToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -48,7 +54,8 @@ export function ApiV2LabelListPost200ResponseOneOfToJSON(value) {
     }
     return {
         'result': value.result,
-        'list': (value.list.map(ApiV2LabelListPost200ResponseOneOfListInnerToJSON)),
+        'list': (value.list.map(ApiV2LabelListPost200ResponseOneOfListInner_1.ApiV2LabelListPost200ResponseOneOfListInnerToJSON)),
     };
 }
+exports.ApiV2LabelListPost200ResponseOneOfToJSON = ApiV2LabelListPost200ResponseOneOfToJSON;
 //# sourceMappingURL=ApiV2LabelListPost200ResponseOneOf.js.map

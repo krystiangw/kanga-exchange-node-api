@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,31 +12,35 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2AomCreatePost200ResponseOneOf8ToJSON = exports.ApiV2AomCreatePost200ResponseOneOf8FromJSONTyped = exports.ApiV2AomCreatePost200ResponseOneOf8FromJSON = exports.instanceOfApiV2AomCreatePost200ResponseOneOf8 = exports.ApiV2AomCreatePost200ResponseOneOf8CodeEnum = exports.ApiV2AomCreatePost200ResponseOneOf8ResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2AomCreatePost200ResponseOneOf8ResultEnum = {
+exports.ApiV2AomCreatePost200ResponseOneOf8ResultEnum = {
     Fail: 'fail'
 };
 /**
  * @export
  */
-export const ApiV2AomCreatePost200ResponseOneOf8CodeEnum = {
+exports.ApiV2AomCreatePost200ResponseOneOf8CodeEnum = {
     NUMBER_9007: 9007
 };
 /**
  * Check if a given object implements the ApiV2AomCreatePost200ResponseOneOf8 interface.
  */
-export function instanceOfApiV2AomCreatePost200ResponseOneOf8(value) {
+function instanceOfApiV2AomCreatePost200ResponseOneOf8(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "code" in value;
     return isInstance;
 }
-export function ApiV2AomCreatePost200ResponseOneOf8FromJSON(json) {
+exports.instanceOfApiV2AomCreatePost200ResponseOneOf8 = instanceOfApiV2AomCreatePost200ResponseOneOf8;
+function ApiV2AomCreatePost200ResponseOneOf8FromJSON(json) {
     return ApiV2AomCreatePost200ResponseOneOf8FromJSONTyped(json, false);
 }
-export function ApiV2AomCreatePost200ResponseOneOf8FromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2AomCreatePost200ResponseOneOf8FromJSON = ApiV2AomCreatePost200ResponseOneOf8FromJSON;
+function ApiV2AomCreatePost200ResponseOneOf8FromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -44,7 +49,8 @@ export function ApiV2AomCreatePost200ResponseOneOf8FromJSONTyped(json, ignoreDis
         'code': json['code'],
     };
 }
-export function ApiV2AomCreatePost200ResponseOneOf8ToJSON(value) {
+exports.ApiV2AomCreatePost200ResponseOneOf8FromJSONTyped = ApiV2AomCreatePost200ResponseOneOf8FromJSONTyped;
+function ApiV2AomCreatePost200ResponseOneOf8ToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -56,4 +62,5 @@ export function ApiV2AomCreatePost200ResponseOneOf8ToJSON(value) {
         'code': value.code,
     };
 }
+exports.ApiV2AomCreatePost200ResponseOneOf8ToJSON = ApiV2AomCreatePost200ResponseOneOf8ToJSON;
 //# sourceMappingURL=ApiV2AomCreatePost200ResponseOneOf8.js.map

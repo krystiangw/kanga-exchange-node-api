@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,31 +12,35 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2DistributionCreatePost200ResponseOneOfToJSON = exports.ApiV2DistributionCreatePost200ResponseOneOfFromJSONTyped = exports.ApiV2DistributionCreatePost200ResponseOneOfFromJSON = exports.instanceOfApiV2DistributionCreatePost200ResponseOneOf = exports.ApiV2DistributionCreatePost200ResponseOneOfCodeEnum = exports.ApiV2DistributionCreatePost200ResponseOneOfResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2DistributionCreatePost200ResponseOneOfResultEnum = {
+exports.ApiV2DistributionCreatePost200ResponseOneOfResultEnum = {
     Fail: 'fail'
 };
 /**
  * @export
  */
-export const ApiV2DistributionCreatePost200ResponseOneOfCodeEnum = {
+exports.ApiV2DistributionCreatePost200ResponseOneOfCodeEnum = {
     NUMBER_9000: 9000
 };
 /**
  * Check if a given object implements the ApiV2DistributionCreatePost200ResponseOneOf interface.
  */
-export function instanceOfApiV2DistributionCreatePost200ResponseOneOf(value) {
+function instanceOfApiV2DistributionCreatePost200ResponseOneOf(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "code" in value;
     return isInstance;
 }
-export function ApiV2DistributionCreatePost200ResponseOneOfFromJSON(json) {
+exports.instanceOfApiV2DistributionCreatePost200ResponseOneOf = instanceOfApiV2DistributionCreatePost200ResponseOneOf;
+function ApiV2DistributionCreatePost200ResponseOneOfFromJSON(json) {
     return ApiV2DistributionCreatePost200ResponseOneOfFromJSONTyped(json, false);
 }
-export function ApiV2DistributionCreatePost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2DistributionCreatePost200ResponseOneOfFromJSON = ApiV2DistributionCreatePost200ResponseOneOfFromJSON;
+function ApiV2DistributionCreatePost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -44,7 +49,8 @@ export function ApiV2DistributionCreatePost200ResponseOneOfFromJSONTyped(json, i
         'code': json['code'],
     };
 }
-export function ApiV2DistributionCreatePost200ResponseOneOfToJSON(value) {
+exports.ApiV2DistributionCreatePost200ResponseOneOfFromJSONTyped = ApiV2DistributionCreatePost200ResponseOneOfFromJSONTyped;
+function ApiV2DistributionCreatePost200ResponseOneOfToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -56,4 +62,5 @@ export function ApiV2DistributionCreatePost200ResponseOneOfToJSON(value) {
         'code': value.code,
     };
 }
+exports.ApiV2DistributionCreatePost200ResponseOneOfToJSON = ApiV2DistributionCreatePost200ResponseOneOfToJSON;
 //# sourceMappingURL=ApiV2DistributionCreatePost200ResponseOneOf.js.map

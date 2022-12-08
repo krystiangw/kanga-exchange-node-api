@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,24 +12,28 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketChangesGet200ResponseOneOf1ToJSON = exports.ApiV2MarketChangesGet200ResponseOneOf1FromJSONTyped = exports.ApiV2MarketChangesGet200ResponseOneOf1FromJSON = exports.instanceOfApiV2MarketChangesGet200ResponseOneOf1 = exports.ApiV2MarketChangesGet200ResponseOneOf1ResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2MarketChangesGet200ResponseOneOf1ResultEnum = {
+exports.ApiV2MarketChangesGet200ResponseOneOf1ResultEnum = {
     Fail: 'fail'
 };
 /**
  * Check if a given object implements the ApiV2MarketChangesGet200ResponseOneOf1 interface.
  */
-export function instanceOfApiV2MarketChangesGet200ResponseOneOf1(value) {
+function instanceOfApiV2MarketChangesGet200ResponseOneOf1(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     return isInstance;
 }
-export function ApiV2MarketChangesGet200ResponseOneOf1FromJSON(json) {
+exports.instanceOfApiV2MarketChangesGet200ResponseOneOf1 = instanceOfApiV2MarketChangesGet200ResponseOneOf1;
+function ApiV2MarketChangesGet200ResponseOneOf1FromJSON(json) {
     return ApiV2MarketChangesGet200ResponseOneOf1FromJSONTyped(json, false);
 }
-export function ApiV2MarketChangesGet200ResponseOneOf1FromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketChangesGet200ResponseOneOf1FromJSON = ApiV2MarketChangesGet200ResponseOneOf1FromJSON;
+function ApiV2MarketChangesGet200ResponseOneOf1FromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -36,7 +41,8 @@ export function ApiV2MarketChangesGet200ResponseOneOf1FromJSONTyped(json, ignore
         'result': json['result'],
     };
 }
-export function ApiV2MarketChangesGet200ResponseOneOf1ToJSON(value) {
+exports.ApiV2MarketChangesGet200ResponseOneOf1FromJSONTyped = ApiV2MarketChangesGet200ResponseOneOf1FromJSONTyped;
+function ApiV2MarketChangesGet200ResponseOneOf1ToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -47,4 +53,5 @@ export function ApiV2MarketChangesGet200ResponseOneOf1ToJSON(value) {
         'result': value.result,
     };
 }
+exports.ApiV2MarketChangesGet200ResponseOneOf1ToJSON = ApiV2MarketChangesGet200ResponseOneOf1ToJSON;
 //# sourceMappingURL=ApiV2MarketChangesGet200ResponseOneOf1.js.map

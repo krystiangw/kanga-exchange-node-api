@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,18 +12,20 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { exists } from '../runtime';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketOrderCreatePostRequestToJSON = exports.ApiV2MarketOrderCreatePostRequestFromJSONTyped = exports.ApiV2MarketOrderCreatePostRequestFromJSON = exports.instanceOfApiV2MarketOrderCreatePostRequest = exports.ApiV2MarketOrderCreatePostRequestTypeEnum = void 0;
+const runtime_1 = require("../runtime");
 /**
  * @export
  */
-export const ApiV2MarketOrderCreatePostRequestTypeEnum = {
+exports.ApiV2MarketOrderCreatePostRequestTypeEnum = {
     Bid: 'BID',
     Ask: 'ASK'
 };
 /**
  * Check if a given object implements the ApiV2MarketOrderCreatePostRequest interface.
  */
-export function instanceOfApiV2MarketOrderCreatePostRequest(value) {
+function instanceOfApiV2MarketOrderCreatePostRequest(value) {
     let isInstance = true;
     isInstance = isInstance && "nonce" in value;
     isInstance = isInstance && "appId" in value;
@@ -31,10 +34,12 @@ export function instanceOfApiV2MarketOrderCreatePostRequest(value) {
     isInstance = isInstance && "market" in value;
     return isInstance;
 }
-export function ApiV2MarketOrderCreatePostRequestFromJSON(json) {
+exports.instanceOfApiV2MarketOrderCreatePostRequest = instanceOfApiV2MarketOrderCreatePostRequest;
+function ApiV2MarketOrderCreatePostRequestFromJSON(json) {
     return ApiV2MarketOrderCreatePostRequestFromJSONTyped(json, false);
 }
-export function ApiV2MarketOrderCreatePostRequestFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketOrderCreatePostRequestFromJSON = ApiV2MarketOrderCreatePostRequestFromJSON;
+function ApiV2MarketOrderCreatePostRequestFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -42,13 +47,14 @@ export function ApiV2MarketOrderCreatePostRequestFromJSONTyped(json, ignoreDiscr
         'nonce': json['nonce'],
         'appId': json['appId'],
         'quantity': json['quantity'],
-        'price': !exists(json, 'price') ? undefined : json['price'],
-        'valueLimit': !exists(json, 'valueLimit') ? undefined : json['valueLimit'],
+        'price': !(0, runtime_1.exists)(json, 'price') ? undefined : json['price'],
+        'valueLimit': !(0, runtime_1.exists)(json, 'valueLimit') ? undefined : json['valueLimit'],
         'type': json['type'],
         'market': json['market'],
     };
 }
-export function ApiV2MarketOrderCreatePostRequestToJSON(value) {
+exports.ApiV2MarketOrderCreatePostRequestFromJSONTyped = ApiV2MarketOrderCreatePostRequestFromJSONTyped;
+function ApiV2MarketOrderCreatePostRequestToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -65,4 +71,5 @@ export function ApiV2MarketOrderCreatePostRequestToJSON(value) {
         'market': value.market,
     };
 }
+exports.ApiV2MarketOrderCreatePostRequestToJSON = ApiV2MarketOrderCreatePostRequestToJSON;
 //# sourceMappingURL=ApiV2MarketOrderCreatePostRequest.js.map

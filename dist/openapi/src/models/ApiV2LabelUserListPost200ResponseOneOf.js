@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,25 +12,29 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2LabelUserListPost200ResponseOneOfToJSON = exports.ApiV2LabelUserListPost200ResponseOneOfFromJSONTyped = exports.ApiV2LabelUserListPost200ResponseOneOfFromJSON = exports.instanceOfApiV2LabelUserListPost200ResponseOneOf = exports.ApiV2LabelUserListPost200ResponseOneOfResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2LabelUserListPost200ResponseOneOfResultEnum = {
+exports.ApiV2LabelUserListPost200ResponseOneOfResultEnum = {
     Ok: 'ok'
 };
 /**
  * Check if a given object implements the ApiV2LabelUserListPost200ResponseOneOf interface.
  */
-export function instanceOfApiV2LabelUserListPost200ResponseOneOf(value) {
+function instanceOfApiV2LabelUserListPost200ResponseOneOf(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "labels" in value;
     return isInstance;
 }
-export function ApiV2LabelUserListPost200ResponseOneOfFromJSON(json) {
+exports.instanceOfApiV2LabelUserListPost200ResponseOneOf = instanceOfApiV2LabelUserListPost200ResponseOneOf;
+function ApiV2LabelUserListPost200ResponseOneOfFromJSON(json) {
     return ApiV2LabelUserListPost200ResponseOneOfFromJSONTyped(json, false);
 }
-export function ApiV2LabelUserListPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2LabelUserListPost200ResponseOneOfFromJSON = ApiV2LabelUserListPost200ResponseOneOfFromJSON;
+function ApiV2LabelUserListPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -38,7 +43,8 @@ export function ApiV2LabelUserListPost200ResponseOneOfFromJSONTyped(json, ignore
         'labels': json['labels'],
     };
 }
-export function ApiV2LabelUserListPost200ResponseOneOfToJSON(value) {
+exports.ApiV2LabelUserListPost200ResponseOneOfFromJSONTyped = ApiV2LabelUserListPost200ResponseOneOfFromJSONTyped;
+function ApiV2LabelUserListPost200ResponseOneOfToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -50,4 +56,5 @@ export function ApiV2LabelUserListPost200ResponseOneOfToJSON(value) {
         'labels': value.labels,
     };
 }
+exports.ApiV2LabelUserListPost200ResponseOneOfToJSON = ApiV2LabelUserListPost200ResponseOneOfToJSON;
 //# sourceMappingURL=ApiV2LabelUserListPost200ResponseOneOf.js.map

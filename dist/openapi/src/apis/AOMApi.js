@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,12 +12,37 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as runtime from '../runtime';
-import { ApiV2AomClosePost200ResponseFromJSON, ApiV2AomCreatePost200ResponseFromJSON, ApiV2AomCreatePostRequestToJSON, ApiV2AomGetPost200ResponseFromJSON, ApiV2AomGetPostRequestToJSON, ApiV2AomListPost200ResponseFromJSON, ApiV2AomListPostRequestToJSON, ApiV2AomStartPost200ResponseFromJSON, ApiV2AomStopPost200ResponseFromJSON, ApiV2AomTopupPost200ResponseFromJSON, ApiV2AomTopupPostRequestToJSON, ApiV2AomUpdatePost200ResponseFromJSON, ApiV2AomUpdatePostRequestToJSON, ApiV2AomWithdrawPost200ResponseFromJSON, } from '../models';
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AOMApi = void 0;
+const runtime = __importStar(require("../runtime"));
+const models_1 = require("../models");
 /**
  *
  */
-export class AOMApi extends runtime.BaseAPI {
+class AOMApi extends runtime.BaseAPI {
     /**
      * Closes an automated order maker and transfers funds to wallet. An AOM can only be closed when inactive
      * Close automated order maker
@@ -36,9 +62,9 @@ export class AOMApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2AomGetPostRequestToJSON(requestParameters.apiV2AomGetPostRequest),
+            body: (0, models_1.ApiV2AomGetPostRequestToJSON)(requestParameters.apiV2AomGetPostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2AomClosePost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2AomClosePost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Closes an automated order maker and transfers funds to wallet. An AOM can only be closed when inactive
@@ -67,9 +93,9 @@ export class AOMApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2AomCreatePostRequestToJSON(requestParameters.apiV2AomCreatePostRequest),
+            body: (0, models_1.ApiV2AomCreatePostRequestToJSON)(requestParameters.apiV2AomCreatePostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2AomCreatePost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2AomCreatePost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Creates a new automated order maker.
@@ -98,9 +124,9 @@ export class AOMApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2AomGetPostRequestToJSON(requestParameters.apiV2AomGetPostRequest),
+            body: (0, models_1.ApiV2AomGetPostRequestToJSON)(requestParameters.apiV2AomGetPostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2AomGetPost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2AomGetPost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Returns automated order maker details and currency balances.
@@ -129,9 +155,9 @@ export class AOMApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2AomListPostRequestToJSON(requestParameters.apiV2AomListPostRequest),
+            body: (0, models_1.ApiV2AomListPostRequestToJSON)(requestParameters.apiV2AomListPostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2AomListPost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2AomListPost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Returns the list of automated order makers.
@@ -160,9 +186,9 @@ export class AOMApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2AomGetPostRequestToJSON(requestParameters.apiV2AomGetPostRequest),
+            body: (0, models_1.ApiV2AomGetPostRequestToJSON)(requestParameters.apiV2AomGetPostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2AomStartPost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2AomStartPost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Starts a newly created or previously stopped automated order maker.
@@ -191,9 +217,9 @@ export class AOMApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2AomGetPostRequestToJSON(requestParameters.apiV2AomGetPostRequest),
+            body: (0, models_1.ApiV2AomGetPostRequestToJSON)(requestParameters.apiV2AomGetPostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2AomStopPost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2AomStopPost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Stops an active automated order maker.
@@ -222,9 +248,9 @@ export class AOMApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2AomTopupPostRequestToJSON(requestParameters.apiV2AomTopupPostRequest),
+            body: (0, models_1.ApiV2AomTopupPostRequestToJSON)(requestParameters.apiV2AomTopupPostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2AomTopupPost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2AomTopupPost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Tops up automated order maker currency balance.
@@ -253,9 +279,9 @@ export class AOMApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2AomUpdatePostRequestToJSON(requestParameters.apiV2AomUpdatePostRequest),
+            body: (0, models_1.ApiV2AomUpdatePostRequestToJSON)(requestParameters.apiV2AomUpdatePostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2AomUpdatePost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2AomUpdatePost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Updates an existing automated order maker. An AOM can only be updated when inactive.
@@ -284,9 +310,9 @@ export class AOMApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2AomGetPostRequestToJSON(requestParameters.apiV2AomGetPostRequest),
+            body: (0, models_1.ApiV2AomGetPostRequestToJSON)(requestParameters.apiV2AomGetPostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2AomWithdrawPost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2AomWithdrawPost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Transfers the total balance of automated order maker purchases to wallet.
@@ -297,4 +323,5 @@ export class AOMApi extends runtime.BaseAPI {
         return await response.value();
     }
 }
+exports.AOMApi = AOMApi;
 //# sourceMappingURL=AOMApi.js.map

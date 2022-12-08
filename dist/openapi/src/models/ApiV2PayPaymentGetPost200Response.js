@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,42 +12,47 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { instanceOfApiV2PayPaymentGetPost200ResponseOneOf, ApiV2PayPaymentGetPost200ResponseOneOfFromJSONTyped, ApiV2PayPaymentGetPost200ResponseOneOfToJSON, } from './ApiV2PayPaymentGetPost200ResponseOneOf';
-import { instanceOfApiV2PayPaymentGetPost200ResponseOneOf1, ApiV2PayPaymentGetPost200ResponseOneOf1FromJSONTyped, ApiV2PayPaymentGetPost200ResponseOneOf1ToJSON, } from './ApiV2PayPaymentGetPost200ResponseOneOf1';
-import { instanceOfApiV2PayPaymentGetPost200ResponseOneOf2, ApiV2PayPaymentGetPost200ResponseOneOf2FromJSONTyped, ApiV2PayPaymentGetPost200ResponseOneOf2ToJSON, } from './ApiV2PayPaymentGetPost200ResponseOneOf2';
-import { instanceOfApiV2PayPaymentGetPost200ResponseOneOf3, ApiV2PayPaymentGetPost200ResponseOneOf3FromJSONTyped, ApiV2PayPaymentGetPost200ResponseOneOf3ToJSON, } from './ApiV2PayPaymentGetPost200ResponseOneOf3';
-import { instanceOfApiV2PayPaymentGetPost200ResponseOneOf4, ApiV2PayPaymentGetPost200ResponseOneOf4FromJSONTyped, ApiV2PayPaymentGetPost200ResponseOneOf4ToJSON, } from './ApiV2PayPaymentGetPost200ResponseOneOf4';
-export function ApiV2PayPaymentGetPost200ResponseFromJSON(json) {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2PayPaymentGetPost200ResponseToJSON = exports.ApiV2PayPaymentGetPost200ResponseFromJSONTyped = exports.ApiV2PayPaymentGetPost200ResponseFromJSON = void 0;
+const ApiV2PayPaymentGetPost200ResponseOneOf_1 = require("./ApiV2PayPaymentGetPost200ResponseOneOf");
+const ApiV2PayPaymentGetPost200ResponseOneOf1_1 = require("./ApiV2PayPaymentGetPost200ResponseOneOf1");
+const ApiV2PayPaymentGetPost200ResponseOneOf2_1 = require("./ApiV2PayPaymentGetPost200ResponseOneOf2");
+const ApiV2PayPaymentGetPost200ResponseOneOf3_1 = require("./ApiV2PayPaymentGetPost200ResponseOneOf3");
+const ApiV2PayPaymentGetPost200ResponseOneOf4_1 = require("./ApiV2PayPaymentGetPost200ResponseOneOf4");
+function ApiV2PayPaymentGetPost200ResponseFromJSON(json) {
     return ApiV2PayPaymentGetPost200ResponseFromJSONTyped(json, false);
 }
-export function ApiV2PayPaymentGetPost200ResponseFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2PayPaymentGetPost200ResponseFromJSON = ApiV2PayPaymentGetPost200ResponseFromJSON;
+function ApiV2PayPaymentGetPost200ResponseFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
-    return { ...ApiV2PayPaymentGetPost200ResponseOneOfFromJSONTyped(json, true), ...ApiV2PayPaymentGetPost200ResponseOneOf1FromJSONTyped(json, true), ...ApiV2PayPaymentGetPost200ResponseOneOf2FromJSONTyped(json, true), ...ApiV2PayPaymentGetPost200ResponseOneOf3FromJSONTyped(json, true), ...ApiV2PayPaymentGetPost200ResponseOneOf4FromJSONTyped(json, true) };
+    return { ...(0, ApiV2PayPaymentGetPost200ResponseOneOf_1.ApiV2PayPaymentGetPost200ResponseOneOfFromJSONTyped)(json, true), ...(0, ApiV2PayPaymentGetPost200ResponseOneOf1_1.ApiV2PayPaymentGetPost200ResponseOneOf1FromJSONTyped)(json, true), ...(0, ApiV2PayPaymentGetPost200ResponseOneOf2_1.ApiV2PayPaymentGetPost200ResponseOneOf2FromJSONTyped)(json, true), ...(0, ApiV2PayPaymentGetPost200ResponseOneOf3_1.ApiV2PayPaymentGetPost200ResponseOneOf3FromJSONTyped)(json, true), ...(0, ApiV2PayPaymentGetPost200ResponseOneOf4_1.ApiV2PayPaymentGetPost200ResponseOneOf4FromJSONTyped)(json, true) };
 }
-export function ApiV2PayPaymentGetPost200ResponseToJSON(value) {
+exports.ApiV2PayPaymentGetPost200ResponseFromJSONTyped = ApiV2PayPaymentGetPost200ResponseFromJSONTyped;
+function ApiV2PayPaymentGetPost200ResponseToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
     if (value === null) {
         return null;
     }
-    if (instanceOfApiV2PayPaymentGetPost200ResponseOneOf(value)) {
-        return ApiV2PayPaymentGetPost200ResponseOneOfToJSON(value);
+    if ((0, ApiV2PayPaymentGetPost200ResponseOneOf_1.instanceOfApiV2PayPaymentGetPost200ResponseOneOf)(value)) {
+        return (0, ApiV2PayPaymentGetPost200ResponseOneOf_1.ApiV2PayPaymentGetPost200ResponseOneOfToJSON)(value);
     }
-    if (instanceOfApiV2PayPaymentGetPost200ResponseOneOf1(value)) {
-        return ApiV2PayPaymentGetPost200ResponseOneOf1ToJSON(value);
+    if ((0, ApiV2PayPaymentGetPost200ResponseOneOf1_1.instanceOfApiV2PayPaymentGetPost200ResponseOneOf1)(value)) {
+        return (0, ApiV2PayPaymentGetPost200ResponseOneOf1_1.ApiV2PayPaymentGetPost200ResponseOneOf1ToJSON)(value);
     }
-    if (instanceOfApiV2PayPaymentGetPost200ResponseOneOf2(value)) {
-        return ApiV2PayPaymentGetPost200ResponseOneOf2ToJSON(value);
+    if ((0, ApiV2PayPaymentGetPost200ResponseOneOf2_1.instanceOfApiV2PayPaymentGetPost200ResponseOneOf2)(value)) {
+        return (0, ApiV2PayPaymentGetPost200ResponseOneOf2_1.ApiV2PayPaymentGetPost200ResponseOneOf2ToJSON)(value);
     }
-    if (instanceOfApiV2PayPaymentGetPost200ResponseOneOf3(value)) {
-        return ApiV2PayPaymentGetPost200ResponseOneOf3ToJSON(value);
+    if ((0, ApiV2PayPaymentGetPost200ResponseOneOf3_1.instanceOfApiV2PayPaymentGetPost200ResponseOneOf3)(value)) {
+        return (0, ApiV2PayPaymentGetPost200ResponseOneOf3_1.ApiV2PayPaymentGetPost200ResponseOneOf3ToJSON)(value);
     }
-    if (instanceOfApiV2PayPaymentGetPost200ResponseOneOf4(value)) {
-        return ApiV2PayPaymentGetPost200ResponseOneOf4ToJSON(value);
+    if ((0, ApiV2PayPaymentGetPost200ResponseOneOf4_1.instanceOfApiV2PayPaymentGetPost200ResponseOneOf4)(value)) {
+        return (0, ApiV2PayPaymentGetPost200ResponseOneOf4_1.ApiV2PayPaymentGetPost200ResponseOneOf4ToJSON)(value);
     }
     return {};
 }
+exports.ApiV2PayPaymentGetPost200ResponseToJSON = ApiV2PayPaymentGetPost200ResponseToJSON;
 //# sourceMappingURL=ApiV2PayPaymentGetPost200Response.js.map

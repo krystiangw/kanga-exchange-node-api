@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,10 +12,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketTradesGet200ResponseTradesInnerToJSON = exports.ApiV2MarketTradesGet200ResponseTradesInnerFromJSONTyped = exports.ApiV2MarketTradesGet200ResponseTradesInnerFromJSON = exports.instanceOfApiV2MarketTradesGet200ResponseTradesInner = void 0;
 /**
  * Check if a given object implements the ApiV2MarketTradesGet200ResponseTradesInner interface.
  */
-export function instanceOfApiV2MarketTradesGet200ResponseTradesInner(value) {
+function instanceOfApiV2MarketTradesGet200ResponseTradesInner(value) {
     let isInstance = true;
     isInstance = isInstance && "tradeId" in value;
     isInstance = isInstance && "price" in value;
@@ -24,10 +27,12 @@ export function instanceOfApiV2MarketTradesGet200ResponseTradesInner(value) {
     isInstance = isInstance && "timestamp" in value;
     return isInstance;
 }
-export function ApiV2MarketTradesGet200ResponseTradesInnerFromJSON(json) {
+exports.instanceOfApiV2MarketTradesGet200ResponseTradesInner = instanceOfApiV2MarketTradesGet200ResponseTradesInner;
+function ApiV2MarketTradesGet200ResponseTradesInnerFromJSON(json) {
     return ApiV2MarketTradesGet200ResponseTradesInnerFromJSONTyped(json, false);
 }
-export function ApiV2MarketTradesGet200ResponseTradesInnerFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketTradesGet200ResponseTradesInnerFromJSON = ApiV2MarketTradesGet200ResponseTradesInnerFromJSON;
+function ApiV2MarketTradesGet200ResponseTradesInnerFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -40,7 +45,8 @@ export function ApiV2MarketTradesGet200ResponseTradesInnerFromJSONTyped(json, ig
         'timestamp': json['timestamp'],
     };
 }
-export function ApiV2MarketTradesGet200ResponseTradesInnerToJSON(value) {
+exports.ApiV2MarketTradesGet200ResponseTradesInnerFromJSONTyped = ApiV2MarketTradesGet200ResponseTradesInnerFromJSONTyped;
+function ApiV2MarketTradesGet200ResponseTradesInnerToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -56,4 +62,5 @@ export function ApiV2MarketTradesGet200ResponseTradesInnerToJSON(value) {
         'timestamp': value.timestamp,
     };
 }
+exports.ApiV2MarketTradesGet200ResponseTradesInnerToJSON = ApiV2MarketTradesGet200ResponseTradesInnerToJSON;
 //# sourceMappingURL=ApiV2MarketTradesGet200ResponseTradesInner.js.map

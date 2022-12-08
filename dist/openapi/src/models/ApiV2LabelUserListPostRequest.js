@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,20 +12,24 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2LabelUserListPostRequestToJSON = exports.ApiV2LabelUserListPostRequestFromJSONTyped = exports.ApiV2LabelUserListPostRequestFromJSON = exports.instanceOfApiV2LabelUserListPostRequest = void 0;
 /**
  * Check if a given object implements the ApiV2LabelUserListPostRequest interface.
  */
-export function instanceOfApiV2LabelUserListPostRequest(value) {
+function instanceOfApiV2LabelUserListPostRequest(value) {
     let isInstance = true;
     isInstance = isInstance && "nonce" in value;
     isInstance = isInstance && "appId" in value;
     isInstance = isInstance && "appUserId" in value;
     return isInstance;
 }
-export function ApiV2LabelUserListPostRequestFromJSON(json) {
+exports.instanceOfApiV2LabelUserListPostRequest = instanceOfApiV2LabelUserListPostRequest;
+function ApiV2LabelUserListPostRequestFromJSON(json) {
     return ApiV2LabelUserListPostRequestFromJSONTyped(json, false);
 }
-export function ApiV2LabelUserListPostRequestFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2LabelUserListPostRequestFromJSON = ApiV2LabelUserListPostRequestFromJSON;
+function ApiV2LabelUserListPostRequestFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -34,7 +39,8 @@ export function ApiV2LabelUserListPostRequestFromJSONTyped(json, ignoreDiscrimin
         'appUserId': json['appUserId'],
     };
 }
-export function ApiV2LabelUserListPostRequestToJSON(value) {
+exports.ApiV2LabelUserListPostRequestFromJSONTyped = ApiV2LabelUserListPostRequestFromJSONTyped;
+function ApiV2LabelUserListPostRequestToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -47,4 +53,5 @@ export function ApiV2LabelUserListPostRequestToJSON(value) {
         'appUserId': value.appUserId,
     };
 }
+exports.ApiV2LabelUserListPostRequestToJSON = ApiV2LabelUserListPostRequestToJSON;
 //# sourceMappingURL=ApiV2LabelUserListPostRequest.js.map

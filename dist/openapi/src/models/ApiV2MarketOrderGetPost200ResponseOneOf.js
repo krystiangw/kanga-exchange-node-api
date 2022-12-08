@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,16 +12,18 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketOrderGetPost200ResponseOneOfToJSON = exports.ApiV2MarketOrderGetPost200ResponseOneOfFromJSONTyped = exports.ApiV2MarketOrderGetPost200ResponseOneOfFromJSON = exports.instanceOfApiV2MarketOrderGetPost200ResponseOneOf = exports.ApiV2MarketOrderGetPost200ResponseOneOfResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2MarketOrderGetPost200ResponseOneOfResultEnum = {
+exports.ApiV2MarketOrderGetPost200ResponseOneOfResultEnum = {
     Ok: 'ok'
 };
 /**
  * Check if a given object implements the ApiV2MarketOrderGetPost200ResponseOneOf interface.
  */
-export function instanceOfApiV2MarketOrderGetPost200ResponseOneOf(value) {
+function instanceOfApiV2MarketOrderGetPost200ResponseOneOf(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "state" in value;
@@ -30,10 +33,12 @@ export function instanceOfApiV2MarketOrderGetPost200ResponseOneOf(value) {
     isInstance = isInstance && "currentValue" in value;
     return isInstance;
 }
-export function ApiV2MarketOrderGetPost200ResponseOneOfFromJSON(json) {
+exports.instanceOfApiV2MarketOrderGetPost200ResponseOneOf = instanceOfApiV2MarketOrderGetPost200ResponseOneOf;
+function ApiV2MarketOrderGetPost200ResponseOneOfFromJSON(json) {
     return ApiV2MarketOrderGetPost200ResponseOneOfFromJSONTyped(json, false);
 }
-export function ApiV2MarketOrderGetPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketOrderGetPost200ResponseOneOfFromJSON = ApiV2MarketOrderGetPost200ResponseOneOfFromJSON;
+function ApiV2MarketOrderGetPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -46,7 +51,8 @@ export function ApiV2MarketOrderGetPost200ResponseOneOfFromJSONTyped(json, ignor
         'currentValue': json['currentValue'],
     };
 }
-export function ApiV2MarketOrderGetPost200ResponseOneOfToJSON(value) {
+exports.ApiV2MarketOrderGetPost200ResponseOneOfFromJSONTyped = ApiV2MarketOrderGetPost200ResponseOneOfFromJSONTyped;
+function ApiV2MarketOrderGetPost200ResponseOneOfToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -62,4 +68,5 @@ export function ApiV2MarketOrderGetPost200ResponseOneOfToJSON(value) {
         'currentValue': value.currentValue,
     };
 }
+exports.ApiV2MarketOrderGetPost200ResponseOneOfToJSON = ApiV2MarketOrderGetPost200ResponseOneOfToJSON;
 //# sourceMappingURL=ApiV2MarketOrderGetPost200ResponseOneOf.js.map

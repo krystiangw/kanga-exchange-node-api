@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,11 +12,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { exists } from '../runtime';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerToJSON = exports.ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerFromJSONTyped = exports.ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerFromJSON = exports.instanceOfApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInner = void 0;
+const runtime_1 = require("../runtime");
 /**
  * Check if a given object implements the ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInner interface.
  */
-export function instanceOfApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInner(value) {
+function instanceOfApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInner(value) {
     let isInstance = true;
     isInstance = isInstance && "type" in value;
     isInstance = isInstance && "quantity" in value;
@@ -26,10 +29,12 @@ export function instanceOfApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersI
     isInstance = isInstance && "created" in value;
     return isInstance;
 }
-export function ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerFromJSON(json) {
+exports.instanceOfApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInner = instanceOfApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInner;
+function ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerFromJSON(json) {
     return ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerFromJSONTyped(json, false);
 }
-export function ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerFromJSON = ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerFromJSON;
+function ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -41,10 +46,11 @@ export function ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerFromJS
         'currentValue': json['currentValue'],
         'state': json['state'],
         'created': json['created'],
-        'closed': !exists(json, 'closed') ? undefined : json['closed'],
+        'closed': !(0, runtime_1.exists)(json, 'closed') ? undefined : json['closed'],
     };
 }
-export function ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerToJSON(value) {
+exports.ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerFromJSONTyped = ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerFromJSONTyped;
+function ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -62,4 +68,5 @@ export function ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerToJSON
         'closed': value.closed,
     };
 }
+exports.ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerToJSON = ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerToJSON;
 //# sourceMappingURL=ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInner.js.map

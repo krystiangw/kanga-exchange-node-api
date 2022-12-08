@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,31 +12,35 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2LabelUnassignPost200ResponseOneOfToJSON = exports.ApiV2LabelUnassignPost200ResponseOneOfFromJSONTyped = exports.ApiV2LabelUnassignPost200ResponseOneOfFromJSON = exports.instanceOfApiV2LabelUnassignPost200ResponseOneOf = exports.ApiV2LabelUnassignPost200ResponseOneOfCodeEnum = exports.ApiV2LabelUnassignPost200ResponseOneOfResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2LabelUnassignPost200ResponseOneOfResultEnum = {
+exports.ApiV2LabelUnassignPost200ResponseOneOfResultEnum = {
     Fail: 'fail'
 };
 /**
  * @export
  */
-export const ApiV2LabelUnassignPost200ResponseOneOfCodeEnum = {
+exports.ApiV2LabelUnassignPost200ResponseOneOfCodeEnum = {
     NUMBER_9000: 9000
 };
 /**
  * Check if a given object implements the ApiV2LabelUnassignPost200ResponseOneOf interface.
  */
-export function instanceOfApiV2LabelUnassignPost200ResponseOneOf(value) {
+function instanceOfApiV2LabelUnassignPost200ResponseOneOf(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "code" in value;
     return isInstance;
 }
-export function ApiV2LabelUnassignPost200ResponseOneOfFromJSON(json) {
+exports.instanceOfApiV2LabelUnassignPost200ResponseOneOf = instanceOfApiV2LabelUnassignPost200ResponseOneOf;
+function ApiV2LabelUnassignPost200ResponseOneOfFromJSON(json) {
     return ApiV2LabelUnassignPost200ResponseOneOfFromJSONTyped(json, false);
 }
-export function ApiV2LabelUnassignPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2LabelUnassignPost200ResponseOneOfFromJSON = ApiV2LabelUnassignPost200ResponseOneOfFromJSON;
+function ApiV2LabelUnassignPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -44,7 +49,8 @@ export function ApiV2LabelUnassignPost200ResponseOneOfFromJSONTyped(json, ignore
         'code': json['code'],
     };
 }
-export function ApiV2LabelUnassignPost200ResponseOneOfToJSON(value) {
+exports.ApiV2LabelUnassignPost200ResponseOneOfFromJSONTyped = ApiV2LabelUnassignPost200ResponseOneOfFromJSONTyped;
+function ApiV2LabelUnassignPost200ResponseOneOfToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -56,4 +62,5 @@ export function ApiV2LabelUnassignPost200ResponseOneOfToJSON(value) {
         'code': value.code,
     };
 }
+exports.ApiV2LabelUnassignPost200ResponseOneOfToJSON = ApiV2LabelUnassignPost200ResponseOneOfToJSON;
 //# sourceMappingURL=ApiV2LabelUnassignPost200ResponseOneOf.js.map

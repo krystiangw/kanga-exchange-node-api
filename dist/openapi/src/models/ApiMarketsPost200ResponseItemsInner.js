@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,11 +12,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { exists } from '../runtime';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiMarketsPost200ResponseItemsInnerToJSON = exports.ApiMarketsPost200ResponseItemsInnerFromJSONTyped = exports.ApiMarketsPost200ResponseItemsInnerFromJSON = exports.instanceOfApiMarketsPost200ResponseItemsInner = void 0;
+const runtime_1 = require("../runtime");
 /**
  * Check if a given object implements the ApiMarketsPost200ResponseItemsInner interface.
  */
-export function instanceOfApiMarketsPost200ResponseItemsInner(value) {
+function instanceOfApiMarketsPost200ResponseItemsInner(value) {
     let isInstance = true;
     isInstance = isInstance && "id" in value;
     isInstance = isInstance && "buyingCurrency" in value;
@@ -29,10 +32,12 @@ export function instanceOfApiMarketsPost200ResponseItemsInner(value) {
     isInstance = isInstance && "asksAvailableSince" in value;
     return isInstance;
 }
-export function ApiMarketsPost200ResponseItemsInnerFromJSON(json) {
+exports.instanceOfApiMarketsPost200ResponseItemsInner = instanceOfApiMarketsPost200ResponseItemsInner;
+function ApiMarketsPost200ResponseItemsInnerFromJSON(json) {
     return ApiMarketsPost200ResponseItemsInnerFromJSONTyped(json, false);
 }
-export function ApiMarketsPost200ResponseItemsInnerFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiMarketsPost200ResponseItemsInnerFromJSON = ApiMarketsPost200ResponseItemsInnerFromJSON;
+function ApiMarketsPost200ResponseItemsInnerFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -45,17 +50,18 @@ export function ApiMarketsPost200ResponseItemsInnerFromJSONTyped(json, ignoreDis
         'mainMarket': json['mainMarket'],
         'pricePrecision': json['pricePrecision'],
         'index': json['index'],
-        'available': !exists(json, 'available') ? undefined : json['available'],
-        'opening': !exists(json, 'opening') ? undefined : json['opening'],
-        'ecoOpening': !exists(json, 'ecoOpening') ? undefined : json['ecoOpening'],
-        'lastPrice': !exists(json, 'lastPrice') ? undefined : json['lastPrice'],
-        'change': !exists(json, 'change') ? undefined : json['change'],
-        'volume': !exists(json, 'volume') ? undefined : json['volume'],
+        'available': !(0, runtime_1.exists)(json, 'available') ? undefined : json['available'],
+        'opening': !(0, runtime_1.exists)(json, 'opening') ? undefined : json['opening'],
+        'ecoOpening': !(0, runtime_1.exists)(json, 'ecoOpening') ? undefined : json['ecoOpening'],
+        'lastPrice': !(0, runtime_1.exists)(json, 'lastPrice') ? undefined : json['lastPrice'],
+        'change': !(0, runtime_1.exists)(json, 'change') ? undefined : json['change'],
+        'volume': !(0, runtime_1.exists)(json, 'volume') ? undefined : json['volume'],
         'bidsAvailableSince': json['bidsAvailableSince'],
         'asksAvailableSince': json['asksAvailableSince'],
     };
 }
-export function ApiMarketsPost200ResponseItemsInnerToJSON(value) {
+exports.ApiMarketsPost200ResponseItemsInnerFromJSONTyped = ApiMarketsPost200ResponseItemsInnerFromJSONTyped;
+function ApiMarketsPost200ResponseItemsInnerToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -81,4 +87,5 @@ export function ApiMarketsPost200ResponseItemsInnerToJSON(value) {
         'asksAvailableSince': value.asksAvailableSince,
     };
 }
+exports.ApiMarketsPost200ResponseItemsInnerToJSON = ApiMarketsPost200ResponseItemsInnerToJSON;
 //# sourceMappingURL=ApiMarketsPost200ResponseItemsInner.js.map

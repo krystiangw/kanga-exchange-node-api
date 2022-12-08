@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,19 +12,23 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerToJSON = exports.ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerFromJSONTyped = exports.ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerFromJSON = exports.instanceOfApiV2MarketOrderBookPost200ResponseOneOfBidsInner = void 0;
 /**
  * Check if a given object implements the ApiV2MarketOrderBookPost200ResponseOneOfBidsInner interface.
  */
-export function instanceOfApiV2MarketOrderBookPost200ResponseOneOfBidsInner(value) {
+function instanceOfApiV2MarketOrderBookPost200ResponseOneOfBidsInner(value) {
     let isInstance = true;
     isInstance = isInstance && "remaining" in value;
     isInstance = isInstance && "price" in value;
     return isInstance;
 }
-export function ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerFromJSON(json) {
+exports.instanceOfApiV2MarketOrderBookPost200ResponseOneOfBidsInner = instanceOfApiV2MarketOrderBookPost200ResponseOneOfBidsInner;
+function ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerFromJSON(json) {
     return ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerFromJSONTyped(json, false);
 }
-export function ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerFromJSON = ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerFromJSON;
+function ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -32,7 +37,8 @@ export function ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerFromJSONTyped(j
         'price': json['price'],
     };
 }
-export function ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerToJSON(value) {
+exports.ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerFromJSONTyped = ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerFromJSONTyped;
+function ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -44,4 +50,5 @@ export function ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerToJSON(value) {
         'price': value.price,
     };
 }
+exports.ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerToJSON = ApiV2MarketOrderBookPost200ResponseOneOfBidsInnerToJSON;
 //# sourceMappingURL=ApiV2MarketOrderBookPost200ResponseOneOfBidsInner.js.map

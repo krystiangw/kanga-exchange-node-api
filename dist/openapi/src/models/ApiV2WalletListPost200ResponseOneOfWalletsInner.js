@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,11 +12,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerFromJSON, ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerToJSON, } from './ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInner';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2WalletListPost200ResponseOneOfWalletsInnerToJSON = exports.ApiV2WalletListPost200ResponseOneOfWalletsInnerFromJSONTyped = exports.ApiV2WalletListPost200ResponseOneOfWalletsInnerFromJSON = exports.instanceOfApiV2WalletListPost200ResponseOneOfWalletsInner = void 0;
+const ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInner_1 = require("./ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInner");
 /**
  * Check if a given object implements the ApiV2WalletListPost200ResponseOneOfWalletsInner interface.
  */
-export function instanceOfApiV2WalletListPost200ResponseOneOfWalletsInner(value) {
+function instanceOfApiV2WalletListPost200ResponseOneOfWalletsInner(value) {
     let isInstance = true;
     isInstance = isInstance && "currencyCode" in value;
     isInstance = isInstance && "value" in value;
@@ -23,10 +26,12 @@ export function instanceOfApiV2WalletListPost200ResponseOneOfWalletsInner(value)
     isInstance = isInstance && "addresses" in value;
     return isInstance;
 }
-export function ApiV2WalletListPost200ResponseOneOfWalletsInnerFromJSON(json) {
+exports.instanceOfApiV2WalletListPost200ResponseOneOfWalletsInner = instanceOfApiV2WalletListPost200ResponseOneOfWalletsInner;
+function ApiV2WalletListPost200ResponseOneOfWalletsInnerFromJSON(json) {
     return ApiV2WalletListPost200ResponseOneOfWalletsInnerFromJSONTyped(json, false);
 }
-export function ApiV2WalletListPost200ResponseOneOfWalletsInnerFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2WalletListPost200ResponseOneOfWalletsInnerFromJSON = ApiV2WalletListPost200ResponseOneOfWalletsInnerFromJSON;
+function ApiV2WalletListPost200ResponseOneOfWalletsInnerFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -34,10 +39,11 @@ export function ApiV2WalletListPost200ResponseOneOfWalletsInnerFromJSONTyped(jso
         'currencyCode': json['currencyCode'],
         'value': json['value'],
         'lockedValue': json['lockedValue'],
-        'addresses': (json['addresses'].map(ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerFromJSON)),
+        'addresses': (json['addresses'].map(ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInner_1.ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerFromJSON)),
     };
 }
-export function ApiV2WalletListPost200ResponseOneOfWalletsInnerToJSON(value) {
+exports.ApiV2WalletListPost200ResponseOneOfWalletsInnerFromJSONTyped = ApiV2WalletListPost200ResponseOneOfWalletsInnerFromJSONTyped;
+function ApiV2WalletListPost200ResponseOneOfWalletsInnerToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -48,7 +54,8 @@ export function ApiV2WalletListPost200ResponseOneOfWalletsInnerToJSON(value) {
         'currencyCode': value.currencyCode,
         'value': value.value,
         'lockedValue': value.lockedValue,
-        'addresses': (value.addresses.map(ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerToJSON)),
+        'addresses': (value.addresses.map(ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInner_1.ApiV2WalletListPost200ResponseOneOfWalletsInnerAddressesInnerToJSON)),
     };
 }
+exports.ApiV2WalletListPost200ResponseOneOfWalletsInnerToJSON = ApiV2WalletListPost200ResponseOneOfWalletsInnerToJSON;
 //# sourceMappingURL=ApiV2WalletListPost200ResponseOneOfWalletsInner.js.map

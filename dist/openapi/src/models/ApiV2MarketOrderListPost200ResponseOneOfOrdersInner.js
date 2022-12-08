@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,10 +12,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerToJSON = exports.ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerFromJSONTyped = exports.ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerFromJSON = exports.instanceOfApiV2MarketOrderListPost200ResponseOneOfOrdersInner = void 0;
 /**
  * Check if a given object implements the ApiV2MarketOrderListPost200ResponseOneOfOrdersInner interface.
  */
-export function instanceOfApiV2MarketOrderListPost200ResponseOneOfOrdersInner(value) {
+function instanceOfApiV2MarketOrderListPost200ResponseOneOfOrdersInner(value) {
     let isInstance = true;
     isInstance = isInstance && "id" in value;
     isInstance = isInstance && "type" in value;
@@ -25,10 +28,12 @@ export function instanceOfApiV2MarketOrderListPost200ResponseOneOfOrdersInner(va
     isInstance = isInstance && "created" in value;
     return isInstance;
 }
-export function ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerFromJSON(json) {
+exports.instanceOfApiV2MarketOrderListPost200ResponseOneOfOrdersInner = instanceOfApiV2MarketOrderListPost200ResponseOneOfOrdersInner;
+function ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerFromJSON(json) {
     return ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerFromJSONTyped(json, false);
 }
-export function ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerFromJSON = ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerFromJSON;
+function ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -42,7 +47,8 @@ export function ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerFromJSONTyped
         'created': json['created'],
     };
 }
-export function ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerToJSON(value) {
+exports.ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerFromJSONTyped = ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerFromJSONTyped;
+function ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -59,4 +65,5 @@ export function ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerToJSON(value)
         'created': value.created,
     };
 }
+exports.ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerToJSON = ApiV2MarketOrderListPost200ResponseOneOfOrdersInnerToJSON;
 //# sourceMappingURL=ApiV2MarketOrderListPost200ResponseOneOfOrdersInner.js.map

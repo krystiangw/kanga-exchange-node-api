@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,19 +12,23 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2LabelListPostRequestToJSON = exports.ApiV2LabelListPostRequestFromJSONTyped = exports.ApiV2LabelListPostRequestFromJSON = exports.instanceOfApiV2LabelListPostRequest = void 0;
 /**
  * Check if a given object implements the ApiV2LabelListPostRequest interface.
  */
-export function instanceOfApiV2LabelListPostRequest(value) {
+function instanceOfApiV2LabelListPostRequest(value) {
     let isInstance = true;
     isInstance = isInstance && "nonce" in value;
     isInstance = isInstance && "appId" in value;
     return isInstance;
 }
-export function ApiV2LabelListPostRequestFromJSON(json) {
+exports.instanceOfApiV2LabelListPostRequest = instanceOfApiV2LabelListPostRequest;
+function ApiV2LabelListPostRequestFromJSON(json) {
     return ApiV2LabelListPostRequestFromJSONTyped(json, false);
 }
-export function ApiV2LabelListPostRequestFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2LabelListPostRequestFromJSON = ApiV2LabelListPostRequestFromJSON;
+function ApiV2LabelListPostRequestFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -32,7 +37,8 @@ export function ApiV2LabelListPostRequestFromJSONTyped(json, ignoreDiscriminator
         'appId': json['appId'],
     };
 }
-export function ApiV2LabelListPostRequestToJSON(value) {
+exports.ApiV2LabelListPostRequestFromJSONTyped = ApiV2LabelListPostRequestFromJSONTyped;
+function ApiV2LabelListPostRequestToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -44,4 +50,5 @@ export function ApiV2LabelListPostRequestToJSON(value) {
         'appId': value.appId,
     };
 }
+exports.ApiV2LabelListPostRequestToJSON = ApiV2LabelListPostRequestToJSON;
 //# sourceMappingURL=ApiV2LabelListPostRequest.js.map

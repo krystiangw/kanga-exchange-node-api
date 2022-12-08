@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,30 +12,35 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { instanceOfApiV2MarketChangesGet200ResponseOneOf, ApiV2MarketChangesGet200ResponseOneOfFromJSONTyped, ApiV2MarketChangesGet200ResponseOneOfToJSON, } from './ApiV2MarketChangesGet200ResponseOneOf';
-import { instanceOfApiV2MarketChangesGet200ResponseOneOf1, ApiV2MarketChangesGet200ResponseOneOf1FromJSONTyped, ApiV2MarketChangesGet200ResponseOneOf1ToJSON, } from './ApiV2MarketChangesGet200ResponseOneOf1';
-export function ApiV2MarketChangesGet200ResponseFromJSON(json) {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketChangesGet200ResponseToJSON = exports.ApiV2MarketChangesGet200ResponseFromJSONTyped = exports.ApiV2MarketChangesGet200ResponseFromJSON = void 0;
+const ApiV2MarketChangesGet200ResponseOneOf_1 = require("./ApiV2MarketChangesGet200ResponseOneOf");
+const ApiV2MarketChangesGet200ResponseOneOf1_1 = require("./ApiV2MarketChangesGet200ResponseOneOf1");
+function ApiV2MarketChangesGet200ResponseFromJSON(json) {
     return ApiV2MarketChangesGet200ResponseFromJSONTyped(json, false);
 }
-export function ApiV2MarketChangesGet200ResponseFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketChangesGet200ResponseFromJSON = ApiV2MarketChangesGet200ResponseFromJSON;
+function ApiV2MarketChangesGet200ResponseFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
-    return { ...ApiV2MarketChangesGet200ResponseOneOfFromJSONTyped(json, true), ...ApiV2MarketChangesGet200ResponseOneOf1FromJSONTyped(json, true) };
+    return { ...(0, ApiV2MarketChangesGet200ResponseOneOf_1.ApiV2MarketChangesGet200ResponseOneOfFromJSONTyped)(json, true), ...(0, ApiV2MarketChangesGet200ResponseOneOf1_1.ApiV2MarketChangesGet200ResponseOneOf1FromJSONTyped)(json, true) };
 }
-export function ApiV2MarketChangesGet200ResponseToJSON(value) {
+exports.ApiV2MarketChangesGet200ResponseFromJSONTyped = ApiV2MarketChangesGet200ResponseFromJSONTyped;
+function ApiV2MarketChangesGet200ResponseToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
     if (value === null) {
         return null;
     }
-    if (instanceOfApiV2MarketChangesGet200ResponseOneOf(value)) {
-        return ApiV2MarketChangesGet200ResponseOneOfToJSON(value);
+    if ((0, ApiV2MarketChangesGet200ResponseOneOf_1.instanceOfApiV2MarketChangesGet200ResponseOneOf)(value)) {
+        return (0, ApiV2MarketChangesGet200ResponseOneOf_1.ApiV2MarketChangesGet200ResponseOneOfToJSON)(value);
     }
-    if (instanceOfApiV2MarketChangesGet200ResponseOneOf1(value)) {
-        return ApiV2MarketChangesGet200ResponseOneOf1ToJSON(value);
+    if ((0, ApiV2MarketChangesGet200ResponseOneOf1_1.instanceOfApiV2MarketChangesGet200ResponseOneOf1)(value)) {
+        return (0, ApiV2MarketChangesGet200ResponseOneOf1_1.ApiV2MarketChangesGet200ResponseOneOf1ToJSON)(value);
     }
     return {};
 }
+exports.ApiV2MarketChangesGet200ResponseToJSON = ApiV2MarketChangesGet200ResponseToJSON;
 //# sourceMappingURL=ApiV2MarketChangesGet200Response.js.map

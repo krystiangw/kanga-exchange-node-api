@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,19 +12,23 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2DistributionGroupListPost200ResponseOneOfListInnerToJSON = exports.ApiV2DistributionGroupListPost200ResponseOneOfListInnerFromJSONTyped = exports.ApiV2DistributionGroupListPost200ResponseOneOfListInnerFromJSON = exports.instanceOfApiV2DistributionGroupListPost200ResponseOneOfListInner = void 0;
 /**
  * Check if a given object implements the ApiV2DistributionGroupListPost200ResponseOneOfListInner interface.
  */
-export function instanceOfApiV2DistributionGroupListPost200ResponseOneOfListInner(value) {
+function instanceOfApiV2DistributionGroupListPost200ResponseOneOfListInner(value) {
     let isInstance = true;
     isInstance = isInstance && "groupId" in value;
     isInstance = isInstance && "groupName" in value;
     return isInstance;
 }
-export function ApiV2DistributionGroupListPost200ResponseOneOfListInnerFromJSON(json) {
+exports.instanceOfApiV2DistributionGroupListPost200ResponseOneOfListInner = instanceOfApiV2DistributionGroupListPost200ResponseOneOfListInner;
+function ApiV2DistributionGroupListPost200ResponseOneOfListInnerFromJSON(json) {
     return ApiV2DistributionGroupListPost200ResponseOneOfListInnerFromJSONTyped(json, false);
 }
-export function ApiV2DistributionGroupListPost200ResponseOneOfListInnerFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2DistributionGroupListPost200ResponseOneOfListInnerFromJSON = ApiV2DistributionGroupListPost200ResponseOneOfListInnerFromJSON;
+function ApiV2DistributionGroupListPost200ResponseOneOfListInnerFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -32,7 +37,8 @@ export function ApiV2DistributionGroupListPost200ResponseOneOfListInnerFromJSONT
         'groupName': json['groupName'],
     };
 }
-export function ApiV2DistributionGroupListPost200ResponseOneOfListInnerToJSON(value) {
+exports.ApiV2DistributionGroupListPost200ResponseOneOfListInnerFromJSONTyped = ApiV2DistributionGroupListPost200ResponseOneOfListInnerFromJSONTyped;
+function ApiV2DistributionGroupListPost200ResponseOneOfListInnerToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -44,4 +50,5 @@ export function ApiV2DistributionGroupListPost200ResponseOneOfListInnerToJSON(va
         'groupName': value.groupName,
     };
 }
+exports.ApiV2DistributionGroupListPost200ResponseOneOfListInnerToJSON = ApiV2DistributionGroupListPost200ResponseOneOfListInnerToJSON;
 //# sourceMappingURL=ApiV2DistributionGroupListPost200ResponseOneOfListInner.js.map

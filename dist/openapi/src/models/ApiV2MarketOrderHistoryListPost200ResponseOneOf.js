@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,35 +12,40 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerFromJSON, ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerToJSON, } from './ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInner';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketOrderHistoryListPost200ResponseOneOfToJSON = exports.ApiV2MarketOrderHistoryListPost200ResponseOneOfFromJSONTyped = exports.ApiV2MarketOrderHistoryListPost200ResponseOneOfFromJSON = exports.instanceOfApiV2MarketOrderHistoryListPost200ResponseOneOf = exports.ApiV2MarketOrderHistoryListPost200ResponseOneOfResultEnum = void 0;
+const ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInner_1 = require("./ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInner");
 /**
  * @export
  */
-export const ApiV2MarketOrderHistoryListPost200ResponseOneOfResultEnum = {
+exports.ApiV2MarketOrderHistoryListPost200ResponseOneOfResultEnum = {
     Ok: 'ok'
 };
 /**
  * Check if a given object implements the ApiV2MarketOrderHistoryListPost200ResponseOneOf interface.
  */
-export function instanceOfApiV2MarketOrderHistoryListPost200ResponseOneOf(value) {
+function instanceOfApiV2MarketOrderHistoryListPost200ResponseOneOf(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "orders" in value;
     return isInstance;
 }
-export function ApiV2MarketOrderHistoryListPost200ResponseOneOfFromJSON(json) {
+exports.instanceOfApiV2MarketOrderHistoryListPost200ResponseOneOf = instanceOfApiV2MarketOrderHistoryListPost200ResponseOneOf;
+function ApiV2MarketOrderHistoryListPost200ResponseOneOfFromJSON(json) {
     return ApiV2MarketOrderHistoryListPost200ResponseOneOfFromJSONTyped(json, false);
 }
-export function ApiV2MarketOrderHistoryListPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketOrderHistoryListPost200ResponseOneOfFromJSON = ApiV2MarketOrderHistoryListPost200ResponseOneOfFromJSON;
+function ApiV2MarketOrderHistoryListPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         'result': json['result'],
-        'orders': (json['orders'].map(ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerFromJSON)),
+        'orders': (json['orders'].map(ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInner_1.ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerFromJSON)),
     };
 }
-export function ApiV2MarketOrderHistoryListPost200ResponseOneOfToJSON(value) {
+exports.ApiV2MarketOrderHistoryListPost200ResponseOneOfFromJSONTyped = ApiV2MarketOrderHistoryListPost200ResponseOneOfFromJSONTyped;
+function ApiV2MarketOrderHistoryListPost200ResponseOneOfToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -48,7 +54,8 @@ export function ApiV2MarketOrderHistoryListPost200ResponseOneOfToJSON(value) {
     }
     return {
         'result': value.result,
-        'orders': (value.orders.map(ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerToJSON)),
+        'orders': (value.orders.map(ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInner_1.ApiV2MarketOrderHistoryListPost200ResponseOneOfOrdersInnerToJSON)),
     };
 }
+exports.ApiV2MarketOrderHistoryListPost200ResponseOneOfToJSON = ApiV2MarketOrderHistoryListPost200ResponseOneOfToJSON;
 //# sourceMappingURL=ApiV2MarketOrderHistoryListPost200ResponseOneOf.js.map

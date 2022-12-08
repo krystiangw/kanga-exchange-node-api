@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,10 +12,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2AomListPost200ResponseOneOfListInnerToJSON = exports.ApiV2AomListPost200ResponseOneOfListInnerFromJSONTyped = exports.ApiV2AomListPost200ResponseOneOfListInnerFromJSON = exports.instanceOfApiV2AomListPost200ResponseOneOfListInner = void 0;
 /**
  * Check if a given object implements the ApiV2AomListPost200ResponseOneOfListInner interface.
  */
-export function instanceOfApiV2AomListPost200ResponseOneOfListInner(value) {
+function instanceOfApiV2AomListPost200ResponseOneOfListInner(value) {
     let isInstance = true;
     isInstance = isInstance && "aomId" in value;
     isInstance = isInstance && "marketId" in value;
@@ -27,10 +30,12 @@ export function instanceOfApiV2AomListPost200ResponseOneOfListInner(value) {
     isInstance = isInstance && "created" in value;
     return isInstance;
 }
-export function ApiV2AomListPost200ResponseOneOfListInnerFromJSON(json) {
+exports.instanceOfApiV2AomListPost200ResponseOneOfListInner = instanceOfApiV2AomListPost200ResponseOneOfListInner;
+function ApiV2AomListPost200ResponseOneOfListInnerFromJSON(json) {
     return ApiV2AomListPost200ResponseOneOfListInnerFromJSONTyped(json, false);
 }
-export function ApiV2AomListPost200ResponseOneOfListInnerFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2AomListPost200ResponseOneOfListInnerFromJSON = ApiV2AomListPost200ResponseOneOfListInnerFromJSON;
+function ApiV2AomListPost200ResponseOneOfListInnerFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -46,7 +51,8 @@ export function ApiV2AomListPost200ResponseOneOfListInnerFromJSONTyped(json, ign
         'created': json['created'],
     };
 }
-export function ApiV2AomListPost200ResponseOneOfListInnerToJSON(value) {
+exports.ApiV2AomListPost200ResponseOneOfListInnerFromJSONTyped = ApiV2AomListPost200ResponseOneOfListInnerFromJSONTyped;
+function ApiV2AomListPost200ResponseOneOfListInnerToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -65,4 +71,5 @@ export function ApiV2AomListPost200ResponseOneOfListInnerToJSON(value) {
         'created': value.created,
     };
 }
+exports.ApiV2AomListPost200ResponseOneOfListInnerToJSON = ApiV2AomListPost200ResponseOneOfListInnerToJSON;
 //# sourceMappingURL=ApiV2AomListPost200ResponseOneOfListInner.js.map

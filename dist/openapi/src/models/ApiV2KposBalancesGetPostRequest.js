@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,20 +12,24 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2KposBalancesGetPostRequestToJSON = exports.ApiV2KposBalancesGetPostRequestFromJSONTyped = exports.ApiV2KposBalancesGetPostRequestFromJSON = exports.instanceOfApiV2KposBalancesGetPostRequest = void 0;
 /**
  * Check if a given object implements the ApiV2KposBalancesGetPostRequest interface.
  */
-export function instanceOfApiV2KposBalancesGetPostRequest(value) {
+function instanceOfApiV2KposBalancesGetPostRequest(value) {
     let isInstance = true;
     isInstance = isInstance && "nonce" in value;
     isInstance = isInstance && "appId" in value;
     isInstance = isInstance && "kposId" in value;
     return isInstance;
 }
-export function ApiV2KposBalancesGetPostRequestFromJSON(json) {
+exports.instanceOfApiV2KposBalancesGetPostRequest = instanceOfApiV2KposBalancesGetPostRequest;
+function ApiV2KposBalancesGetPostRequestFromJSON(json) {
     return ApiV2KposBalancesGetPostRequestFromJSONTyped(json, false);
 }
-export function ApiV2KposBalancesGetPostRequestFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2KposBalancesGetPostRequestFromJSON = ApiV2KposBalancesGetPostRequestFromJSON;
+function ApiV2KposBalancesGetPostRequestFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -34,7 +39,8 @@ export function ApiV2KposBalancesGetPostRequestFromJSONTyped(json, ignoreDiscrim
         'kposId': json['kposId'],
     };
 }
-export function ApiV2KposBalancesGetPostRequestToJSON(value) {
+exports.ApiV2KposBalancesGetPostRequestFromJSONTyped = ApiV2KposBalancesGetPostRequestFromJSONTyped;
+function ApiV2KposBalancesGetPostRequestToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -47,4 +53,5 @@ export function ApiV2KposBalancesGetPostRequestToJSON(value) {
         'kposId': value.kposId,
     };
 }
+exports.ApiV2KposBalancesGetPostRequestToJSON = ApiV2KposBalancesGetPostRequestToJSON;
 //# sourceMappingURL=ApiV2KposBalancesGetPostRequest.js.map

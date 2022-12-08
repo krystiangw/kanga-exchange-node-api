@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,19 +12,23 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2DistributionCreatePostRequestDistributionInnerToJSON = exports.ApiV2DistributionCreatePostRequestDistributionInnerFromJSONTyped = exports.ApiV2DistributionCreatePostRequestDistributionInnerFromJSON = exports.instanceOfApiV2DistributionCreatePostRequestDistributionInner = void 0;
 /**
  * Check if a given object implements the ApiV2DistributionCreatePostRequestDistributionInner interface.
  */
-export function instanceOfApiV2DistributionCreatePostRequestDistributionInner(value) {
+function instanceOfApiV2DistributionCreatePostRequestDistributionInner(value) {
     let isInstance = true;
     isInstance = isInstance && "appUserId" in value;
     isInstance = isInstance && "quantity" in value;
     return isInstance;
 }
-export function ApiV2DistributionCreatePostRequestDistributionInnerFromJSON(json) {
+exports.instanceOfApiV2DistributionCreatePostRequestDistributionInner = instanceOfApiV2DistributionCreatePostRequestDistributionInner;
+function ApiV2DistributionCreatePostRequestDistributionInnerFromJSON(json) {
     return ApiV2DistributionCreatePostRequestDistributionInnerFromJSONTyped(json, false);
 }
-export function ApiV2DistributionCreatePostRequestDistributionInnerFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2DistributionCreatePostRequestDistributionInnerFromJSON = ApiV2DistributionCreatePostRequestDistributionInnerFromJSON;
+function ApiV2DistributionCreatePostRequestDistributionInnerFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -32,7 +37,8 @@ export function ApiV2DistributionCreatePostRequestDistributionInnerFromJSONTyped
         'quantity': json['quantity'],
     };
 }
-export function ApiV2DistributionCreatePostRequestDistributionInnerToJSON(value) {
+exports.ApiV2DistributionCreatePostRequestDistributionInnerFromJSONTyped = ApiV2DistributionCreatePostRequestDistributionInnerFromJSONTyped;
+function ApiV2DistributionCreatePostRequestDistributionInnerToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -44,4 +50,5 @@ export function ApiV2DistributionCreatePostRequestDistributionInnerToJSON(value)
         'quantity': value.quantity,
     };
 }
+exports.ApiV2DistributionCreatePostRequestDistributionInnerToJSON = ApiV2DistributionCreatePostRequestDistributionInnerToJSON;
 //# sourceMappingURL=ApiV2DistributionCreatePostRequestDistributionInner.js.map

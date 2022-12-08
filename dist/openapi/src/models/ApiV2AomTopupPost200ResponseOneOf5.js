@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,31 +12,35 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2AomTopupPost200ResponseOneOf5ToJSON = exports.ApiV2AomTopupPost200ResponseOneOf5FromJSONTyped = exports.ApiV2AomTopupPost200ResponseOneOf5FromJSON = exports.instanceOfApiV2AomTopupPost200ResponseOneOf5 = exports.ApiV2AomTopupPost200ResponseOneOf5CodeEnum = exports.ApiV2AomTopupPost200ResponseOneOf5ResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2AomTopupPost200ResponseOneOf5ResultEnum = {
+exports.ApiV2AomTopupPost200ResponseOneOf5ResultEnum = {
     Fail: 'fail'
 };
 /**
  * @export
  */
-export const ApiV2AomTopupPost200ResponseOneOf5CodeEnum = {
+exports.ApiV2AomTopupPost200ResponseOneOf5CodeEnum = {
     NUMBER_9004: 9004
 };
 /**
  * Check if a given object implements the ApiV2AomTopupPost200ResponseOneOf5 interface.
  */
-export function instanceOfApiV2AomTopupPost200ResponseOneOf5(value) {
+function instanceOfApiV2AomTopupPost200ResponseOneOf5(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "code" in value;
     return isInstance;
 }
-export function ApiV2AomTopupPost200ResponseOneOf5FromJSON(json) {
+exports.instanceOfApiV2AomTopupPost200ResponseOneOf5 = instanceOfApiV2AomTopupPost200ResponseOneOf5;
+function ApiV2AomTopupPost200ResponseOneOf5FromJSON(json) {
     return ApiV2AomTopupPost200ResponseOneOf5FromJSONTyped(json, false);
 }
-export function ApiV2AomTopupPost200ResponseOneOf5FromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2AomTopupPost200ResponseOneOf5FromJSON = ApiV2AomTopupPost200ResponseOneOf5FromJSON;
+function ApiV2AomTopupPost200ResponseOneOf5FromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -44,7 +49,8 @@ export function ApiV2AomTopupPost200ResponseOneOf5FromJSONTyped(json, ignoreDisc
         'code': json['code'],
     };
 }
-export function ApiV2AomTopupPost200ResponseOneOf5ToJSON(value) {
+exports.ApiV2AomTopupPost200ResponseOneOf5FromJSONTyped = ApiV2AomTopupPost200ResponseOneOf5FromJSONTyped;
+function ApiV2AomTopupPost200ResponseOneOf5ToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -56,4 +62,5 @@ export function ApiV2AomTopupPost200ResponseOneOf5ToJSON(value) {
         'code': value.code,
     };
 }
+exports.ApiV2AomTopupPost200ResponseOneOf5ToJSON = ApiV2AomTopupPost200ResponseOneOf5ToJSON;
 //# sourceMappingURL=ApiV2AomTopupPost200ResponseOneOf5.js.map

@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,20 +12,24 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketOrderCancelPostRequestToJSON = exports.ApiV2MarketOrderCancelPostRequestFromJSONTyped = exports.ApiV2MarketOrderCancelPostRequestFromJSON = exports.instanceOfApiV2MarketOrderCancelPostRequest = void 0;
 /**
  * Check if a given object implements the ApiV2MarketOrderCancelPostRequest interface.
  */
-export function instanceOfApiV2MarketOrderCancelPostRequest(value) {
+function instanceOfApiV2MarketOrderCancelPostRequest(value) {
     let isInstance = true;
     isInstance = isInstance && "nonce" in value;
     isInstance = isInstance && "appId" in value;
     isInstance = isInstance && "orderId" in value;
     return isInstance;
 }
-export function ApiV2MarketOrderCancelPostRequestFromJSON(json) {
+exports.instanceOfApiV2MarketOrderCancelPostRequest = instanceOfApiV2MarketOrderCancelPostRequest;
+function ApiV2MarketOrderCancelPostRequestFromJSON(json) {
     return ApiV2MarketOrderCancelPostRequestFromJSONTyped(json, false);
 }
-export function ApiV2MarketOrderCancelPostRequestFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketOrderCancelPostRequestFromJSON = ApiV2MarketOrderCancelPostRequestFromJSON;
+function ApiV2MarketOrderCancelPostRequestFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -34,7 +39,8 @@ export function ApiV2MarketOrderCancelPostRequestFromJSONTyped(json, ignoreDiscr
         'orderId': json['orderId'],
     };
 }
-export function ApiV2MarketOrderCancelPostRequestToJSON(value) {
+exports.ApiV2MarketOrderCancelPostRequestFromJSONTyped = ApiV2MarketOrderCancelPostRequestFromJSONTyped;
+function ApiV2MarketOrderCancelPostRequestToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -47,4 +53,5 @@ export function ApiV2MarketOrderCancelPostRequestToJSON(value) {
         'orderId': value.orderId,
     };
 }
+exports.ApiV2MarketOrderCancelPostRequestToJSON = ApiV2MarketOrderCancelPostRequestToJSON;
 //# sourceMappingURL=ApiV2MarketOrderCancelPostRequest.js.map

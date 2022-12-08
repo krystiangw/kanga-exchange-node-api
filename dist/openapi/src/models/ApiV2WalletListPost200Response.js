@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,38 +12,43 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { instanceOfApiV2WalletListPost200ResponseOneOf, ApiV2WalletListPost200ResponseOneOfFromJSONTyped, ApiV2WalletListPost200ResponseOneOfToJSON, } from './ApiV2WalletListPost200ResponseOneOf';
-import { instanceOfApiV2WalletListPost200ResponseOneOf1, ApiV2WalletListPost200ResponseOneOf1FromJSONTyped, ApiV2WalletListPost200ResponseOneOf1ToJSON, } from './ApiV2WalletListPost200ResponseOneOf1';
-import { instanceOfApiV2WalletListPost200ResponseOneOf2, ApiV2WalletListPost200ResponseOneOf2FromJSONTyped, ApiV2WalletListPost200ResponseOneOf2ToJSON, } from './ApiV2WalletListPost200ResponseOneOf2';
-import { instanceOfApiV2WalletListPost200ResponseOneOf3, ApiV2WalletListPost200ResponseOneOf3FromJSONTyped, ApiV2WalletListPost200ResponseOneOf3ToJSON, } from './ApiV2WalletListPost200ResponseOneOf3';
-export function ApiV2WalletListPost200ResponseFromJSON(json) {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2WalletListPost200ResponseToJSON = exports.ApiV2WalletListPost200ResponseFromJSONTyped = exports.ApiV2WalletListPost200ResponseFromJSON = void 0;
+const ApiV2WalletListPost200ResponseOneOf_1 = require("./ApiV2WalletListPost200ResponseOneOf");
+const ApiV2WalletListPost200ResponseOneOf1_1 = require("./ApiV2WalletListPost200ResponseOneOf1");
+const ApiV2WalletListPost200ResponseOneOf2_1 = require("./ApiV2WalletListPost200ResponseOneOf2");
+const ApiV2WalletListPost200ResponseOneOf3_1 = require("./ApiV2WalletListPost200ResponseOneOf3");
+function ApiV2WalletListPost200ResponseFromJSON(json) {
     return ApiV2WalletListPost200ResponseFromJSONTyped(json, false);
 }
-export function ApiV2WalletListPost200ResponseFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2WalletListPost200ResponseFromJSON = ApiV2WalletListPost200ResponseFromJSON;
+function ApiV2WalletListPost200ResponseFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
-    return { ...ApiV2WalletListPost200ResponseOneOfFromJSONTyped(json, true), ...ApiV2WalletListPost200ResponseOneOf1FromJSONTyped(json, true), ...ApiV2WalletListPost200ResponseOneOf2FromJSONTyped(json, true), ...ApiV2WalletListPost200ResponseOneOf3FromJSONTyped(json, true) };
+    return { ...(0, ApiV2WalletListPost200ResponseOneOf_1.ApiV2WalletListPost200ResponseOneOfFromJSONTyped)(json, true), ...(0, ApiV2WalletListPost200ResponseOneOf1_1.ApiV2WalletListPost200ResponseOneOf1FromJSONTyped)(json, true), ...(0, ApiV2WalletListPost200ResponseOneOf2_1.ApiV2WalletListPost200ResponseOneOf2FromJSONTyped)(json, true), ...(0, ApiV2WalletListPost200ResponseOneOf3_1.ApiV2WalletListPost200ResponseOneOf3FromJSONTyped)(json, true) };
 }
-export function ApiV2WalletListPost200ResponseToJSON(value) {
+exports.ApiV2WalletListPost200ResponseFromJSONTyped = ApiV2WalletListPost200ResponseFromJSONTyped;
+function ApiV2WalletListPost200ResponseToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
     if (value === null) {
         return null;
     }
-    if (instanceOfApiV2WalletListPost200ResponseOneOf(value)) {
-        return ApiV2WalletListPost200ResponseOneOfToJSON(value);
+    if ((0, ApiV2WalletListPost200ResponseOneOf_1.instanceOfApiV2WalletListPost200ResponseOneOf)(value)) {
+        return (0, ApiV2WalletListPost200ResponseOneOf_1.ApiV2WalletListPost200ResponseOneOfToJSON)(value);
     }
-    if (instanceOfApiV2WalletListPost200ResponseOneOf1(value)) {
-        return ApiV2WalletListPost200ResponseOneOf1ToJSON(value);
+    if ((0, ApiV2WalletListPost200ResponseOneOf1_1.instanceOfApiV2WalletListPost200ResponseOneOf1)(value)) {
+        return (0, ApiV2WalletListPost200ResponseOneOf1_1.ApiV2WalletListPost200ResponseOneOf1ToJSON)(value);
     }
-    if (instanceOfApiV2WalletListPost200ResponseOneOf2(value)) {
-        return ApiV2WalletListPost200ResponseOneOf2ToJSON(value);
+    if ((0, ApiV2WalletListPost200ResponseOneOf2_1.instanceOfApiV2WalletListPost200ResponseOneOf2)(value)) {
+        return (0, ApiV2WalletListPost200ResponseOneOf2_1.ApiV2WalletListPost200ResponseOneOf2ToJSON)(value);
     }
-    if (instanceOfApiV2WalletListPost200ResponseOneOf3(value)) {
-        return ApiV2WalletListPost200ResponseOneOf3ToJSON(value);
+    if ((0, ApiV2WalletListPost200ResponseOneOf3_1.instanceOfApiV2WalletListPost200ResponseOneOf3)(value)) {
+        return (0, ApiV2WalletListPost200ResponseOneOf3_1.ApiV2WalletListPost200ResponseOneOf3ToJSON)(value);
     }
     return {};
 }
+exports.ApiV2WalletListPost200ResponseToJSON = ApiV2WalletListPost200ResponseToJSON;
 //# sourceMappingURL=ApiV2WalletListPost200Response.js.map

@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,16 +12,18 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2AomGetPost200ResponseOneOfToJSON = exports.ApiV2AomGetPost200ResponseOneOfFromJSONTyped = exports.ApiV2AomGetPost200ResponseOneOfFromJSON = exports.instanceOfApiV2AomGetPost200ResponseOneOf = exports.ApiV2AomGetPost200ResponseOneOfResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2AomGetPost200ResponseOneOfResultEnum = {
+exports.ApiV2AomGetPost200ResponseOneOfResultEnum = {
     Ok: 'ok'
 };
 /**
  * Check if a given object implements the ApiV2AomGetPost200ResponseOneOf interface.
  */
-export function instanceOfApiV2AomGetPost200ResponseOneOf(value) {
+function instanceOfApiV2AomGetPost200ResponseOneOf(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "marketId" in value;
@@ -34,10 +37,12 @@ export function instanceOfApiV2AomGetPost200ResponseOneOf(value) {
     isInstance = isInstance && "balances" in value;
     return isInstance;
 }
-export function ApiV2AomGetPost200ResponseOneOfFromJSON(json) {
+exports.instanceOfApiV2AomGetPost200ResponseOneOf = instanceOfApiV2AomGetPost200ResponseOneOf;
+function ApiV2AomGetPost200ResponseOneOfFromJSON(json) {
     return ApiV2AomGetPost200ResponseOneOfFromJSONTyped(json, false);
 }
-export function ApiV2AomGetPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2AomGetPost200ResponseOneOfFromJSON = ApiV2AomGetPost200ResponseOneOfFromJSON;
+function ApiV2AomGetPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -54,7 +59,8 @@ export function ApiV2AomGetPost200ResponseOneOfFromJSONTyped(json, ignoreDiscrim
         'balances': json['balances'],
     };
 }
-export function ApiV2AomGetPost200ResponseOneOfToJSON(value) {
+exports.ApiV2AomGetPost200ResponseOneOfFromJSONTyped = ApiV2AomGetPost200ResponseOneOfFromJSONTyped;
+function ApiV2AomGetPost200ResponseOneOfToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -74,4 +80,5 @@ export function ApiV2AomGetPost200ResponseOneOfToJSON(value) {
         'balances': value.balances,
     };
 }
+exports.ApiV2AomGetPost200ResponseOneOfToJSON = ApiV2AomGetPost200ResponseOneOfToJSON;
 //# sourceMappingURL=ApiV2AomGetPost200ResponseOneOf.js.map

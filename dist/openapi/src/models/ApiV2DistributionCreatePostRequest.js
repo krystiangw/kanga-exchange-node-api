@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,12 +12,14 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { exists } from '../runtime';
-import { ApiV2DistributionCreatePostRequestDistributionInnerFromJSON, ApiV2DistributionCreatePostRequestDistributionInnerToJSON, } from './ApiV2DistributionCreatePostRequestDistributionInner';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2DistributionCreatePostRequestToJSON = exports.ApiV2DistributionCreatePostRequestFromJSONTyped = exports.ApiV2DistributionCreatePostRequestFromJSON = exports.instanceOfApiV2DistributionCreatePostRequest = void 0;
+const runtime_1 = require("../runtime");
+const ApiV2DistributionCreatePostRequestDistributionInner_1 = require("./ApiV2DistributionCreatePostRequestDistributionInner");
 /**
  * Check if a given object implements the ApiV2DistributionCreatePostRequest interface.
  */
-export function instanceOfApiV2DistributionCreatePostRequest(value) {
+function instanceOfApiV2DistributionCreatePostRequest(value) {
     let isInstance = true;
     isInstance = isInstance && "nonce" in value;
     isInstance = isInstance && "appId" in value;
@@ -26,10 +29,12 @@ export function instanceOfApiV2DistributionCreatePostRequest(value) {
     isInstance = isInstance && "distribution" in value;
     return isInstance;
 }
-export function ApiV2DistributionCreatePostRequestFromJSON(json) {
+exports.instanceOfApiV2DistributionCreatePostRequest = instanceOfApiV2DistributionCreatePostRequest;
+function ApiV2DistributionCreatePostRequestFromJSON(json) {
     return ApiV2DistributionCreatePostRequestFromJSONTyped(json, false);
 }
-export function ApiV2DistributionCreatePostRequestFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2DistributionCreatePostRequestFromJSON = ApiV2DistributionCreatePostRequestFromJSON;
+function ApiV2DistributionCreatePostRequestFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -39,12 +44,13 @@ export function ApiV2DistributionCreatePostRequestFromJSONTyped(json, ignoreDisc
         'groupId': json['groupId'],
         'currency': json['currency'],
         'title': json['title'],
-        'availability': !exists(json, 'availability') ? undefined : json['availability'],
-        'expires': !exists(json, 'expires') ? undefined : json['expires'],
-        'distribution': (json['distribution'].map(ApiV2DistributionCreatePostRequestDistributionInnerFromJSON)),
+        'availability': !(0, runtime_1.exists)(json, 'availability') ? undefined : json['availability'],
+        'expires': !(0, runtime_1.exists)(json, 'expires') ? undefined : json['expires'],
+        'distribution': (json['distribution'].map(ApiV2DistributionCreatePostRequestDistributionInner_1.ApiV2DistributionCreatePostRequestDistributionInnerFromJSON)),
     };
 }
-export function ApiV2DistributionCreatePostRequestToJSON(value) {
+exports.ApiV2DistributionCreatePostRequestFromJSONTyped = ApiV2DistributionCreatePostRequestFromJSONTyped;
+function ApiV2DistributionCreatePostRequestToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -59,7 +65,8 @@ export function ApiV2DistributionCreatePostRequestToJSON(value) {
         'title': value.title,
         'availability': value.availability,
         'expires': value.expires,
-        'distribution': (value.distribution.map(ApiV2DistributionCreatePostRequestDistributionInnerToJSON)),
+        'distribution': (value.distribution.map(ApiV2DistributionCreatePostRequestDistributionInner_1.ApiV2DistributionCreatePostRequestDistributionInnerToJSON)),
     };
 }
+exports.ApiV2DistributionCreatePostRequestToJSON = ApiV2DistributionCreatePostRequestToJSON;
 //# sourceMappingURL=ApiV2DistributionCreatePostRequest.js.map

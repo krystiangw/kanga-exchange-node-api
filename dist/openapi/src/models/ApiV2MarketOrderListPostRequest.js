@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,21 +12,25 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { exists } from '../runtime';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketOrderListPostRequestToJSON = exports.ApiV2MarketOrderListPostRequestFromJSONTyped = exports.ApiV2MarketOrderListPostRequestFromJSON = exports.instanceOfApiV2MarketOrderListPostRequest = void 0;
+const runtime_1 = require("../runtime");
 /**
  * Check if a given object implements the ApiV2MarketOrderListPostRequest interface.
  */
-export function instanceOfApiV2MarketOrderListPostRequest(value) {
+function instanceOfApiV2MarketOrderListPostRequest(value) {
     let isInstance = true;
     isInstance = isInstance && "nonce" in value;
     isInstance = isInstance && "appId" in value;
     isInstance = isInstance && "market" in value;
     return isInstance;
 }
-export function ApiV2MarketOrderListPostRequestFromJSON(json) {
+exports.instanceOfApiV2MarketOrderListPostRequest = instanceOfApiV2MarketOrderListPostRequest;
+function ApiV2MarketOrderListPostRequestFromJSON(json) {
     return ApiV2MarketOrderListPostRequestFromJSONTyped(json, false);
 }
-export function ApiV2MarketOrderListPostRequestFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketOrderListPostRequestFromJSON = ApiV2MarketOrderListPostRequestFromJSON;
+function ApiV2MarketOrderListPostRequestFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -33,10 +38,11 @@ export function ApiV2MarketOrderListPostRequestFromJSONTyped(json, ignoreDiscrim
         'nonce': json['nonce'],
         'appId': json['appId'],
         'market': json['market'],
-        'limit': !exists(json, 'limit') ? undefined : json['limit'],
+        'limit': !(0, runtime_1.exists)(json, 'limit') ? undefined : json['limit'],
     };
 }
-export function ApiV2MarketOrderListPostRequestToJSON(value) {
+exports.ApiV2MarketOrderListPostRequestFromJSONTyped = ApiV2MarketOrderListPostRequestFromJSONTyped;
+function ApiV2MarketOrderListPostRequestToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -50,4 +56,5 @@ export function ApiV2MarketOrderListPostRequestToJSON(value) {
         'limit': value.limit,
     };
 }
+exports.ApiV2MarketOrderListPostRequestToJSON = ApiV2MarketOrderListPostRequestToJSON;
 //# sourceMappingURL=ApiV2MarketOrderListPostRequest.js.map

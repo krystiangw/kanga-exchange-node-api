@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,35 +12,40 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ApiV2DistributionGroupListPost200ResponseOneOfListInnerFromJSON, ApiV2DistributionGroupListPost200ResponseOneOfListInnerToJSON, } from './ApiV2DistributionGroupListPost200ResponseOneOfListInner';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2DistributionGroupListPost200ResponseOneOfToJSON = exports.ApiV2DistributionGroupListPost200ResponseOneOfFromJSONTyped = exports.ApiV2DistributionGroupListPost200ResponseOneOfFromJSON = exports.instanceOfApiV2DistributionGroupListPost200ResponseOneOf = exports.ApiV2DistributionGroupListPost200ResponseOneOfResultEnum = void 0;
+const ApiV2DistributionGroupListPost200ResponseOneOfListInner_1 = require("./ApiV2DistributionGroupListPost200ResponseOneOfListInner");
 /**
  * @export
  */
-export const ApiV2DistributionGroupListPost200ResponseOneOfResultEnum = {
+exports.ApiV2DistributionGroupListPost200ResponseOneOfResultEnum = {
     Ok: 'ok'
 };
 /**
  * Check if a given object implements the ApiV2DistributionGroupListPost200ResponseOneOf interface.
  */
-export function instanceOfApiV2DistributionGroupListPost200ResponseOneOf(value) {
+function instanceOfApiV2DistributionGroupListPost200ResponseOneOf(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "list" in value;
     return isInstance;
 }
-export function ApiV2DistributionGroupListPost200ResponseOneOfFromJSON(json) {
+exports.instanceOfApiV2DistributionGroupListPost200ResponseOneOf = instanceOfApiV2DistributionGroupListPost200ResponseOneOf;
+function ApiV2DistributionGroupListPost200ResponseOneOfFromJSON(json) {
     return ApiV2DistributionGroupListPost200ResponseOneOfFromJSONTyped(json, false);
 }
-export function ApiV2DistributionGroupListPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2DistributionGroupListPost200ResponseOneOfFromJSON = ApiV2DistributionGroupListPost200ResponseOneOfFromJSON;
+function ApiV2DistributionGroupListPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         'result': json['result'],
-        'list': (json['list'].map(ApiV2DistributionGroupListPost200ResponseOneOfListInnerFromJSON)),
+        'list': (json['list'].map(ApiV2DistributionGroupListPost200ResponseOneOfListInner_1.ApiV2DistributionGroupListPost200ResponseOneOfListInnerFromJSON)),
     };
 }
-export function ApiV2DistributionGroupListPost200ResponseOneOfToJSON(value) {
+exports.ApiV2DistributionGroupListPost200ResponseOneOfFromJSONTyped = ApiV2DistributionGroupListPost200ResponseOneOfFromJSONTyped;
+function ApiV2DistributionGroupListPost200ResponseOneOfToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -48,7 +54,8 @@ export function ApiV2DistributionGroupListPost200ResponseOneOfToJSON(value) {
     }
     return {
         'result': value.result,
-        'list': (value.list.map(ApiV2DistributionGroupListPost200ResponseOneOfListInnerToJSON)),
+        'list': (value.list.map(ApiV2DistributionGroupListPost200ResponseOneOfListInner_1.ApiV2DistributionGroupListPost200ResponseOneOfListInnerToJSON)),
     };
 }
+exports.ApiV2DistributionGroupListPost200ResponseOneOfToJSON = ApiV2DistributionGroupListPost200ResponseOneOfToJSON;
 //# sourceMappingURL=ApiV2DistributionGroupListPost200ResponseOneOf.js.map

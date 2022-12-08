@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,25 +12,29 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketOrderCancelPost200ResponseOneOfToJSON = exports.ApiV2MarketOrderCancelPost200ResponseOneOfFromJSONTyped = exports.ApiV2MarketOrderCancelPost200ResponseOneOfFromJSON = exports.instanceOfApiV2MarketOrderCancelPost200ResponseOneOf = exports.ApiV2MarketOrderCancelPost200ResponseOneOfResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2MarketOrderCancelPost200ResponseOneOfResultEnum = {
+exports.ApiV2MarketOrderCancelPost200ResponseOneOfResultEnum = {
     Ok: 'ok'
 };
 /**
  * Check if a given object implements the ApiV2MarketOrderCancelPost200ResponseOneOf interface.
  */
-export function instanceOfApiV2MarketOrderCancelPost200ResponseOneOf(value) {
+function instanceOfApiV2MarketOrderCancelPost200ResponseOneOf(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "orderId" in value;
     return isInstance;
 }
-export function ApiV2MarketOrderCancelPost200ResponseOneOfFromJSON(json) {
+exports.instanceOfApiV2MarketOrderCancelPost200ResponseOneOf = instanceOfApiV2MarketOrderCancelPost200ResponseOneOf;
+function ApiV2MarketOrderCancelPost200ResponseOneOfFromJSON(json) {
     return ApiV2MarketOrderCancelPost200ResponseOneOfFromJSONTyped(json, false);
 }
-export function ApiV2MarketOrderCancelPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketOrderCancelPost200ResponseOneOfFromJSON = ApiV2MarketOrderCancelPost200ResponseOneOfFromJSON;
+function ApiV2MarketOrderCancelPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -38,7 +43,8 @@ export function ApiV2MarketOrderCancelPost200ResponseOneOfFromJSONTyped(json, ig
         'orderId': json['orderId'],
     };
 }
-export function ApiV2MarketOrderCancelPost200ResponseOneOfToJSON(value) {
+exports.ApiV2MarketOrderCancelPost200ResponseOneOfFromJSONTyped = ApiV2MarketOrderCancelPost200ResponseOneOfFromJSONTyped;
+function ApiV2MarketOrderCancelPost200ResponseOneOfToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -50,4 +56,5 @@ export function ApiV2MarketOrderCancelPost200ResponseOneOfToJSON(value) {
         'orderId': value.orderId,
     };
 }
+exports.ApiV2MarketOrderCancelPost200ResponseOneOfToJSON = ApiV2MarketOrderCancelPost200ResponseOneOfToJSON;
 //# sourceMappingURL=ApiV2MarketOrderCancelPost200ResponseOneOf.js.map

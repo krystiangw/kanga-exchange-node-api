@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,11 +12,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { exists } from '../runtime';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2KposRefillPostRequestToJSON = exports.ApiV2KposRefillPostRequestFromJSONTyped = exports.ApiV2KposRefillPostRequestFromJSON = exports.instanceOfApiV2KposRefillPostRequest = void 0;
+const runtime_1 = require("../runtime");
 /**
  * Check if a given object implements the ApiV2KposRefillPostRequest interface.
  */
-export function instanceOfApiV2KposRefillPostRequest(value) {
+function instanceOfApiV2KposRefillPostRequest(value) {
     let isInstance = true;
     isInstance = isInstance && "nonce" in value;
     isInstance = isInstance && "appId" in value;
@@ -23,10 +26,12 @@ export function instanceOfApiV2KposRefillPostRequest(value) {
     isInstance = isInstance && "prize" in value;
     return isInstance;
 }
-export function ApiV2KposRefillPostRequestFromJSON(json) {
+exports.instanceOfApiV2KposRefillPostRequest = instanceOfApiV2KposRefillPostRequest;
+function ApiV2KposRefillPostRequestFromJSON(json) {
     return ApiV2KposRefillPostRequestFromJSONTyped(json, false);
 }
-export function ApiV2KposRefillPostRequestFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2KposRefillPostRequestFromJSON = ApiV2KposRefillPostRequestFromJSON;
+function ApiV2KposRefillPostRequestFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -35,10 +40,11 @@ export function ApiV2KposRefillPostRequestFromJSONTyped(json, ignoreDiscriminato
         'appId': json['appId'],
         'kposId': json['kposId'],
         'prize': json['prize'],
-        'repeats': !exists(json, 'repeats') ? undefined : json['repeats'],
+        'repeats': !(0, runtime_1.exists)(json, 'repeats') ? undefined : json['repeats'],
     };
 }
-export function ApiV2KposRefillPostRequestToJSON(value) {
+exports.ApiV2KposRefillPostRequestFromJSONTyped = ApiV2KposRefillPostRequestFromJSONTyped;
+function ApiV2KposRefillPostRequestToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -53,4 +59,5 @@ export function ApiV2KposRefillPostRequestToJSON(value) {
         'repeats': value.repeats,
     };
 }
+exports.ApiV2KposRefillPostRequestToJSON = ApiV2KposRefillPostRequestToJSON;
 //# sourceMappingURL=ApiV2KposRefillPostRequest.js.map

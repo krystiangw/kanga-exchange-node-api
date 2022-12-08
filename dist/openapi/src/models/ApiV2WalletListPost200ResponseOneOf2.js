@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,31 +12,35 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2WalletListPost200ResponseOneOf2ToJSON = exports.ApiV2WalletListPost200ResponseOneOf2FromJSONTyped = exports.ApiV2WalletListPost200ResponseOneOf2FromJSON = exports.instanceOfApiV2WalletListPost200ResponseOneOf2 = exports.ApiV2WalletListPost200ResponseOneOf2CodeEnum = exports.ApiV2WalletListPost200ResponseOneOf2ResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2WalletListPost200ResponseOneOf2ResultEnum = {
+exports.ApiV2WalletListPost200ResponseOneOf2ResultEnum = {
     Fail: 'fail'
 };
 /**
  * @export
  */
-export const ApiV2WalletListPost200ResponseOneOf2CodeEnum = {
+exports.ApiV2WalletListPost200ResponseOneOf2CodeEnum = {
     NUMBER_9001: 9001
 };
 /**
  * Check if a given object implements the ApiV2WalletListPost200ResponseOneOf2 interface.
  */
-export function instanceOfApiV2WalletListPost200ResponseOneOf2(value) {
+function instanceOfApiV2WalletListPost200ResponseOneOf2(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "code" in value;
     return isInstance;
 }
-export function ApiV2WalletListPost200ResponseOneOf2FromJSON(json) {
+exports.instanceOfApiV2WalletListPost200ResponseOneOf2 = instanceOfApiV2WalletListPost200ResponseOneOf2;
+function ApiV2WalletListPost200ResponseOneOf2FromJSON(json) {
     return ApiV2WalletListPost200ResponseOneOf2FromJSONTyped(json, false);
 }
-export function ApiV2WalletListPost200ResponseOneOf2FromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2WalletListPost200ResponseOneOf2FromJSON = ApiV2WalletListPost200ResponseOneOf2FromJSON;
+function ApiV2WalletListPost200ResponseOneOf2FromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -44,7 +49,8 @@ export function ApiV2WalletListPost200ResponseOneOf2FromJSONTyped(json, ignoreDi
         'code': json['code'],
     };
 }
-export function ApiV2WalletListPost200ResponseOneOf2ToJSON(value) {
+exports.ApiV2WalletListPost200ResponseOneOf2FromJSONTyped = ApiV2WalletListPost200ResponseOneOf2FromJSONTyped;
+function ApiV2WalletListPost200ResponseOneOf2ToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -56,4 +62,5 @@ export function ApiV2WalletListPost200ResponseOneOf2ToJSON(value) {
         'code': value.code,
     };
 }
+exports.ApiV2WalletListPost200ResponseOneOf2ToJSON = ApiV2WalletListPost200ResponseOneOf2ToJSON;
 //# sourceMappingURL=ApiV2WalletListPost200ResponseOneOf2.js.map

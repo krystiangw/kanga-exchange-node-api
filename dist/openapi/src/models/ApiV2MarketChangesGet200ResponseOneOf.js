@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,39 +12,44 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { exists } from '../runtime';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2MarketChangesGet200ResponseOneOfToJSON = exports.ApiV2MarketChangesGet200ResponseOneOfFromJSONTyped = exports.ApiV2MarketChangesGet200ResponseOneOfFromJSON = exports.instanceOfApiV2MarketChangesGet200ResponseOneOf = void 0;
+const runtime_1 = require("../runtime");
 /**
  * Check if a given object implements the ApiV2MarketChangesGet200ResponseOneOf interface.
  */
-export function instanceOfApiV2MarketChangesGet200ResponseOneOf(value) {
+function instanceOfApiV2MarketChangesGet200ResponseOneOf(value) {
     let isInstance = true;
     isInstance = isInstance && "timestamp" in value;
     return isInstance;
 }
-export function ApiV2MarketChangesGet200ResponseOneOfFromJSON(json) {
+exports.instanceOfApiV2MarketChangesGet200ResponseOneOf = instanceOfApiV2MarketChangesGet200ResponseOneOf;
+function ApiV2MarketChangesGet200ResponseOneOfFromJSON(json) {
     return ApiV2MarketChangesGet200ResponseOneOfFromJSONTyped(json, false);
 }
-export function ApiV2MarketChangesGet200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2MarketChangesGet200ResponseOneOfFromJSON = ApiV2MarketChangesGet200ResponseOneOfFromJSON;
+function ApiV2MarketChangesGet200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         'timestamp': json['timestamp'],
-        'price': !exists(json, 'price') ? undefined : json['price'],
-        'minPrice': !exists(json, 'minPrice') ? undefined : json['minPrice'],
-        'maxPrice': !exists(json, 'maxPrice') ? undefined : json['maxPrice'],
-        'highestBid': !exists(json, 'highestBid') ? undefined : json['highestBid'],
-        'lowestAsk': !exists(json, 'lowestAsk') ? undefined : json['lowestAsk'],
-        'volume': !exists(json, 'volume') ? undefined : json['volume'],
-        'volume24': !exists(json, 'volume24') ? undefined : json['volume24'],
-        'quantityVolume24': !exists(json, 'quantityVolume24') ? undefined : json['quantityVolume24'],
-        'weeklyVolume': !exists(json, 'weeklyVolume') ? undefined : json['weeklyVolume'],
-        'monthlyVolume': !exists(json, 'monthlyVolume') ? undefined : json['monthlyVolume'],
-        'change': !exists(json, 'change') ? undefined : json['change'],
-        'changeQuantity': !exists(json, 'changeQuantity') ? undefined : json['changeQuantity'],
+        'price': !(0, runtime_1.exists)(json, 'price') ? undefined : json['price'],
+        'minPrice': !(0, runtime_1.exists)(json, 'minPrice') ? undefined : json['minPrice'],
+        'maxPrice': !(0, runtime_1.exists)(json, 'maxPrice') ? undefined : json['maxPrice'],
+        'highestBid': !(0, runtime_1.exists)(json, 'highestBid') ? undefined : json['highestBid'],
+        'lowestAsk': !(0, runtime_1.exists)(json, 'lowestAsk') ? undefined : json['lowestAsk'],
+        'volume': !(0, runtime_1.exists)(json, 'volume') ? undefined : json['volume'],
+        'volume24': !(0, runtime_1.exists)(json, 'volume24') ? undefined : json['volume24'],
+        'quantityVolume24': !(0, runtime_1.exists)(json, 'quantityVolume24') ? undefined : json['quantityVolume24'],
+        'weeklyVolume': !(0, runtime_1.exists)(json, 'weeklyVolume') ? undefined : json['weeklyVolume'],
+        'monthlyVolume': !(0, runtime_1.exists)(json, 'monthlyVolume') ? undefined : json['monthlyVolume'],
+        'change': !(0, runtime_1.exists)(json, 'change') ? undefined : json['change'],
+        'changeQuantity': !(0, runtime_1.exists)(json, 'changeQuantity') ? undefined : json['changeQuantity'],
     };
 }
-export function ApiV2MarketChangesGet200ResponseOneOfToJSON(value) {
+exports.ApiV2MarketChangesGet200ResponseOneOfFromJSONTyped = ApiV2MarketChangesGet200ResponseOneOfFromJSONTyped;
+function ApiV2MarketChangesGet200ResponseOneOfToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -66,4 +72,5 @@ export function ApiV2MarketChangesGet200ResponseOneOfToJSON(value) {
         'changeQuantity': value.changeQuantity,
     };
 }
+exports.ApiV2MarketChangesGet200ResponseOneOfToJSON = ApiV2MarketChangesGet200ResponseOneOfToJSON;
 //# sourceMappingURL=ApiV2MarketChangesGet200ResponseOneOf.js.map

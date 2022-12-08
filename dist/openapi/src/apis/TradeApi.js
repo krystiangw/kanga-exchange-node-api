@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,12 +12,37 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as runtime from '../runtime';
-import { ApiMarketsPost200ResponseFromJSON, ApiV2MarketOrderBookPost200ResponseFromJSON, ApiV2MarketOrderBookPostRequestToJSON, ApiV2MarketOrderCancelPost200ResponseFromJSON, ApiV2MarketOrderCancelPostRequestToJSON, ApiV2MarketOrderCreatePost200ResponseFromJSON, ApiV2MarketOrderCreatePostRequestToJSON, ApiV2MarketOrderGetPost200ResponseFromJSON, ApiV2MarketOrderGetPostRequestToJSON, ApiV2MarketOrderHistoryListPost200ResponseFromJSON, ApiV2MarketOrderListPost200ResponseFromJSON, ApiV2MarketOrderListPostRequestToJSON, } from '../models';
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TradeApi = void 0;
+const runtime = __importStar(require("../runtime"));
+const models_1 = require("../models");
 /**
  *
  */
-export class TradeApi extends runtime.BaseAPI {
+class TradeApi extends runtime.BaseAPI {
     /**
      * Returns the list of all markets. This call will be deprecated in the near future.
      * Market list
@@ -38,7 +64,7 @@ export class TradeApi extends runtime.BaseAPI {
             query: queryParameters,
             body: requestParameters.body,
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiMarketsPost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiMarketsPost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Returns the list of all markets. This call will be deprecated in the near future.
@@ -67,9 +93,9 @@ export class TradeApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2MarketOrderBookPostRequestToJSON(requestParameters.apiV2MarketOrderBookPostRequest),
+            body: (0, models_1.ApiV2MarketOrderBookPostRequestToJSON)(requestParameters.apiV2MarketOrderBookPostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2MarketOrderBookPost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2MarketOrderBookPost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Returns the order book for the specified market (cached every 2 seconds).
@@ -98,9 +124,9 @@ export class TradeApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2MarketOrderCancelPostRequestToJSON(requestParameters.apiV2MarketOrderCancelPostRequest),
+            body: (0, models_1.ApiV2MarketOrderCancelPostRequestToJSON)(requestParameters.apiV2MarketOrderCancelPostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2MarketOrderCancelPost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2MarketOrderCancelPost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Cancels the order identified by orderId.
@@ -129,9 +155,9 @@ export class TradeApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2MarketOrderCreatePostRequestToJSON(requestParameters.apiV2MarketOrderCreatePostRequest),
+            body: (0, models_1.ApiV2MarketOrderCreatePostRequestToJSON)(requestParameters.apiV2MarketOrderCreatePostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2MarketOrderCreatePost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2MarketOrderCreatePost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Creates a new order. On success returns orderId.
@@ -160,9 +186,9 @@ export class TradeApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2MarketOrderGetPostRequestToJSON(requestParameters.apiV2MarketOrderGetPostRequest),
+            body: (0, models_1.ApiV2MarketOrderGetPostRequestToJSON)(requestParameters.apiV2MarketOrderGetPostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2MarketOrderGetPost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2MarketOrderGetPost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Returns the details of the specified order.
@@ -191,9 +217,9 @@ export class TradeApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2MarketOrderBookPostRequestToJSON(requestParameters.apiV2MarketOrderBookPostRequest),
+            body: (0, models_1.ApiV2MarketOrderBookPostRequestToJSON)(requestParameters.apiV2MarketOrderBookPostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2MarketOrderHistoryListPost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2MarketOrderHistoryListPost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Returns up to 50 recent orders (both fulfilled and canceled) from the specified market.
@@ -222,9 +248,9 @@ export class TradeApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2MarketOrderListPostRequestToJSON(requestParameters.apiV2MarketOrderListPostRequest),
+            body: (0, models_1.ApiV2MarketOrderListPostRequestToJSON)(requestParameters.apiV2MarketOrderListPostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2MarketOrderListPost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2MarketOrderListPost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Returns up to 100 active orders from the specified market.
@@ -235,4 +261,5 @@ export class TradeApi extends runtime.BaseAPI {
         return await response.value();
     }
 }
+exports.TradeApi = TradeApi;
 //# sourceMappingURL=TradeApi.js.map

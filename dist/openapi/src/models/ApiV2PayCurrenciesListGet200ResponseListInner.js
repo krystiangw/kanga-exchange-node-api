@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,19 +12,23 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2PayCurrenciesListGet200ResponseListInnerToJSON = exports.ApiV2PayCurrenciesListGet200ResponseListInnerFromJSONTyped = exports.ApiV2PayCurrenciesListGet200ResponseListInnerFromJSON = exports.instanceOfApiV2PayCurrenciesListGet200ResponseListInner = void 0;
 /**
  * Check if a given object implements the ApiV2PayCurrenciesListGet200ResponseListInner interface.
  */
-export function instanceOfApiV2PayCurrenciesListGet200ResponseListInner(value) {
+function instanceOfApiV2PayCurrenciesListGet200ResponseListInner(value) {
     let isInstance = true;
     isInstance = isInstance && "currency" in value;
     isInstance = isInstance && "connectedCurrencies" in value;
     return isInstance;
 }
-export function ApiV2PayCurrenciesListGet200ResponseListInnerFromJSON(json) {
+exports.instanceOfApiV2PayCurrenciesListGet200ResponseListInner = instanceOfApiV2PayCurrenciesListGet200ResponseListInner;
+function ApiV2PayCurrenciesListGet200ResponseListInnerFromJSON(json) {
     return ApiV2PayCurrenciesListGet200ResponseListInnerFromJSONTyped(json, false);
 }
-export function ApiV2PayCurrenciesListGet200ResponseListInnerFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2PayCurrenciesListGet200ResponseListInnerFromJSON = ApiV2PayCurrenciesListGet200ResponseListInnerFromJSON;
+function ApiV2PayCurrenciesListGet200ResponseListInnerFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -32,7 +37,8 @@ export function ApiV2PayCurrenciesListGet200ResponseListInnerFromJSONTyped(json,
         'connectedCurrencies': json['connectedCurrencies'],
     };
 }
-export function ApiV2PayCurrenciesListGet200ResponseListInnerToJSON(value) {
+exports.ApiV2PayCurrenciesListGet200ResponseListInnerFromJSONTyped = ApiV2PayCurrenciesListGet200ResponseListInnerFromJSONTyped;
+function ApiV2PayCurrenciesListGet200ResponseListInnerToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -44,4 +50,5 @@ export function ApiV2PayCurrenciesListGet200ResponseListInnerToJSON(value) {
         'connectedCurrencies': value.connectedCurrencies,
     };
 }
+exports.ApiV2PayCurrenciesListGet200ResponseListInnerToJSON = ApiV2PayCurrenciesListGet200ResponseListInnerToJSON;
 //# sourceMappingURL=ApiV2PayCurrenciesListGet200ResponseListInner.js.map

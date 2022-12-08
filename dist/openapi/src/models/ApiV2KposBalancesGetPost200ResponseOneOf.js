@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,16 +12,18 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2KposBalancesGetPost200ResponseOneOfToJSON = exports.ApiV2KposBalancesGetPost200ResponseOneOfFromJSONTyped = exports.ApiV2KposBalancesGetPost200ResponseOneOfFromJSON = exports.instanceOfApiV2KposBalancesGetPost200ResponseOneOf = exports.ApiV2KposBalancesGetPost200ResponseOneOfResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2KposBalancesGetPost200ResponseOneOfResultEnum = {
+exports.ApiV2KposBalancesGetPost200ResponseOneOfResultEnum = {
     Ok: 'ok'
 };
 /**
  * Check if a given object implements the ApiV2KposBalancesGetPost200ResponseOneOf interface.
  */
-export function instanceOfApiV2KposBalancesGetPost200ResponseOneOf(value) {
+function instanceOfApiV2KposBalancesGetPost200ResponseOneOf(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "kposTotal" in value;
@@ -28,10 +31,12 @@ export function instanceOfApiV2KposBalancesGetPost200ResponseOneOf(value) {
     isInstance = isInstance && "kposRefill" in value;
     return isInstance;
 }
-export function ApiV2KposBalancesGetPost200ResponseOneOfFromJSON(json) {
+exports.instanceOfApiV2KposBalancesGetPost200ResponseOneOf = instanceOfApiV2KposBalancesGetPost200ResponseOneOf;
+function ApiV2KposBalancesGetPost200ResponseOneOfFromJSON(json) {
     return ApiV2KposBalancesGetPost200ResponseOneOfFromJSONTyped(json, false);
 }
-export function ApiV2KposBalancesGetPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2KposBalancesGetPost200ResponseOneOfFromJSON = ApiV2KposBalancesGetPost200ResponseOneOfFromJSON;
+function ApiV2KposBalancesGetPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -42,7 +47,8 @@ export function ApiV2KposBalancesGetPost200ResponseOneOfFromJSONTyped(json, igno
         'kposRefill': json['kposRefill'],
     };
 }
-export function ApiV2KposBalancesGetPost200ResponseOneOfToJSON(value) {
+exports.ApiV2KposBalancesGetPost200ResponseOneOfFromJSONTyped = ApiV2KposBalancesGetPost200ResponseOneOfFromJSONTyped;
+function ApiV2KposBalancesGetPost200ResponseOneOfToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -56,4 +62,5 @@ export function ApiV2KposBalancesGetPost200ResponseOneOfToJSON(value) {
         'kposRefill': value.kposRefill,
     };
 }
+exports.ApiV2KposBalancesGetPost200ResponseOneOfToJSON = ApiV2KposBalancesGetPost200ResponseOneOfToJSON;
 //# sourceMappingURL=ApiV2KposBalancesGetPost200ResponseOneOf.js.map

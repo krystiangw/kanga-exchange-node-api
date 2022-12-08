@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,12 +12,37 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import * as runtime from '../runtime';
-import { ApiV2PayCurrenciesListGet200ResponseFromJSON, ApiV2PayPaymentCreatePost200ResponseFromJSON, ApiV2PayPaymentCreatePostRequestToJSON, ApiV2PayPaymentGetPost200ResponseFromJSON, ApiV2PayPaymentGetPostRequestToJSON, } from '../models';
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KangaPayApi = void 0;
+const runtime = __importStar(require("../runtime"));
+const models_1 = require("../models");
 /**
  *
  */
-export class KangaPayApi extends runtime.BaseAPI {
+class KangaPayApi extends runtime.BaseAPI {
     /**
      * This endpoint returns which currencies are exchanged with Kanga Pay
      * Kanga Pay currencies
@@ -30,7 +56,7 @@ export class KangaPayApi extends runtime.BaseAPI {
             headers: headerParameters,
             query: queryParameters,
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2PayCurrenciesListGet200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2PayCurrenciesListGet200ResponseFromJSON)(jsonValue));
     }
     /**
      * This endpoint returns which currencies are exchanged with Kanga Pay
@@ -59,9 +85,9 @@ export class KangaPayApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2PayPaymentCreatePostRequestToJSON(requestParameters.apiV2PayPaymentCreatePostRequest),
+            body: (0, models_1.ApiV2PayPaymentCreatePostRequestToJSON)(requestParameters.apiV2PayPaymentCreatePostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2PayPaymentCreatePost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2PayPaymentCreatePost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Creates a new KangaPay payment for the user identified by the payCode.
@@ -90,9 +116,9 @@ export class KangaPayApi extends runtime.BaseAPI {
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: ApiV2PayPaymentGetPostRequestToJSON(requestParameters.apiV2PayPaymentGetPostRequest),
+            body: (0, models_1.ApiV2PayPaymentGetPostRequestToJSON)(requestParameters.apiV2PayPaymentGetPostRequest),
         }, initOverrides);
-        return new runtime.JSONApiResponse(response, (jsonValue) => ApiV2PayPaymentGetPost200ResponseFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => (0, models_1.ApiV2PayPaymentGetPost200ResponseFromJSON)(jsonValue));
     }
     /**
      * Returns KangaPay payment details.
@@ -103,4 +129,5 @@ export class KangaPayApi extends runtime.BaseAPI {
         return await response.value();
     }
 }
+exports.KangaPayApi = KangaPayApi;
 //# sourceMappingURL=KangaPayApi.js.map

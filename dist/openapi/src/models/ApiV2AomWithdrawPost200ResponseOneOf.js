@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,25 +12,29 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2AomWithdrawPost200ResponseOneOfToJSON = exports.ApiV2AomWithdrawPost200ResponseOneOfFromJSONTyped = exports.ApiV2AomWithdrawPost200ResponseOneOfFromJSON = exports.instanceOfApiV2AomWithdrawPost200ResponseOneOf = exports.ApiV2AomWithdrawPost200ResponseOneOfResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2AomWithdrawPost200ResponseOneOfResultEnum = {
+exports.ApiV2AomWithdrawPost200ResponseOneOfResultEnum = {
     Ok: 'ok'
 };
 /**
  * Check if a given object implements the ApiV2AomWithdrawPost200ResponseOneOf interface.
  */
-export function instanceOfApiV2AomWithdrawPost200ResponseOneOf(value) {
+function instanceOfApiV2AomWithdrawPost200ResponseOneOf(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "withdrawal" in value;
     return isInstance;
 }
-export function ApiV2AomWithdrawPost200ResponseOneOfFromJSON(json) {
+exports.instanceOfApiV2AomWithdrawPost200ResponseOneOf = instanceOfApiV2AomWithdrawPost200ResponseOneOf;
+function ApiV2AomWithdrawPost200ResponseOneOfFromJSON(json) {
     return ApiV2AomWithdrawPost200ResponseOneOfFromJSONTyped(json, false);
 }
-export function ApiV2AomWithdrawPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2AomWithdrawPost200ResponseOneOfFromJSON = ApiV2AomWithdrawPost200ResponseOneOfFromJSON;
+function ApiV2AomWithdrawPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -38,7 +43,8 @@ export function ApiV2AomWithdrawPost200ResponseOneOfFromJSONTyped(json, ignoreDi
         'withdrawal': json['withdrawal'],
     };
 }
-export function ApiV2AomWithdrawPost200ResponseOneOfToJSON(value) {
+exports.ApiV2AomWithdrawPost200ResponseOneOfFromJSONTyped = ApiV2AomWithdrawPost200ResponseOneOfFromJSONTyped;
+function ApiV2AomWithdrawPost200ResponseOneOfToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -50,4 +56,5 @@ export function ApiV2AomWithdrawPost200ResponseOneOfToJSON(value) {
         'withdrawal': value.withdrawal,
     };
 }
+exports.ApiV2AomWithdrawPost200ResponseOneOfToJSON = ApiV2AomWithdrawPost200ResponseOneOfToJSON;
 //# sourceMappingURL=ApiV2AomWithdrawPost200ResponseOneOf.js.map

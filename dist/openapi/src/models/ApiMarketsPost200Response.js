@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,29 +12,34 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { ApiMarketsPost200ResponseItemsInnerFromJSON, ApiMarketsPost200ResponseItemsInnerToJSON, } from './ApiMarketsPost200ResponseItemsInner';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiMarketsPost200ResponseToJSON = exports.ApiMarketsPost200ResponseFromJSONTyped = exports.ApiMarketsPost200ResponseFromJSON = exports.instanceOfApiMarketsPost200Response = void 0;
+const ApiMarketsPost200ResponseItemsInner_1 = require("./ApiMarketsPost200ResponseItemsInner");
 /**
  * Check if a given object implements the ApiMarketsPost200Response interface.
  */
-export function instanceOfApiMarketsPost200Response(value) {
+function instanceOfApiMarketsPost200Response(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "items" in value;
     return isInstance;
 }
-export function ApiMarketsPost200ResponseFromJSON(json) {
+exports.instanceOfApiMarketsPost200Response = instanceOfApiMarketsPost200Response;
+function ApiMarketsPost200ResponseFromJSON(json) {
     return ApiMarketsPost200ResponseFromJSONTyped(json, false);
 }
-export function ApiMarketsPost200ResponseFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiMarketsPost200ResponseFromJSON = ApiMarketsPost200ResponseFromJSON;
+function ApiMarketsPost200ResponseFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         'result': json['result'],
-        'items': (json['items'].map(ApiMarketsPost200ResponseItemsInnerFromJSON)),
+        'items': (json['items'].map(ApiMarketsPost200ResponseItemsInner_1.ApiMarketsPost200ResponseItemsInnerFromJSON)),
     };
 }
-export function ApiMarketsPost200ResponseToJSON(value) {
+exports.ApiMarketsPost200ResponseFromJSONTyped = ApiMarketsPost200ResponseFromJSONTyped;
+function ApiMarketsPost200ResponseToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -42,7 +48,8 @@ export function ApiMarketsPost200ResponseToJSON(value) {
     }
     return {
         'result': value.result,
-        'items': (value.items.map(ApiMarketsPost200ResponseItemsInnerToJSON)),
+        'items': (value.items.map(ApiMarketsPost200ResponseItemsInner_1.ApiMarketsPost200ResponseItemsInnerToJSON)),
     };
 }
+exports.ApiMarketsPost200ResponseToJSON = ApiMarketsPost200ResponseToJSON;
 //# sourceMappingURL=ApiMarketsPost200Response.js.map

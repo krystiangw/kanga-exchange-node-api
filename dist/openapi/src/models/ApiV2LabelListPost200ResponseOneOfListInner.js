@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,10 +12,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2LabelListPost200ResponseOneOfListInnerToJSON = exports.ApiV2LabelListPost200ResponseOneOfListInnerFromJSONTyped = exports.ApiV2LabelListPost200ResponseOneOfListInnerFromJSON = exports.instanceOfApiV2LabelListPost200ResponseOneOfListInner = void 0;
 /**
  * Check if a given object implements the ApiV2LabelListPost200ResponseOneOfListInner interface.
  */
-export function instanceOfApiV2LabelListPost200ResponseOneOfListInner(value) {
+function instanceOfApiV2LabelListPost200ResponseOneOfListInner(value) {
     let isInstance = true;
     isInstance = isInstance && "labelId" in value;
     isInstance = isInstance && "labelName" in value;
@@ -23,10 +26,12 @@ export function instanceOfApiV2LabelListPost200ResponseOneOfListInner(value) {
     isInstance = isInstance && "readLabelPermission" in value;
     return isInstance;
 }
-export function ApiV2LabelListPost200ResponseOneOfListInnerFromJSON(json) {
+exports.instanceOfApiV2LabelListPost200ResponseOneOfListInner = instanceOfApiV2LabelListPost200ResponseOneOfListInner;
+function ApiV2LabelListPost200ResponseOneOfListInnerFromJSON(json) {
     return ApiV2LabelListPost200ResponseOneOfListInnerFromJSONTyped(json, false);
 }
-export function ApiV2LabelListPost200ResponseOneOfListInnerFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2LabelListPost200ResponseOneOfListInnerFromJSON = ApiV2LabelListPost200ResponseOneOfListInnerFromJSON;
+function ApiV2LabelListPost200ResponseOneOfListInnerFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -38,7 +43,8 @@ export function ApiV2LabelListPost200ResponseOneOfListInnerFromJSONTyped(json, i
         'readLabelPermission': json['readLabelPermission'],
     };
 }
-export function ApiV2LabelListPost200ResponseOneOfListInnerToJSON(value) {
+exports.ApiV2LabelListPost200ResponseOneOfListInnerFromJSONTyped = ApiV2LabelListPost200ResponseOneOfListInnerFromJSONTyped;
+function ApiV2LabelListPost200ResponseOneOfListInnerToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -53,4 +59,5 @@ export function ApiV2LabelListPost200ResponseOneOfListInnerToJSON(value) {
         'readLabelPermission': value.readLabelPermission,
     };
 }
+exports.ApiV2LabelListPost200ResponseOneOfListInnerToJSON = ApiV2LabelListPost200ResponseOneOfListInnerToJSON;
 //# sourceMappingURL=ApiV2LabelListPost200ResponseOneOfListInner.js.map

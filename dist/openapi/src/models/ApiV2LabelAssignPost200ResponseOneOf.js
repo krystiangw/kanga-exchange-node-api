@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,31 +12,35 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2LabelAssignPost200ResponseOneOfToJSON = exports.ApiV2LabelAssignPost200ResponseOneOfFromJSONTyped = exports.ApiV2LabelAssignPost200ResponseOneOfFromJSON = exports.instanceOfApiV2LabelAssignPost200ResponseOneOf = exports.ApiV2LabelAssignPost200ResponseOneOfCodeEnum = exports.ApiV2LabelAssignPost200ResponseOneOfResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2LabelAssignPost200ResponseOneOfResultEnum = {
+exports.ApiV2LabelAssignPost200ResponseOneOfResultEnum = {
     Fail: 'fail'
 };
 /**
  * @export
  */
-export const ApiV2LabelAssignPost200ResponseOneOfCodeEnum = {
+exports.ApiV2LabelAssignPost200ResponseOneOfCodeEnum = {
     NUMBER_9000: 9000
 };
 /**
  * Check if a given object implements the ApiV2LabelAssignPost200ResponseOneOf interface.
  */
-export function instanceOfApiV2LabelAssignPost200ResponseOneOf(value) {
+function instanceOfApiV2LabelAssignPost200ResponseOneOf(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "code" in value;
     return isInstance;
 }
-export function ApiV2LabelAssignPost200ResponseOneOfFromJSON(json) {
+exports.instanceOfApiV2LabelAssignPost200ResponseOneOf = instanceOfApiV2LabelAssignPost200ResponseOneOf;
+function ApiV2LabelAssignPost200ResponseOneOfFromJSON(json) {
     return ApiV2LabelAssignPost200ResponseOneOfFromJSONTyped(json, false);
 }
-export function ApiV2LabelAssignPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2LabelAssignPost200ResponseOneOfFromJSON = ApiV2LabelAssignPost200ResponseOneOfFromJSON;
+function ApiV2LabelAssignPost200ResponseOneOfFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -44,7 +49,8 @@ export function ApiV2LabelAssignPost200ResponseOneOfFromJSONTyped(json, ignoreDi
         'code': json['code'],
     };
 }
-export function ApiV2LabelAssignPost200ResponseOneOfToJSON(value) {
+exports.ApiV2LabelAssignPost200ResponseOneOfFromJSONTyped = ApiV2LabelAssignPost200ResponseOneOfFromJSONTyped;
+function ApiV2LabelAssignPost200ResponseOneOfToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -56,4 +62,5 @@ export function ApiV2LabelAssignPost200ResponseOneOfToJSON(value) {
         'code': value.code,
     };
 }
+exports.ApiV2LabelAssignPost200ResponseOneOfToJSON = ApiV2LabelAssignPost200ResponseOneOfToJSON;
 //# sourceMappingURL=ApiV2LabelAssignPost200ResponseOneOf.js.map

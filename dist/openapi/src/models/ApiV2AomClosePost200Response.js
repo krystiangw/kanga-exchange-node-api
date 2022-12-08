@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,46 +12,51 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { instanceOfApiV2AomClosePost200ResponseOneOf, ApiV2AomClosePost200ResponseOneOfFromJSONTyped, ApiV2AomClosePost200ResponseOneOfToJSON, } from './ApiV2AomClosePost200ResponseOneOf';
-import { instanceOfApiV2AomClosePost200ResponseOneOf1, ApiV2AomClosePost200ResponseOneOf1FromJSONTyped, ApiV2AomClosePost200ResponseOneOf1ToJSON, } from './ApiV2AomClosePost200ResponseOneOf1';
-import { instanceOfApiV2AomClosePost200ResponseOneOf2, ApiV2AomClosePost200ResponseOneOf2FromJSONTyped, ApiV2AomClosePost200ResponseOneOf2ToJSON, } from './ApiV2AomClosePost200ResponseOneOf2';
-import { instanceOfApiV2PayPaymentGetPost200ResponseOneOf1, ApiV2PayPaymentGetPost200ResponseOneOf1FromJSONTyped, ApiV2PayPaymentGetPost200ResponseOneOf1ToJSON, } from './ApiV2PayPaymentGetPost200ResponseOneOf1';
-import { instanceOfApiV2PayPaymentGetPost200ResponseOneOf2, ApiV2PayPaymentGetPost200ResponseOneOf2FromJSONTyped, ApiV2PayPaymentGetPost200ResponseOneOf2ToJSON, } from './ApiV2PayPaymentGetPost200ResponseOneOf2';
-import { instanceOfApiV2PayPaymentGetPost200ResponseOneOf3, ApiV2PayPaymentGetPost200ResponseOneOf3FromJSONTyped, ApiV2PayPaymentGetPost200ResponseOneOf3ToJSON, } from './ApiV2PayPaymentGetPost200ResponseOneOf3';
-export function ApiV2AomClosePost200ResponseFromJSON(json) {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2AomClosePost200ResponseToJSON = exports.ApiV2AomClosePost200ResponseFromJSONTyped = exports.ApiV2AomClosePost200ResponseFromJSON = void 0;
+const ApiV2AomClosePost200ResponseOneOf_1 = require("./ApiV2AomClosePost200ResponseOneOf");
+const ApiV2AomClosePost200ResponseOneOf1_1 = require("./ApiV2AomClosePost200ResponseOneOf1");
+const ApiV2AomClosePost200ResponseOneOf2_1 = require("./ApiV2AomClosePost200ResponseOneOf2");
+const ApiV2PayPaymentGetPost200ResponseOneOf1_1 = require("./ApiV2PayPaymentGetPost200ResponseOneOf1");
+const ApiV2PayPaymentGetPost200ResponseOneOf2_1 = require("./ApiV2PayPaymentGetPost200ResponseOneOf2");
+const ApiV2PayPaymentGetPost200ResponseOneOf3_1 = require("./ApiV2PayPaymentGetPost200ResponseOneOf3");
+function ApiV2AomClosePost200ResponseFromJSON(json) {
     return ApiV2AomClosePost200ResponseFromJSONTyped(json, false);
 }
-export function ApiV2AomClosePost200ResponseFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2AomClosePost200ResponseFromJSON = ApiV2AomClosePost200ResponseFromJSON;
+function ApiV2AomClosePost200ResponseFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
-    return { ...ApiV2AomClosePost200ResponseOneOfFromJSONTyped(json, true), ...ApiV2AomClosePost200ResponseOneOf1FromJSONTyped(json, true), ...ApiV2AomClosePost200ResponseOneOf2FromJSONTyped(json, true), ...ApiV2PayPaymentGetPost200ResponseOneOf1FromJSONTyped(json, true), ...ApiV2PayPaymentGetPost200ResponseOneOf2FromJSONTyped(json, true), ...ApiV2PayPaymentGetPost200ResponseOneOf3FromJSONTyped(json, true) };
+    return { ...(0, ApiV2AomClosePost200ResponseOneOf_1.ApiV2AomClosePost200ResponseOneOfFromJSONTyped)(json, true), ...(0, ApiV2AomClosePost200ResponseOneOf1_1.ApiV2AomClosePost200ResponseOneOf1FromJSONTyped)(json, true), ...(0, ApiV2AomClosePost200ResponseOneOf2_1.ApiV2AomClosePost200ResponseOneOf2FromJSONTyped)(json, true), ...(0, ApiV2PayPaymentGetPost200ResponseOneOf1_1.ApiV2PayPaymentGetPost200ResponseOneOf1FromJSONTyped)(json, true), ...(0, ApiV2PayPaymentGetPost200ResponseOneOf2_1.ApiV2PayPaymentGetPost200ResponseOneOf2FromJSONTyped)(json, true), ...(0, ApiV2PayPaymentGetPost200ResponseOneOf3_1.ApiV2PayPaymentGetPost200ResponseOneOf3FromJSONTyped)(json, true) };
 }
-export function ApiV2AomClosePost200ResponseToJSON(value) {
+exports.ApiV2AomClosePost200ResponseFromJSONTyped = ApiV2AomClosePost200ResponseFromJSONTyped;
+function ApiV2AomClosePost200ResponseToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
     if (value === null) {
         return null;
     }
-    if (instanceOfApiV2AomClosePost200ResponseOneOf(value)) {
-        return ApiV2AomClosePost200ResponseOneOfToJSON(value);
+    if ((0, ApiV2AomClosePost200ResponseOneOf_1.instanceOfApiV2AomClosePost200ResponseOneOf)(value)) {
+        return (0, ApiV2AomClosePost200ResponseOneOf_1.ApiV2AomClosePost200ResponseOneOfToJSON)(value);
     }
-    if (instanceOfApiV2AomClosePost200ResponseOneOf1(value)) {
-        return ApiV2AomClosePost200ResponseOneOf1ToJSON(value);
+    if ((0, ApiV2AomClosePost200ResponseOneOf1_1.instanceOfApiV2AomClosePost200ResponseOneOf1)(value)) {
+        return (0, ApiV2AomClosePost200ResponseOneOf1_1.ApiV2AomClosePost200ResponseOneOf1ToJSON)(value);
     }
-    if (instanceOfApiV2AomClosePost200ResponseOneOf2(value)) {
-        return ApiV2AomClosePost200ResponseOneOf2ToJSON(value);
+    if ((0, ApiV2AomClosePost200ResponseOneOf2_1.instanceOfApiV2AomClosePost200ResponseOneOf2)(value)) {
+        return (0, ApiV2AomClosePost200ResponseOneOf2_1.ApiV2AomClosePost200ResponseOneOf2ToJSON)(value);
     }
-    if (instanceOfApiV2PayPaymentGetPost200ResponseOneOf1(value)) {
-        return ApiV2PayPaymentGetPost200ResponseOneOf1ToJSON(value);
+    if ((0, ApiV2PayPaymentGetPost200ResponseOneOf1_1.instanceOfApiV2PayPaymentGetPost200ResponseOneOf1)(value)) {
+        return (0, ApiV2PayPaymentGetPost200ResponseOneOf1_1.ApiV2PayPaymentGetPost200ResponseOneOf1ToJSON)(value);
     }
-    if (instanceOfApiV2PayPaymentGetPost200ResponseOneOf2(value)) {
-        return ApiV2PayPaymentGetPost200ResponseOneOf2ToJSON(value);
+    if ((0, ApiV2PayPaymentGetPost200ResponseOneOf2_1.instanceOfApiV2PayPaymentGetPost200ResponseOneOf2)(value)) {
+        return (0, ApiV2PayPaymentGetPost200ResponseOneOf2_1.ApiV2PayPaymentGetPost200ResponseOneOf2ToJSON)(value);
     }
-    if (instanceOfApiV2PayPaymentGetPost200ResponseOneOf3(value)) {
-        return ApiV2PayPaymentGetPost200ResponseOneOf3ToJSON(value);
+    if ((0, ApiV2PayPaymentGetPost200ResponseOneOf3_1.instanceOfApiV2PayPaymentGetPost200ResponseOneOf3)(value)) {
+        return (0, ApiV2PayPaymentGetPost200ResponseOneOf3_1.ApiV2PayPaymentGetPost200ResponseOneOf3ToJSON)(value);
     }
     return {};
 }
+exports.ApiV2AomClosePost200ResponseToJSON = ApiV2AomClosePost200ResponseToJSON;
 //# sourceMappingURL=ApiV2AomClosePost200Response.js.map

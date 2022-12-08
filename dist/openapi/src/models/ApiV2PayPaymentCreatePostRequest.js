@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,11 +12,13 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { exists } from '../runtime';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2PayPaymentCreatePostRequestToJSON = exports.ApiV2PayPaymentCreatePostRequestFromJSONTyped = exports.ApiV2PayPaymentCreatePostRequestFromJSON = exports.instanceOfApiV2PayPaymentCreatePostRequest = void 0;
+const runtime_1 = require("../runtime");
 /**
  * Check if a given object implements the ApiV2PayPaymentCreatePostRequest interface.
  */
-export function instanceOfApiV2PayPaymentCreatePostRequest(value) {
+function instanceOfApiV2PayPaymentCreatePostRequest(value) {
     let isInstance = true;
     isInstance = isInstance && "nonce" in value;
     isInstance = isInstance && "appId" in value;
@@ -28,10 +31,12 @@ export function instanceOfApiV2PayPaymentCreatePostRequest(value) {
     isInstance = isInstance && "notificationUrl" in value;
     return isInstance;
 }
-export function ApiV2PayPaymentCreatePostRequestFromJSON(json) {
+exports.instanceOfApiV2PayPaymentCreatePostRequest = instanceOfApiV2PayPaymentCreatePostRequest;
+function ApiV2PayPaymentCreatePostRequestFromJSON(json) {
     return ApiV2PayPaymentCreatePostRequestFromJSONTyped(json, false);
 }
-export function ApiV2PayPaymentCreatePostRequestFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2PayPaymentCreatePostRequestFromJSON = ApiV2PayPaymentCreatePostRequestFromJSON;
+function ApiV2PayPaymentCreatePostRequestFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -41,14 +46,15 @@ export function ApiV2PayPaymentCreatePostRequestFromJSONTyped(json, ignoreDiscri
         'itemPrice': json['itemPrice'],
         'itemCurrency': json['itemCurrency'],
         'destinationCurrency': json['destinationCurrency'],
-        'forcedPaymentCurrency': !exists(json, 'forcedPaymentCurrency') ? undefined : json['forcedPaymentCurrency'],
+        'forcedPaymentCurrency': !(0, runtime_1.exists)(json, 'forcedPaymentCurrency') ? undefined : json['forcedPaymentCurrency'],
         'payCode': json['payCode'],
         'paymentId': json['paymentId'],
         'paymentDescription': json['paymentDescription'],
         'notificationUrl': json['notificationUrl'],
     };
 }
-export function ApiV2PayPaymentCreatePostRequestToJSON(value) {
+exports.ApiV2PayPaymentCreatePostRequestFromJSONTyped = ApiV2PayPaymentCreatePostRequestFromJSONTyped;
+function ApiV2PayPaymentCreatePostRequestToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -68,4 +74,5 @@ export function ApiV2PayPaymentCreatePostRequestToJSON(value) {
         'notificationUrl': value.notificationUrl,
     };
 }
+exports.ApiV2PayPaymentCreatePostRequestToJSON = ApiV2PayPaymentCreatePostRequestToJSON;
 //# sourceMappingURL=ApiV2PayPaymentCreatePostRequest.js.map

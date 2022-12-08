@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,10 +12,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2AomTopupPostRequestToJSON = exports.ApiV2AomTopupPostRequestFromJSONTyped = exports.ApiV2AomTopupPostRequestFromJSON = exports.instanceOfApiV2AomTopupPostRequest = void 0;
 /**
  * Check if a given object implements the ApiV2AomTopupPostRequest interface.
  */
-export function instanceOfApiV2AomTopupPostRequest(value) {
+function instanceOfApiV2AomTopupPostRequest(value) {
     let isInstance = true;
     isInstance = isInstance && "nonce" in value;
     isInstance = isInstance && "appId" in value;
@@ -23,10 +26,12 @@ export function instanceOfApiV2AomTopupPostRequest(value) {
     isInstance = isInstance && "amount" in value;
     return isInstance;
 }
-export function ApiV2AomTopupPostRequestFromJSON(json) {
+exports.instanceOfApiV2AomTopupPostRequest = instanceOfApiV2AomTopupPostRequest;
+function ApiV2AomTopupPostRequestFromJSON(json) {
     return ApiV2AomTopupPostRequestFromJSONTyped(json, false);
 }
-export function ApiV2AomTopupPostRequestFromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2AomTopupPostRequestFromJSON = ApiV2AomTopupPostRequestFromJSON;
+function ApiV2AomTopupPostRequestFromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -38,7 +43,8 @@ export function ApiV2AomTopupPostRequestFromJSONTyped(json, ignoreDiscriminator)
         'amount': json['amount'],
     };
 }
-export function ApiV2AomTopupPostRequestToJSON(value) {
+exports.ApiV2AomTopupPostRequestFromJSONTyped = ApiV2AomTopupPostRequestFromJSONTyped;
+function ApiV2AomTopupPostRequestToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -53,4 +59,5 @@ export function ApiV2AomTopupPostRequestToJSON(value) {
         'amount': value.amount,
     };
 }
+exports.ApiV2AomTopupPostRequestToJSON = ApiV2AomTopupPostRequestToJSON;
 //# sourceMappingURL=ApiV2AomTopupPostRequest.js.map

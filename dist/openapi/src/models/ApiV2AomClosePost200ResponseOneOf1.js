@@ -1,3 +1,4 @@
+"use strict";
 /* tslint:disable */
 /* eslint-disable */
 /**
@@ -11,31 +12,35 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiV2AomClosePost200ResponseOneOf1ToJSON = exports.ApiV2AomClosePost200ResponseOneOf1FromJSONTyped = exports.ApiV2AomClosePost200ResponseOneOf1FromJSON = exports.instanceOfApiV2AomClosePost200ResponseOneOf1 = exports.ApiV2AomClosePost200ResponseOneOf1CodeEnum = exports.ApiV2AomClosePost200ResponseOneOf1ResultEnum = void 0;
 /**
  * @export
  */
-export const ApiV2AomClosePost200ResponseOneOf1ResultEnum = {
+exports.ApiV2AomClosePost200ResponseOneOf1ResultEnum = {
     Fail: 'fail'
 };
 /**
  * @export
  */
-export const ApiV2AomClosePost200ResponseOneOf1CodeEnum = {
+exports.ApiV2AomClosePost200ResponseOneOf1CodeEnum = {
     NUMBER_9000: 9000
 };
 /**
  * Check if a given object implements the ApiV2AomClosePost200ResponseOneOf1 interface.
  */
-export function instanceOfApiV2AomClosePost200ResponseOneOf1(value) {
+function instanceOfApiV2AomClosePost200ResponseOneOf1(value) {
     let isInstance = true;
     isInstance = isInstance && "result" in value;
     isInstance = isInstance && "code" in value;
     return isInstance;
 }
-export function ApiV2AomClosePost200ResponseOneOf1FromJSON(json) {
+exports.instanceOfApiV2AomClosePost200ResponseOneOf1 = instanceOfApiV2AomClosePost200ResponseOneOf1;
+function ApiV2AomClosePost200ResponseOneOf1FromJSON(json) {
     return ApiV2AomClosePost200ResponseOneOf1FromJSONTyped(json, false);
 }
-export function ApiV2AomClosePost200ResponseOneOf1FromJSONTyped(json, ignoreDiscriminator) {
+exports.ApiV2AomClosePost200ResponseOneOf1FromJSON = ApiV2AomClosePost200ResponseOneOf1FromJSON;
+function ApiV2AomClosePost200ResponseOneOf1FromJSONTyped(json, ignoreDiscriminator) {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -44,7 +49,8 @@ export function ApiV2AomClosePost200ResponseOneOf1FromJSONTyped(json, ignoreDisc
         'code': json['code'],
     };
 }
-export function ApiV2AomClosePost200ResponseOneOf1ToJSON(value) {
+exports.ApiV2AomClosePost200ResponseOneOf1FromJSONTyped = ApiV2AomClosePost200ResponseOneOf1FromJSONTyped;
+function ApiV2AomClosePost200ResponseOneOf1ToJSON(value) {
     if (value === undefined) {
         return undefined;
     }
@@ -56,4 +62,5 @@ export function ApiV2AomClosePost200ResponseOneOf1ToJSON(value) {
         'code': value.code,
     };
 }
+exports.ApiV2AomClosePost200ResponseOneOf1ToJSON = ApiV2AomClosePost200ResponseOneOf1ToJSON;
 //# sourceMappingURL=ApiV2AomClosePost200ResponseOneOf1.js.map
