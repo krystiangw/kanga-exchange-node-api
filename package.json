@@ -1,6 +1,6 @@
 {
   "name": "kanga-exchange-node-api",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "devDependencies": {
     "@tsconfig/node16": "^1.0.3",
@@ -14,12 +14,14 @@
     "crypto": "^1.0.1"
   },
   "author": "Krystian Gwizdala <gwizdala.kr@gmail.com>",
-  "main": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "description": "Kanga Exchange Node API library",
   "scripts": {
     "test": "npm test",
-    "generate": "openapi-generator-cli generate -i kanga-api-schema.yaml -g typescript-fetch -o src/openapi/ --additional-properties=npmName=kanga-exchange-node-api,supportsES6=true,npmVersion=0.0.2,withInterfaces=true",
-    "example": "npx ts-node src/example.ts"
+    "generate-openapi": "openapi-generator-cli generate -i kanga-api-schema.yaml -g typescript-fetch -o src/openapi/ --additional-properties=npmName=kanga-exchange-node-api,supportsES6=true,npmVersion=0.0.2,withInterfaces=true",
+    "example": "npx ts-node src/example.ts",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",

@@ -10,7 +10,11 @@
     "sourceMap": true,
     "target": "es2022",
     "types": ["node"],
-    "outDir": "dist"
+    "outDir": "dist",
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "declarationMap": true,
+    "allowJs": true
   },
   "include": ["src"],
   "exclude": ["node_modules"],
