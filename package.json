@@ -1,6 +1,6 @@
 {
   "name": "kanga-exchange-node-api",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
   "devDependencies": {
     "@tsconfig/node16": "^1.0.3",
@@ -41,5 +41,5 @@
   "homepage": "https://github.com/krystiangw/kanga-exchange-node-api#readme",
   "engines": {
     "node": ">=18.0.0"
-   }
+  }
 }
