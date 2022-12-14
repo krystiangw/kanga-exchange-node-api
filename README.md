@@ -1,4 +1,4 @@
-## [Kanga Exchange](https://kanga.exchange/) Node API library
+## [Kanga Exchange](https://kanga.exchange/) Node API library 
 
 ![NPM Downloads](https://img.shields.io/npm/dw/kanga-exchange-node-api)
 
